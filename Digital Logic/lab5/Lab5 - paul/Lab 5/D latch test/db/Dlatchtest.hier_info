@@ -1,0 +1,8 @@
+|Dlatchtest
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+D => inst3.IN0
+D => inst4.IN0
+W => inst3.IN1
+W => inst2.IN1
+
+

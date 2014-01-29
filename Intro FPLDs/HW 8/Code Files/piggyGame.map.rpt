@@ -1,0 +1,363 @@
+Analysis & Synthesis report for piggyGame
+Thu Apr 12 09:21:09 2012
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |piggyGame|pr_state
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 12 09:21:09 2012        ;
+; Quartus II Version                 ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
+; Revision Name                      ; piggyGame                                    ;
+; Top-level Entity Name              ; piggyGame                                    ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 86                                           ;
+;     Total combinational functions  ; 86                                           ;
+;     Dedicated logic registers      ; 4                                            ;
+; Total registers                    ; 4                                            ;
+; Total pins                         ; 8                                            ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; piggyGame          ; piggyGame          ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                       ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+
+; piggyGame.vhd                    ; yes             ; User VHDL File  ; C:/altera/91sp1/quartus/projects/hw8/piggyGame.vhd ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimated Total logic elements              ; 86                    ;
+;                                             ;                       ;
+; Total combinational functions               ; 86                    ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 24                    ;
+;     -- 3 input functions                    ; 51                    ;
+;     -- <=2 input functions                  ; 11                    ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 62                    ;
+;     -- arithmetic mode                      ; 24                    ;
+;                                             ;                       ;
+; Total registers                             ; 4                     ;
+;     -- Dedicated logic registers            ; 4                     ;
+;     -- I/O registers                        ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 8                     ;
+; Maximum fan-out node                        ; pr_state.player2_hold ;
+; Maximum fan-out                             ; 18                    ;
+; Total fan-out                               ; 282                   ;
+; Average fan-out                             ; 2.88                  ;
++---------------------------------------------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |piggyGame                 ; 86 (86)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |piggyGame          ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |piggyGame|pr_state                                                                                               ;
++---------------------------+-----------------------+---------------------------+-----------------------+---------------------------+
+; Name                      ; pr_state.player2_hold ; pr_state.player2_diceroll ; pr_state.player1_hold ; pr_state.player1_diceroll ;
++---------------------------+-----------------------+---------------------------+-----------------------+---------------------------+
+; pr_state.player1_diceroll ; 0                     ; 0                         ; 0                     ; 0                         ;
+; pr_state.player1_hold     ; 0                     ; 0                         ; 1                     ; 1                         ;
+; pr_state.player2_diceroll ; 0                     ; 1                         ; 0                     ; 1                         ;
+; pr_state.player2_hold     ; 1                     ; 0                         ; 0                     ; 1                         ;
++---------------------------+-----------------------+---------------------------+-----------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------+------------------------+
+; winner$latch                                        ; Selector3             ; yes                    ;
+; p2_total[5]                                         ; pr_state.player2_hold ; yes                    ;
+; p2_total[6]                                         ; pr_state.player2_hold ; yes                    ;
+; p2_total[4]                                         ; pr_state.player2_hold ; yes                    ;
+; p2_total[3]                                         ; pr_state.player2_hold ; yes                    ;
+; p2_total[2]                                         ; pr_state.player2_hold ; yes                    ;
+; p1_total[5]                                         ; pr_state.player1_hold ; yes                    ;
+; p1_total[6]                                         ; pr_state.player1_hold ; yes                    ;
+; p1_total[2]                                         ; pr_state.player1_hold ; yes                    ;
+; p1_total[3]                                         ; pr_state.player1_hold ; yes                    ;
+; p1_total[4]                                         ; pr_state.player1_hold ; yes                    ;
+; p2_turn[5]                                          ; p2_turn[0]            ; yes                    ;
+; p2_turn[4]                                          ; p2_turn[0]            ; yes                    ;
+; p2_turn[3]                                          ; p2_turn[0]            ; yes                    ;
+; p2_turn[2]                                          ; p2_turn[0]            ; yes                    ;
+; p2_turn[1]                                          ; p2_turn[0]            ; yes                    ;
+; p2_total[1]                                         ; pr_state.player2_hold ; yes                    ;
+; p2_turn[0]                                          ; p2_turn[0]            ; yes                    ;
+; p2_total[0]                                         ; pr_state.player2_hold ; yes                    ;
+; p2_turn[6]                                          ; p2_turn[0]            ; yes                    ;
+; p1_turn[5]                                          ; Selector5             ; yes                    ;
+; p1_turn[4]                                          ; Selector5             ; yes                    ;
+; p1_turn[3]                                          ; Selector5             ; yes                    ;
+; p1_turn[2]                                          ; Selector5             ; yes                    ;
+; p1_turn[1]                                          ; Selector5             ; yes                    ;
+; p1_total[1]                                         ; pr_state.player1_hold ; yes                    ;
+; p1_turn[0]                                          ; Selector5             ; yes                    ;
+; p1_total[0]                                         ; pr_state.player1_hold ; yes                    ;
+; p1_turn[6]                                          ; Selector5             ; yes                    ;
+; Number of user-specified and inferred latches = 29  ;                       ;                        ;
++-----------------------------------------------------+-----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 12 09:21:06 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off piggyGame -c piggyGame
+Info: Found 2 design units, including 1 entities, in source file piggygame.vhd
+    Info: Found design unit 1: piggyGame-structure
+    Info: Found entity 1: piggyGame
+Info: Found 2 design units, including 1 entities, in source file tb_piggygame.vhd
+    Info: Found design unit 1: tb_piggyGame-Test
+    Info: Found entity 1: tb_piggyGame
+Info: Elaborating entity "piggyGame" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(43): signal "p1_turn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(49): signal "p1_turn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(49): signal "p1_total" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(51): signal "p1_total" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(63): signal "p2_turn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(69): signal "p2_turn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(69): signal "p2_total" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at piggyGame.vhd(71): signal "p2_total" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at piggyGame.vhd(34): inferring latch(es) for signal or variable "p1_turn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at piggyGame.vhd(34): inferring latch(es) for signal or variable "p1_total", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at piggyGame.vhd(34): inferring latch(es) for signal or variable "winner", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at piggyGame.vhd(34): inferring latch(es) for signal or variable "p2_turn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at piggyGame.vhd(34): inferring latch(es) for signal or variable "p2_total", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "p2_total[0]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_total[1]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_total[2]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_total[3]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_total[4]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_total[5]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_total[6]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[0]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[1]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[2]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[3]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[4]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[5]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p2_turn[6]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "winner" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[0]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[1]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[2]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[3]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[4]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[5]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_total[6]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[0]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[1]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[2]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[3]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[4]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[5]" at piggyGame.vhd(34)
+Info (10041): Inferred latch for "p1_turn[6]" at piggyGame.vhd(34)
+Warning: Latch winner$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player2_hold
+Warning: Latch p2_turn[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p2_turn[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p2_turn[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p2_turn[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p2_turn[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p2_turn[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p2_turn[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal diceNum[0]
+Warning: Latch p1_turn[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Warning: Latch p1_turn[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Warning: Latch p1_turn[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Warning: Latch p1_turn[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Warning: Latch p1_turn[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Warning: Latch p1_turn[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Warning: Latch p1_turn[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal pr_state.player1_hold
+Info: Implemented 94 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 1 output pins
+    Info: Implemented 86 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 211 megabytes
+    Info: Processing ended: Thu Apr 12 09:21:09 2012
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

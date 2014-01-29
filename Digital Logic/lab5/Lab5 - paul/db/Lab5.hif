@@ -1,0 +1,491 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Lab5
+# storage
+db|Lab5.(0).cnf
+db|Lab5.(0).cnf
+# case_insensitive
+# source_file
+lab5.bdf
+549778bf17e5f81cc76385e2572575
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+output
+# storage
+db|Lab5.(1).cnf
+db|Lab5.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+displayhex.vhd
+7264a7bf6ecd7839c8ad9cafda4a38b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+output:inst3
+output:inst2
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Registereightbit
+# storage
+db|Lab5.(2).cnf
+db|Lab5.(2).cnf
+# case_insensitive
+# source_file
+registereightbit.bdf
+b6fae82ffa6aca4b9be9ff35e49839f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Registereightbit:inst
+}
+# macro_sequence
+
+# end
+# entity
+D-LatchedSR
+# storage
+db|Lab5.(4).cnf
+db|Lab5.(4).cnf
+# case_insensitive
+# source_file
+d-latchedsr.bdf
+901e60284a249c82215cc3a18b83e419
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst
+Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst1
+Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst
+}
+# macro_sequence
+
+# end
+# entity
+SRLATCHY
+# storage
+db|Lab5.(5).cnf
+db|Lab5.(5).cnf
+# case_insensitive
+# source_file
+srlatchy.bdf
+3ba526372ede126343cc1bcd83bdb164
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst1|SRLATCHY:inst1
+Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst|SRLATCHY:inst1
+}
+# macro_sequence
+
+# end
+# entity
+lpm_add_sub1
+# storage
+db|Lab5.(6).cnf
+db|Lab5.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_add_sub1.vhd
+45a78efc3423965b05a9f957f5097f1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_add_sub1:inst5
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_add_sub
+# storage
+db|Lab5.(7).cnf
+db|Lab5.(7).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_add_sub.tdf
+48629daa7d9afedc175e3e79ef6f21
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+DEFAULT
+PARAMETER_UNKNOWN
+DEF
+ONE_INPUT_IS_CONSTANT
+NO
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+REGISTERED_AT_END
+0
+PARAMETER_UNKNOWN
+DEF
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+USE_CS_BUFFERS
+1
+PARAMETER_UNKNOWN
+DEF
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+USE_WYS
+OFF
+PARAMETER_UNKNOWN
+DEF
+STYLE
+FAST
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+add_sub_big
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+add_sub
+-1
+3
+}
+# hierarchies {
+lpm_add_sub1:inst5|lpm_add_sub:LPM_ADD_SUB_component
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_big
+# storage
+db|Lab5.(8).cnf
+db|Lab5.(8).cnf
+# case_insensitive
+# source_file
+db|add_sub_big.tdf
+d5621e1121abf4b7d32778889757662
+7
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+add_sub
+-1
+3
+}
+# hierarchies {
+lpm_add_sub1:inst5|lpm_add_sub:LPM_ADD_SUB_component|add_sub_big:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+D_FlipFlop
+# storage
+db|Lab5.(3).cnf
+db|Lab5.(3).cnf
+# case_insensitive
+# source_file
+d_flipflop.bdf
+3d5f1b135b6aea756e15be6a21c009d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Registereightbit:inst|D_FlipFlop:inst
+Registereightbit:inst|D_FlipFlop:inst2
+Registereightbit:inst|D_FlipFlop:inst1
+Registereightbit:inst|D_FlipFlop:inst3
+Registereightbit:inst|D_FlipFlop:inst6
+Registereightbit:inst|D_FlipFlop:inst5
+Registereightbit:inst|D_FlipFlop:inst4
+Registereightbit:inst|D_FlipFlop:inst7
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,24 @@
+|hw1
+LEDR0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+SW0 => inst.IN0
+SW0 => andgate:inst2.SW0
+SW0 => orgate:inst1.SW0
+SW1 => inst.IN1
+SW1 => andgate:inst2.SW1
+SW1 => orgate:inst1.SW1
+LEDR1 <= andgate:inst2.LEDR1
+LEDR2 <= orgate:inst1.LEDR2
+
+
+|hw1|andgate:inst2
+SW0 => LEDR1~0.IN0
+SW1 => LEDR1~0.IN1
+LEDR1 <= LEDR1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw1|orgate:inst1
+SW0 => LEDR2~0.IN0
+SW1 => LEDR2~0.IN1
+LEDR2 <= LEDR2~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

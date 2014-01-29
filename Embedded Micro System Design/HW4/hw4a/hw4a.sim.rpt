@@ -1,0 +1,366 @@
+Simulator report for hw4a
+Sat Oct 05 22:49:28 2013
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 94 nodes     ;
+; Simulation Coverage         ;      86.73 % ;
+; Total Number of Transitions ; 645          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; On         ; Off           ;
+; VCD File for PowerPlay Power Analyzer output destination                                   ; hw4a.vcd   ;               ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      86.73 % ;
+; Total nodes checked                                 ; 94           ;
+; Total output ports checked                          ; 98           ;
+; Total output ports with complete 1/0-value coverage ; 85           ;
+; Total output ports with no 1/0-value coverage       ; 5            ;
+; Total output ports with no 1-value coverage         ; 12           ;
+; Total output ports with no 0-value coverage         ; 6            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------+
+; Complete 1/0-Value Coverage                            ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |hw4a|Q_A~0      ; |hw4a|Q_A~0      ; out0             ;
+; |hw4a|Q_B~0      ; |hw4a|Q_B~0      ; out0             ;
+; |hw4a|Q_C~0      ; |hw4a|Q_C~0      ; out0             ;
+; |hw4a|Q_D~0      ; |hw4a|Q_D~0      ; out0             ;
+; |hw4a|comb~0     ; |hw4a|comb~0     ; out0             ;
+; |hw4a|comb~1     ; |hw4a|comb~1     ; out0             ;
+; |hw4a|comb~2     ; |hw4a|comb~2     ; out0             ;
+; |hw4a|first~0    ; |hw4a|first~0    ; out0             ;
+; |hw4a|a~0        ; |hw4a|a~0        ; out0             ;
+; |hw4a|a~1        ; |hw4a|a~1        ; out0             ;
+; |hw4a|a~2        ; |hw4a|a~2        ; out0             ;
+; |hw4a|a~4        ; |hw4a|a~4        ; out0             ;
+; |hw4a|a~5        ; |hw4a|a~5        ; out0             ;
+; |hw4a|a~6        ; |hw4a|a~6        ; out0             ;
+; |hw4a|b~0        ; |hw4a|b~0        ; out0             ;
+; |hw4a|b~1        ; |hw4a|b~1        ; out0             ;
+; |hw4a|b~2        ; |hw4a|b~2        ; out0             ;
+; |hw4a|b~4        ; |hw4a|b~4        ; out0             ;
+; |hw4a|b~5        ; |hw4a|b~5        ; out0             ;
+; |hw4a|b~6        ; |hw4a|b~6        ; out0             ;
+; |hw4a|c~0        ; |hw4a|c~0        ; out0             ;
+; |hw4a|c~1        ; |hw4a|c~1        ; out0             ;
+; |hw4a|c~2        ; |hw4a|c~2        ; out0             ;
+; |hw4a|c~3        ; |hw4a|c~3        ; out0             ;
+; |hw4a|c~4        ; |hw4a|c~4        ; out0             ;
+; |hw4a|c~5        ; |hw4a|c~5        ; out0             ;
+; |hw4a|c~6        ; |hw4a|c~6        ; out0             ;
+; |hw4a|c~7        ; |hw4a|c~7        ; out0             ;
+; |hw4a|d~0        ; |hw4a|d~0        ; out0             ;
+; |hw4a|d~1        ; |hw4a|d~1        ; out0             ;
+; |hw4a|d~3        ; |hw4a|d~3        ; out0             ;
+; |hw4a|d~4        ; |hw4a|d~4        ; out0             ;
+; |hw4a|d~5        ; |hw4a|d~5        ; out0             ;
+; |hw4a|d~6        ; |hw4a|d~6        ; out0             ;
+; |hw4a|d~7        ; |hw4a|d~7        ; out0             ;
+; |hw4a|d~8        ; |hw4a|d~8        ; out0             ;
+; |hw4a|always0~0  ; |hw4a|always0~0  ; out0             ;
+; |hw4a|always0~2  ; |hw4a|always0~2  ; out0             ;
+; |hw4a|temp~0     ; |hw4a|temp~0     ; out              ;
+; |hw4a|temp~1     ; |hw4a|temp~1     ; out              ;
+; |hw4a|temp~2     ; |hw4a|temp~2     ; out              ;
+; |hw4a|always0~3  ; |hw4a|always0~3  ; out0             ;
+; |hw4a|always0~5  ; |hw4a|always0~5  ; out0             ;
+; |hw4a|temp~3     ; |hw4a|temp~3     ; out              ;
+; |hw4a|temp~4     ; |hw4a|temp~4     ; out              ;
+; |hw4a|temp~5     ; |hw4a|temp~5     ; out              ;
+; |hw4a|temp[0]    ; |hw4a|temp[0]    ; regout           ;
+; |hw4a|always0~6  ; |hw4a|always0~6  ; out0             ;
+; |hw4a|always0~7  ; |hw4a|always0~7  ; out0             ;
+; |hw4a|always0~8  ; |hw4a|always0~8  ; out0             ;
+; |hw4a|temp~6     ; |hw4a|temp~6     ; out              ;
+; |hw4a|temp~7     ; |hw4a|temp~7     ; out              ;
+; |hw4a|temp~8     ; |hw4a|temp~8     ; out              ;
+; |hw4a|always0~9  ; |hw4a|always0~9  ; out0             ;
+; |hw4a|always0~10 ; |hw4a|always0~10 ; out0             ;
+; |hw4a|always0~11 ; |hw4a|always0~11 ; out0             ;
+; |hw4a|temp~9     ; |hw4a|temp~9     ; out              ;
+; |hw4a|temp~10    ; |hw4a|temp~10    ; out              ;
+; |hw4a|temp~11    ; |hw4a|temp~11    ; out              ;
+; |hw4a|a[3]       ; |hw4a|a[3]       ; regout           ;
+; |hw4a|b[3]       ; |hw4a|b[3]       ; regout           ;
+; |hw4a|c[3]       ; |hw4a|c[3]       ; regout           ;
+; |hw4a|d[3]       ; |hw4a|d[3]       ; regout           ;
+; |hw4a|temp[3]    ; |hw4a|temp[3]    ; regout           ;
+; |hw4a|temp[2]    ; |hw4a|temp[2]    ; regout           ;
+; |hw4a|temp[1]    ; |hw4a|temp[1]    ; regout           ;
+; |hw4a|Q_D~direct ; |hw4a|Q_D~direct ; out0             ;
+; |hw4a|Q_C~direct ; |hw4a|Q_C~direct ; out0             ;
+; |hw4a|Q_B~direct ; |hw4a|Q_B~direct ; out0             ;
+; |hw4a|Q_A~direct ; |hw4a|Q_A~direct ; out0             ;
+; |hw4a|LOAD       ; |hw4a|LOAD       ; out              ;
+; |hw4a|clk        ; |hw4a|clk        ; out              ;
+; |hw4a|DATA_C     ; |hw4a|DATA_C     ; out              ;
+; |hw4a|DATA_D     ; |hw4a|DATA_D     ; out              ;
+; |hw4a|CLR        ; |hw4a|CLR        ; out              ;
+; |hw4a|ENP        ; |hw4a|ENP        ; out              ;
+; |hw4a|ENT        ; |hw4a|ENT        ; out              ;
+; |hw4a|Q_A        ; |hw4a|Q_A~result ; pin_out          ;
+; |hw4a|Q_B        ; |hw4a|Q_B~result ; pin_out          ;
+; |hw4a|Q_C        ; |hw4a|Q_C~result ; pin_out          ;
+; |hw4a|Q_D        ; |hw4a|Q_D~result ; pin_out          ;
+; |hw4a|Q_A~1      ; |hw4a|Q_A~1      ; out0             ;
+; |hw4a|Q_B~1      ; |hw4a|Q_B~1      ; out0             ;
+; |hw4a|Q_C~1      ; |hw4a|Q_C~1      ; out0             ;
+; |hw4a|Q_D~1      ; |hw4a|Q_D~1      ; out0             ;
++------------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------+
+; Missing 1-Value Coverage                              ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |hw4a|comb~3    ; |hw4a|comb~3     ; out0             ;
+; |hw4a|a~3       ; |hw4a|a~3        ; out0             ;
+; |hw4a|b~3       ; |hw4a|b~3        ; out0             ;
+; |hw4a|d~2       ; |hw4a|d~2        ; out0             ;
+; |hw4a|always0~1 ; |hw4a|always0~1  ; out0             ;
+; |hw4a|always0~4 ; |hw4a|always0~4  ; out0             ;
+; |hw4a|DATA_A    ; |hw4a|DATA_A     ; out              ;
+; |hw4a|DATA_B    ; |hw4a|DATA_B     ; out              ;
+; |hw4a|Q_B       ; |hw4a|Q_B        ; out              ;
+; |hw4a|Q_C       ; |hw4a|Q_C        ; out              ;
+; |hw4a|Q_D       ; |hw4a|Q_D        ; out              ;
+; |hw4a|RC0       ; |hw4a|RC0        ; pin_out          ;
++-----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------+
+; Missing 0-Value Coverage                              ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |hw4a|a~3       ; |hw4a|a~3        ; out0             ;
+; |hw4a|always0~1 ; |hw4a|always0~1  ; out0             ;
+; |hw4a|DATA_A    ; |hw4a|DATA_A     ; out              ;
+; |hw4a|Q_A       ; |hw4a|Q_A        ; out              ;
+; |hw4a|Q_C       ; |hw4a|Q_C        ; out              ;
+; |hw4a|Q_D       ; |hw4a|Q_D        ; out              ;
++-----------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Oct 05 22:49:27 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off hw4a -c hw4a
+Info: Using vector source file "C:/Users/Paul/Desktop/Paul_Kafka/FSU/5. Year 5 (13-14)/2013 Fall/Classes/Emb Sys Design/Assignments/HW4/hw4a/hw4a.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of hw4a.vwf called hw4a.sim_ori.vwf has been created in the db folder
+Warning: Cannot find channels in vector source file for the following output ports - channels are required for VCD file generation for PowerPlay Power Analyzer
+    Warning: Output port: "|hw4a|Q_A~0"
+    Warning: Output port: "|hw4a|Q_B~0"
+    Warning: Output port: "|hw4a|Q_C~0"
+    Warning: Output port: "|hw4a|Q_D~0"
+    Warning: Output port: "|hw4a|comb~0"
+    Warning: Output port: "|hw4a|comb~1"
+    Warning: Output port: "|hw4a|comb~2"
+    Warning: Output port: "|hw4a|comb~3"
+    Warning: Output port: "|hw4a|first~0"
+    Warning: Output port: "|hw4a|a~0"
+    Warning: Output port: "|hw4a|a~1"
+    Warning: Output port: "|hw4a|a~2"
+    Warning: Output port: "|hw4a|a~3"
+    Warning: Output port: "|hw4a|a~4"
+    Warning: Output port: "|hw4a|a~5"
+    Warning: Output port: "|hw4a|a~6"
+    Warning: Output port: "|hw4a|b~0"
+    Warning: Output port: "|hw4a|b~1"
+    Warning: Output port: "|hw4a|b~2"
+    Warning: Output port: "|hw4a|b~3"
+    Warning: Output port: "|hw4a|b~4"
+    Warning: Output port: "|hw4a|b~5"
+    Warning: Output port: "|hw4a|b~6"
+    Warning: Output port: "|hw4a|c~0"
+    Warning: Output port: "|hw4a|c~1"
+    Warning: Output port: "|hw4a|c~2"
+    Warning: Output port: "|hw4a|c~3"
+    Warning: Output port: "|hw4a|c~4"
+    Warning: Output port: "|hw4a|c~5"
+    Warning: Output port: "|hw4a|c~6"
+    Warning: Output port: "|hw4a|c~7"
+    Warning: Output port: "|hw4a|d~0"
+    Warning: Output port: "|hw4a|d~1"
+    Warning: Output port: "|hw4a|d~2"
+    Warning: Output port: "|hw4a|d~3"
+    Warning: Output port: "|hw4a|d~4"
+    Warning: Output port: "|hw4a|d~5"
+    Warning: Output port: "|hw4a|d~6"
+    Warning: Output port: "|hw4a|d~7"
+    Warning: Output port: "|hw4a|d~8"
+    Warning: Output port: "|hw4a|always0~0"
+    Warning: Output port: "|hw4a|always0~1"
+    Warning: Output port: "|hw4a|always0~2"
+    Warning: Output port: "|hw4a|temp~0"
+    Warning: Output port: "|hw4a|temp~1"
+    Warning: Output port: "|hw4a|temp~2"
+    Warning: Output port: "|hw4a|always0~3"
+    Warning: Output port: "|hw4a|always0~4"
+    Warning: Output port: "|hw4a|always0~5"
+    Warning: Output port: "|hw4a|temp~3"
+    Warning: Output port: "|hw4a|temp~4"
+    Warning: Output port: "|hw4a|temp~5"
+    Warning: Output port: "|hw4a|temp[0]"
+    Warning: Output port: "|hw4a|always0~6"
+    Warning: Output port: "|hw4a|always0~7"
+    Warning: Output port: "|hw4a|always0~8"
+    Warning: Output port: "|hw4a|temp~6"
+    Warning: Output port: "|hw4a|temp~7"
+    Warning: Output port: "|hw4a|temp~8"
+    Warning: Output port: "|hw4a|always0~9"
+    Warning: Output port: "|hw4a|always0~10"
+    Warning: Output port: "|hw4a|always0~11"
+    Warning: Output port: "|hw4a|temp~9"
+    Warning: Output port: "|hw4a|temp~10"
+    Warning: Output port: "|hw4a|temp~11"
+    Warning: Output port: "|hw4a|a[3]"
+    Warning: Output port: "|hw4a|b[3]"
+    Warning: Output port: "|hw4a|c[3]"
+    Warning: Output port: "|hw4a|d[3]"
+    Warning: Output port: "|hw4a|temp[3]"
+    Warning: Output port: "|hw4a|temp[2]"
+    Warning: Output port: "|hw4a|temp[1]"
+    Warning: Output port: "|hw4a|Q_D~direct"
+    Warning: Output port: "|hw4a|Q_C~direct"
+    Warning: Output port: "|hw4a|Q_B~direct"
+    Warning: Output port: "|hw4a|Q_A~direct"
+    Warning: Output port: "|hw4a|Q_A~1"
+    Warning: Output port: "|hw4a|Q_B~1"
+    Warning: Output port: "|hw4a|Q_C~1"
+    Warning: Output port: "|hw4a|Q_D~1"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|temp[0]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|a[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|b[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|c[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|d[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|temp[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|temp[2]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|hw4a|temp[1]"
+Warning: Found logic contention at time 20.0 ns on bus node "|hw4a|Q_B~1"
+    Info: Node "Q_B" has logic level of 0
+    Info: Node "Q_B~0" has logic level of 1
+Warning: Found logic contention at time 30.0 ns on bus node "|hw4a|Q_A~1"
+    Info: Node "Q_A" has logic level of 1
+    Info: Node "Q_A~0" has logic level of 0
+Warning: Found logic contention at time 50.0 ns on bus node "|hw4a|Q_A~1"
+    Info: Node "Q_A" has logic level of 1
+    Info: Node "Q_A~0" has logic level of 0
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      86.73 %
+Info: Number of transitions in simulation is 645
+Info: Vector file hw4a.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Created VCD File C:/Users/Paul/Desktop/Paul_Kafka/FSU/5. Year 5 (13-14)/2013 Fall/Classes/Emb Sys Design/Assignments/HW4/hw4a/hw4a.vcd
+Info: Quartus II Simulator was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 139 megabytes
+    Info: Processing ended: Sat Oct 05 22:49:28 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

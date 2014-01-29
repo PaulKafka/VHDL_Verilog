@@ -1,0 +1,9 @@
+set_global_assignment -name VHDL_FILE custominstruction.vhd
+set_global_assignment -name SDC_FILE cpu.sdc
+set_global_assignment -name VHDL_FILE cpu_custominstruction_inst.vhd
+set_global_assignment -name SOURCE_FILE cpu.ocp
+set_global_assignment -name VERILOG_FILE sram.v
+ set_global_assignment -name TCL_FILE custominstruction_hw.tcl
+set_global_assignment -name TCL_FILE [file join $::quartus(ip_rootpath) University_Program/Memory/altera_up_avalon_sram/altera_up_avalon_sram_hw.tcl]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 002564C170970000014273357DE8 
+ 

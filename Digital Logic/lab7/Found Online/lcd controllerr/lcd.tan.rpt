@@ -1,0 +1,468 @@
+Classic Timing Analyzer report for lcd
+Fri Mar 07 10:58:31 2008
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clock'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                             ; To                               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.012 ns                         ; reset_n                          ; lcd_controller:inst1|LCD_DATA[1] ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 11.351 ns                        ; lcd_controller:inst1|LCD_DATA[7] ; LCD_DATA[7]                      ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.534 ns                        ; reset_n                          ; lcd_controller:inst1|LCD_DATA[6] ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; 167.20 MHz ( period = 5.981 ns ) ; lcd_controller:inst1|count[0]    ; lcd_controller:inst1|state.s20   ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                  ;                                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                      ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                         ; Setting            ; From ; To ; Entity Name ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                    ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                  ; Final              ;      ;    ;             ;
+; Default hold multicycle                                        ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                      ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                         ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                 ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                               ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                          ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                        ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                               ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                           ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node          ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                          ; 10                 ;      ;    ;             ;
+; Number of paths to report                                      ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                   ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                         ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                     ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                   ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis ; Off                ;      ;    ;             ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                                        ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                           ; To                             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 167.20 MHz ( period = 5.981 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.774 ns                ;
+; N/A                                     ; 167.28 MHz ( period = 5.978 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.771 ns                ;
+; N/A                                     ; 167.28 MHz ( period = 5.978 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.771 ns                ;
+; N/A                                     ; 167.34 MHz ( period = 5.976 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.769 ns                ;
+; N/A                                     ; 167.67 MHz ( period = 5.964 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.757 ns                ;
+; N/A                                     ; 167.70 MHz ( period = 5.963 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.756 ns                ;
+; N/A                                     ; 168.15 MHz ( period = 5.947 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.735 ns                ;
+; N/A                                     ; 168.24 MHz ( period = 5.944 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.732 ns                ;
+; N/A                                     ; 168.24 MHz ( period = 5.944 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.732 ns                ;
+; N/A                                     ; 168.29 MHz ( period = 5.942 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.730 ns                ;
+; N/A                                     ; 168.63 MHz ( period = 5.930 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.718 ns                ;
+; N/A                                     ; 168.66 MHz ( period = 5.929 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.717 ns                ;
+; N/A                                     ; 169.78 MHz ( period = 5.890 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.678 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.675 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.675 ns                ;
+; N/A                                     ; 169.92 MHz ( period = 5.885 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.673 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.661 ns                ;
+; N/A                                     ; 170.30 MHz ( period = 5.872 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.660 ns                ;
+; N/A                                     ; 172.65 MHz ( period = 5.792 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.585 ns                ;
+; N/A                                     ; 172.74 MHz ( period = 5.789 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.582 ns                ;
+; N/A                                     ; 172.74 MHz ( period = 5.789 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.582 ns                ;
+; N/A                                     ; 172.80 MHz ( period = 5.787 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.580 ns                ;
+; N/A                                     ; 173.16 MHz ( period = 5.775 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.568 ns                ;
+; N/A                                     ; 173.19 MHz ( period = 5.774 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.567 ns                ;
+; N/A                                     ; 174.79 MHz ( period = 5.721 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.514 ns                ;
+; N/A                                     ; 174.89 MHz ( period = 5.718 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.511 ns                ;
+; N/A                                     ; 174.89 MHz ( period = 5.718 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.511 ns                ;
+; N/A                                     ; 174.95 MHz ( period = 5.716 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.509 ns                ;
+; N/A                                     ; 175.32 MHz ( period = 5.704 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.497 ns                ;
+; N/A                                     ; 175.35 MHz ( period = 5.703 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.496 ns                ;
+; N/A                                     ; 176.46 MHz ( period = 5.667 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.460 ns                ;
+; N/A                                     ; 176.55 MHz ( period = 5.664 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.457 ns                ;
+; N/A                                     ; 176.55 MHz ( period = 5.664 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.457 ns                ;
+; N/A                                     ; 176.62 MHz ( period = 5.662 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.455 ns                ;
+; N/A                                     ; 176.99 MHz ( period = 5.650 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.443 ns                ;
+; N/A                                     ; 177.02 MHz ( period = 5.649 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.442 ns                ;
+; N/A                                     ; 179.60 MHz ( period = 5.568 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.361 ns                ;
+; N/A                                     ; 179.69 MHz ( period = 5.565 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.358 ns                ;
+; N/A                                     ; 179.69 MHz ( period = 5.565 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.358 ns                ;
+; N/A                                     ; 179.76 MHz ( period = 5.563 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.356 ns                ;
+; N/A                                     ; 180.15 MHz ( period = 5.551 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.344 ns                ;
+; N/A                                     ; 180.18 MHz ( period = 5.550 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.343 ns                ;
+; N/A                                     ; 181.52 MHz ( period = 5.509 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.302 ns                ;
+; N/A                                     ; 181.62 MHz ( period = 5.506 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.299 ns                ;
+; N/A                                     ; 181.62 MHz ( period = 5.506 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.299 ns                ;
+; N/A                                     ; 181.69 MHz ( period = 5.504 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.297 ns                ;
+; N/A                                     ; 182.08 MHz ( period = 5.492 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.285 ns                ;
+; N/A                                     ; 182.12 MHz ( period = 5.491 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.284 ns                ;
+; N/A                                     ; 187.34 MHz ( period = 5.338 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.131 ns                ;
+; N/A                                     ; 187.44 MHz ( period = 5.335 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.128 ns                ;
+; N/A                                     ; 187.44 MHz ( period = 5.335 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.128 ns                ;
+; N/A                                     ; 187.51 MHz ( period = 5.333 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.126 ns                ;
+; N/A                                     ; 187.93 MHz ( period = 5.321 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.114 ns                ;
+; N/A                                     ; 187.97 MHz ( period = 5.320 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.113 ns                ;
+; N/A                                     ; 189.61 MHz ( period = 5.274 ns )                    ; lcd_controller:inst1|count[9]  ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 5.067 ns                ;
+; N/A                                     ; 189.72 MHz ( period = 5.271 ns )                    ; lcd_controller:inst1|count[9]  ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 5.064 ns                ;
+; N/A                                     ; 189.72 MHz ( period = 5.271 ns )                    ; lcd_controller:inst1|count[9]  ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 5.064 ns                ;
+; N/A                                     ; 189.79 MHz ( period = 5.269 ns )                    ; lcd_controller:inst1|count[9]  ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 5.062 ns                ;
+; N/A                                     ; 190.22 MHz ( period = 5.257 ns )                    ; lcd_controller:inst1|count[9]  ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 5.050 ns                ;
+; N/A                                     ; 190.26 MHz ( period = 5.256 ns )                    ; lcd_controller:inst1|count[9]  ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 5.049 ns                ;
+; N/A                                     ; 191.94 MHz ( period = 5.210 ns )                    ; lcd_controller:inst1|count[10] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.998 ns                ;
+; N/A                                     ; 192.05 MHz ( period = 5.207 ns )                    ; lcd_controller:inst1|count[10] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.995 ns                ;
+; N/A                                     ; 192.05 MHz ( period = 5.207 ns )                    ; lcd_controller:inst1|count[10] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.995 ns                ;
+; N/A                                     ; 192.12 MHz ( period = 5.205 ns )                    ; lcd_controller:inst1|count[10] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.993 ns                ;
+; N/A                                     ; 192.57 MHz ( period = 5.193 ns )                    ; lcd_controller:inst1|count[10] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.981 ns                ;
+; N/A                                     ; 192.60 MHz ( period = 5.192 ns )                    ; lcd_controller:inst1|count[10] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.980 ns                ;
+; N/A                                     ; 193.20 MHz ( period = 5.176 ns )                    ; lcd_controller:inst1|count[11] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.964 ns                ;
+; N/A                                     ; 193.31 MHz ( period = 5.173 ns )                    ; lcd_controller:inst1|count[11] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.961 ns                ;
+; N/A                                     ; 193.31 MHz ( period = 5.173 ns )                    ; lcd_controller:inst1|count[11] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.961 ns                ;
+; N/A                                     ; 193.39 MHz ( period = 5.171 ns )                    ; lcd_controller:inst1|count[11] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.959 ns                ;
+; N/A                                     ; 193.84 MHz ( period = 5.159 ns )                    ; lcd_controller:inst1|count[11] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.947 ns                ;
+; N/A                                     ; 193.87 MHz ( period = 5.158 ns )                    ; lcd_controller:inst1|count[11] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.946 ns                ;
+; N/A                                     ; 197.94 MHz ( period = 5.052 ns )                    ; lcd_controller:inst1|count[12] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.845 ns                ;
+; N/A                                     ; 198.06 MHz ( period = 5.049 ns )                    ; lcd_controller:inst1|count[12] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.842 ns                ;
+; N/A                                     ; 198.06 MHz ( period = 5.049 ns )                    ; lcd_controller:inst1|count[12] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.842 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; lcd_controller:inst1|count[12] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.840 ns                ;
+; N/A                                     ; 198.61 MHz ( period = 5.035 ns )                    ; lcd_controller:inst1|count[12] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.828 ns                ;
+; N/A                                     ; 198.65 MHz ( period = 5.034 ns )                    ; lcd_controller:inst1|count[12] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.827 ns                ;
+; N/A                                     ; 201.61 MHz ( period = 4.960 ns )                    ; lcd_controller:inst1|count[14] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.748 ns                ;
+; N/A                                     ; 201.65 MHz ( period = 4.959 ns )                    ; lcd_controller:inst1|count[16] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.752 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; lcd_controller:inst1|count[14] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.745 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; lcd_controller:inst1|count[14] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.745 ns                ;
+; N/A                                     ; 201.78 MHz ( period = 4.956 ns )                    ; lcd_controller:inst1|count[16] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.749 ns                ;
+; N/A                                     ; 201.78 MHz ( period = 4.956 ns )                    ; lcd_controller:inst1|count[16] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.749 ns                ;
+; N/A                                     ; 201.82 MHz ( period = 4.955 ns )                    ; lcd_controller:inst1|count[14] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.743 ns                ;
+; N/A                                     ; 201.86 MHz ( period = 4.954 ns )                    ; lcd_controller:inst1|count[16] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.747 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; lcd_controller:inst1|count[13] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.742 ns                ;
+; N/A                                     ; 202.18 MHz ( period = 4.946 ns )                    ; lcd_controller:inst1|count[13] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.739 ns                ;
+; N/A                                     ; 202.18 MHz ( period = 4.946 ns )                    ; lcd_controller:inst1|count[13] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.739 ns                ;
+; N/A                                     ; 202.27 MHz ( period = 4.944 ns )                    ; lcd_controller:inst1|count[13] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.737 ns                ;
+; N/A                                     ; 202.31 MHz ( period = 4.943 ns )                    ; lcd_controller:inst1|count[14] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.731 ns                ;
+; N/A                                     ; 202.35 MHz ( period = 4.942 ns )                    ; lcd_controller:inst1|count[14] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.730 ns                ;
+; N/A                                     ; 202.35 MHz ( period = 4.942 ns )                    ; lcd_controller:inst1|count[16] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.735 ns                ;
+; N/A                                     ; 202.39 MHz ( period = 4.941 ns )                    ; lcd_controller:inst1|count[16] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.734 ns                ;
+; N/A                                     ; 202.72 MHz ( period = 4.933 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.726 ns                ;
+; N/A                                     ; 202.76 MHz ( period = 4.932 ns )                    ; lcd_controller:inst1|count[13] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.725 ns                ;
+; N/A                                     ; 202.80 MHz ( period = 4.931 ns )                    ; lcd_controller:inst1|count[13] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.724 ns                ;
+; N/A                                     ; 204.12 MHz ( period = 4.899 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.687 ns                ;
+; N/A                                     ; 204.42 MHz ( period = 4.892 ns )                    ; lcd_controller:inst1|count[17] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.685 ns                ;
+; N/A                                     ; 204.54 MHz ( period = 4.889 ns )                    ; lcd_controller:inst1|count[17] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.682 ns                ;
+; N/A                                     ; 204.54 MHz ( period = 4.889 ns )                    ; lcd_controller:inst1|count[17] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.682 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; lcd_controller:inst1|count[17] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.680 ns                ;
+; N/A                                     ; 205.13 MHz ( period = 4.875 ns )                    ; lcd_controller:inst1|count[15] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.668 ns                ;
+; N/A                                     ; 205.13 MHz ( period = 4.875 ns )                    ; lcd_controller:inst1|count[17] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.668 ns                ;
+; N/A                                     ; 205.17 MHz ( period = 4.874 ns )                    ; lcd_controller:inst1|count[17] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.667 ns                ;
+; N/A                                     ; 205.25 MHz ( period = 4.872 ns )                    ; lcd_controller:inst1|count[15] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.665 ns                ;
+; N/A                                     ; 205.25 MHz ( period = 4.872 ns )                    ; lcd_controller:inst1|count[15] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.665 ns                ;
+; N/A                                     ; 205.34 MHz ( period = 4.870 ns )                    ; lcd_controller:inst1|count[15] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.663 ns                ;
+; N/A                                     ; 205.59 MHz ( period = 4.864 ns )                    ; lcd_controller:inst1|count[18] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.657 ns                ;
+; N/A                                     ; 205.72 MHz ( period = 4.861 ns )                    ; lcd_controller:inst1|count[18] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.654 ns                ;
+; N/A                                     ; 205.72 MHz ( period = 4.861 ns )                    ; lcd_controller:inst1|count[18] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.654 ns                ;
+; N/A                                     ; 205.80 MHz ( period = 4.859 ns )                    ; lcd_controller:inst1|count[18] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.652 ns                ;
+; N/A                                     ; 205.80 MHz ( period = 4.859 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.652 ns                ;
+; N/A                                     ; 205.85 MHz ( period = 4.858 ns )                    ; lcd_controller:inst1|count[15] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.651 ns                ;
+; N/A                                     ; 205.89 MHz ( period = 4.857 ns )                    ; lcd_controller:inst1|count[15] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.650 ns                ;
+; N/A                                     ; 206.31 MHz ( period = 4.847 ns )                    ; lcd_controller:inst1|count[18] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.640 ns                ;
+; N/A                                     ; 206.36 MHz ( period = 4.846 ns )                    ; lcd_controller:inst1|count[18] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.639 ns                ;
+; N/A                                     ; 206.53 MHz ( period = 4.842 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.630 ns                ;
+; N/A                                     ; 207.25 MHz ( period = 4.825 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.613 ns                ;
+; N/A                                     ; 207.81 MHz ( period = 4.812 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 209.29 MHz ( period = 4.778 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.564 ns                ;
+; N/A                                     ; 209.73 MHz ( period = 4.768 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.556 ns                ;
+; N/A                                     ; 210.61 MHz ( period = 4.748 ns )                    ; lcd_controller:inst1|count[19] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.534 ns                ;
+; N/A                                     ; 210.75 MHz ( period = 4.745 ns )                    ; lcd_controller:inst1|count[19] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 210.75 MHz ( period = 4.745 ns )                    ; lcd_controller:inst1|count[19] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 210.79 MHz ( period = 4.744 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.537 ns                ;
+; N/A                                     ; 210.84 MHz ( period = 4.743 ns )                    ; lcd_controller:inst1|count[19] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.529 ns                ;
+; N/A                                     ; 211.37 MHz ( period = 4.731 ns )                    ; lcd_controller:inst1|count[19] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.517 ns                ;
+; N/A                                     ; 211.42 MHz ( period = 4.730 ns )                    ; lcd_controller:inst1|count[19] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.516 ns                ;
+; N/A                                     ; 211.82 MHz ( period = 4.721 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.507 ns                ;
+; N/A                                     ; 213.90 MHz ( period = 4.675 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.468 ns                ;
+; N/A                                     ; 214.00 MHz ( period = 4.673 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.466 ns                ;
+; N/A                                     ; 214.13 MHz ( period = 4.670 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.463 ns                ;
+; N/A                                     ; 214.55 MHz ( period = 4.661 ns )                    ; lcd_controller:inst1|count[21] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.454 ns                ;
+; N/A                                     ; 214.68 MHz ( period = 4.658 ns )                    ; lcd_controller:inst1|count[21] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.451 ns                ;
+; N/A                                     ; 214.68 MHz ( period = 4.658 ns )                    ; lcd_controller:inst1|count[21] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.451 ns                ;
+; N/A                                     ; 214.73 MHz ( period = 4.657 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[27] ; clock      ; clock    ; None                        ; None                      ; 4.450 ns                ;
+; N/A                                     ; 214.78 MHz ( period = 4.656 ns )                    ; lcd_controller:inst1|count[21] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.449 ns                ;
+; N/A                                     ; 215.10 MHz ( period = 4.649 ns )                    ; lcd_controller:inst1|count[20] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.435 ns                ;
+; N/A                                     ; 215.24 MHz ( period = 4.646 ns )                    ; lcd_controller:inst1|count[20] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.432 ns                ;
+; N/A                                     ; 215.24 MHz ( period = 4.646 ns )                    ; lcd_controller:inst1|count[20] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.432 ns                ;
+; N/A                                     ; 215.33 MHz ( period = 4.644 ns )                    ; lcd_controller:inst1|count[21] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.437 ns                ;
+; N/A                                     ; 215.33 MHz ( period = 4.644 ns )                    ; lcd_controller:inst1|count[20] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.430 ns                ;
+; N/A                                     ; 215.38 MHz ( period = 4.643 ns )                    ; lcd_controller:inst1|count[21] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.436 ns                ;
+; N/A                                     ; 215.47 MHz ( period = 4.641 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.429 ns                ;
+; N/A                                     ; 215.89 MHz ( period = 4.632 ns )                    ; lcd_controller:inst1|count[20] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.418 ns                ;
+; N/A                                     ; 215.94 MHz ( period = 4.631 ns )                    ; lcd_controller:inst1|count[20] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.417 ns                ;
+; N/A                                     ; 216.31 MHz ( period = 4.623 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.414 ns                ;
+; N/A                                     ; 216.31 MHz ( period = 4.623 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[27] ; clock      ; clock    ; None                        ; None                      ; 4.411 ns                ;
+; N/A                                     ; 216.50 MHz ( period = 4.619 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.412 ns                ;
+; N/A                                     ; 217.44 MHz ( period = 4.599 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.392 ns                ;
+; N/A                                     ; 218.15 MHz ( period = 4.584 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.372 ns                ;
+; N/A                                     ; 219.01 MHz ( period = 4.566 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[27] ; clock      ; clock    ; None                        ; None                      ; 4.354 ns                ;
+; N/A                                     ; 219.68 MHz ( period = 4.552 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.343 ns                ;
+; N/A                                     ; 220.02 MHz ( period = 4.545 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.338 ns                ;
+; N/A                                     ; 221.24 MHz ( period = 4.520 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.313 ns                ;
+; N/A                                     ; 222.32 MHz ( period = 4.498 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.289 ns                ;
+; N/A                                     ; 222.37 MHz ( period = 4.497 ns )                    ; lcd_controller:inst1|count[22] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.283 ns                ;
+; N/A                                     ; 222.52 MHz ( period = 4.494 ns )                    ; lcd_controller:inst1|count[22] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.280 ns                ;
+; N/A                                     ; 222.52 MHz ( period = 4.494 ns )                    ; lcd_controller:inst1|count[22] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.280 ns                ;
+; N/A                                     ; 222.62 MHz ( period = 4.492 ns )                    ; lcd_controller:inst1|count[22] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.278 ns                ;
+; N/A                                     ; 222.92 MHz ( period = 4.486 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.279 ns                ;
+; N/A                                     ; 223.21 MHz ( period = 4.480 ns )                    ; lcd_controller:inst1|count[22] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.266 ns                ;
+; N/A                                     ; 223.26 MHz ( period = 4.479 ns )                    ; lcd_controller:inst1|count[22] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.265 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|count[27] ; clock      ; clock    ; None                        ; None                      ; 4.261 ns                ;
+; N/A                                     ; 224.16 MHz ( period = 4.461 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.254 ns                ;
+; N/A                                     ; 224.77 MHz ( period = 4.449 ns )                    ; lcd_controller:inst1|count[23] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.235 ns                ;
+; N/A                                     ; 224.92 MHz ( period = 4.446 ns )                    ; lcd_controller:inst1|count[23] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.232 ns                ;
+; N/A                                     ; 224.92 MHz ( period = 4.446 ns )                    ; lcd_controller:inst1|count[23] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.232 ns                ;
+; N/A                                     ; 224.92 MHz ( period = 4.446 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.239 ns                ;
+; N/A                                     ; 224.97 MHz ( period = 4.445 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[24] ; clock      ; clock    ; None                        ; None                      ; 4.238 ns                ;
+; N/A                                     ; 225.02 MHz ( period = 4.444 ns )                    ; lcd_controller:inst1|count[23] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.230 ns                ;
+; N/A                                     ; 225.02 MHz ( period = 4.444 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[26] ; clock      ; clock    ; None                        ; None                      ; 4.237 ns                ;
+; N/A                                     ; 225.63 MHz ( period = 4.432 ns )                    ; lcd_controller:inst1|count[23] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.218 ns                ;
+; N/A                                     ; 225.68 MHz ( period = 4.431 ns )                    ; lcd_controller:inst1|count[23] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.217 ns                ;
+; N/A                                     ; 226.50 MHz ( period = 4.415 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.208 ns                ;
+; N/A                                     ; 226.71 MHz ( period = 4.411 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[24] ; clock      ; clock    ; None                        ; None                      ; 4.199 ns                ;
+; N/A                                     ; 226.76 MHz ( period = 4.410 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[26] ; clock      ; clock    ; None                        ; None                      ; 4.198 ns                ;
+; N/A                                     ; 227.32 MHz ( period = 4.399 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.190 ns                ;
+; N/A                                     ; 227.43 MHz ( period = 4.397 ns )                    ; lcd_controller:inst1|count[4]  ; lcd_controller:inst1|count[27] ; clock      ; clock    ; None                        ; None                      ; 4.190 ns                ;
+; N/A                                     ; 227.95 MHz ( period = 4.387 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|count[30] ; clock      ; clock    ; None                        ; None                      ; 4.180 ns                ;
+; N/A                                     ; 228.10 MHz ( period = 4.384 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[25] ; clock      ; clock    ; None                        ; None                      ; 4.177 ns                ;
+; N/A                                     ; 229.31 MHz ( period = 4.361 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.154 ns                ;
+; N/A                                     ; 229.67 MHz ( period = 4.354 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[24] ; clock      ; clock    ; None                        ; None                      ; 4.142 ns                ;
+; N/A                                     ; 229.73 MHz ( period = 4.353 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[26] ; clock      ; clock    ; None                        ; None                      ; 4.141 ns                ;
+; N/A                                     ; 229.89 MHz ( period = 4.350 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[25] ; clock      ; clock    ; None                        ; None                      ; 4.138 ns                ;
+; N/A                                     ; 230.26 MHz ( period = 4.343 ns )                    ; lcd_controller:inst1|count[5]  ; lcd_controller:inst1|count[27] ; clock      ; clock    ; None                        ; None                      ; 4.136 ns                ;
+; N/A                                     ; 230.41 MHz ( period = 4.340 ns )                    ; lcd_controller:inst1|count[7]  ; lcd_controller:inst1|count[28] ; clock      ; clock    ; None                        ; None                      ; 4.131 ns                ;
+; N/A                                     ; 232.02 MHz ( period = 4.310 ns )                    ; lcd_controller:inst1|count[0]  ; lcd_controller:inst1|count[23] ; clock      ; clock    ; None                        ; None                      ; 4.103 ns                ;
+; N/A                                     ; 232.56 MHz ( period = 4.300 ns )                    ; lcd_controller:inst1|count[24] ; lcd_controller:inst1|state.s20 ; clock      ; clock    ; None                        ; None                      ; 4.086 ns                ;
+; N/A                                     ; 232.72 MHz ( period = 4.297 ns )                    ; lcd_controller:inst1|count[24] ; lcd_controller:inst1|state.s24 ; clock      ; clock    ; None                        ; None                      ; 4.083 ns                ;
+; N/A                                     ; 232.72 MHz ( period = 4.297 ns )                    ; lcd_controller:inst1|count[24] ; lcd_controller:inst1|state.s12 ; clock      ; clock    ; None                        ; None                      ; 4.083 ns                ;
+; N/A                                     ; 232.83 MHz ( period = 4.295 ns )                    ; lcd_controller:inst1|count[24] ; lcd_controller:inst1|state.s22 ; clock      ; clock    ; None                        ; None                      ; 4.081 ns                ;
+; N/A                                     ; 232.94 MHz ( period = 4.293 ns )                    ; lcd_controller:inst1|count[2]  ; lcd_controller:inst1|count[25] ; clock      ; clock    ; None                        ; None                      ; 4.081 ns                ;
+; N/A                                     ; 233.10 MHz ( period = 4.290 ns )                    ; lcd_controller:inst1|count[8]  ; lcd_controller:inst1|count[31] ; clock      ; clock    ; None                        ; None                      ; 4.083 ns                ;
+; N/A                                     ; 233.48 MHz ( period = 4.283 ns )                    ; lcd_controller:inst1|count[24] ; lcd_controller:inst1|state.s1  ; clock      ; clock    ; None                        ; None                      ; 4.069 ns                ;
+; N/A                                     ; 233.54 MHz ( period = 4.282 ns )                    ; lcd_controller:inst1|count[24] ; lcd_controller:inst1|state.s10 ; clock      ; clock    ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 233.86 MHz ( period = 4.276 ns )                    ; lcd_controller:inst1|count[1]  ; lcd_controller:inst1|count[23] ; clock      ; clock    ; None                        ; None                      ; 4.064 ns                ;
+; N/A                                     ; 234.63 MHz ( period = 4.262 ns )                    ; lcd_controller:inst1|count[6]  ; lcd_controller:inst1|count[29] ; clock      ; clock    ; None                        ; None                      ; 4.055 ns                ;
+; N/A                                     ; 234.96 MHz ( period = 4.256 ns )                    ; lcd_controller:inst1|count[3]  ; lcd_controller:inst1|count[24] ; clock      ; clock    ; None                        ; None                      ; 4.049 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                ;                                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; tsu                                                                                       ;
++-------+--------------+------------+---------+----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                               ; To Clock ;
++-------+--------------+------------+---------+----------------------------------+----------+
+; N/A   ; None         ; 3.012 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[5] ; clock    ;
+; N/A   ; None         ; 3.012 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[4] ; clock    ;
+; N/A   ; None         ; 3.012 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[3] ; clock    ;
+; N/A   ; None         ; 3.012 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[2] ; clock    ;
+; N/A   ; None         ; 3.012 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[1] ; clock    ;
+; N/A   ; None         ; 2.745 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[0] ; clock    ;
+; N/A   ; None         ; 1.764 ns   ; reset_n ; lcd_controller:inst1|LCD_EN      ; clock    ;
+; N/A   ; None         ; 1.764 ns   ; reset_n ; lcd_controller:inst1|LCD_RS      ; clock    ;
+; N/A   ; None         ; 1.764 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[7] ; clock    ;
+; N/A   ; None         ; 1.764 ns   ; reset_n ; lcd_controller:inst1|LCD_DATA[6] ; clock    ;
++-------+--------------+------------+---------+----------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------+
+; tco                                                                                             ;
++-------+--------------+------------+----------------------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From                             ; To          ; From Clock ;
++-------+--------------+------------+----------------------------------+-------------+------------+
+; N/A   ; None         ; 11.351 ns  ; lcd_controller:inst1|LCD_DATA[7] ; LCD_DATA[7] ; clock      ;
+; N/A   ; None         ; 11.316 ns  ; lcd_controller:inst1|LCD_EN      ; LCD_EN      ; clock      ;
+; N/A   ; None         ; 11.303 ns  ; lcd_controller:inst1|LCD_RS      ; LCD_RS      ; clock      ;
+; N/A   ; None         ; 11.301 ns  ; lcd_controller:inst1|LCD_DATA[6] ; LCD_DATA[6] ; clock      ;
+; N/A   ; None         ; 11.297 ns  ; lcd_controller:inst1|LCD_DATA[2] ; LCD_DATA[2] ; clock      ;
+; N/A   ; None         ; 11.295 ns  ; lcd_controller:inst1|LCD_DATA[3] ; LCD_DATA[3] ; clock      ;
+; N/A   ; None         ; 11.287 ns  ; lcd_controller:inst1|LCD_DATA[0] ; LCD_DATA[0] ; clock      ;
+; N/A   ; None         ; 11.285 ns  ; lcd_controller:inst1|LCD_DATA[4] ; LCD_DATA[4] ; clock      ;
+; N/A   ; None         ; 11.035 ns  ; lcd_controller:inst1|LCD_DATA[5] ; LCD_DATA[5] ; clock      ;
+; N/A   ; None         ; 11.008 ns  ; lcd_controller:inst1|LCD_DATA[1] ; LCD_DATA[1] ; clock      ;
++-------+--------------+------------+----------------------------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; th                                                                                              ;
++---------------+-------------+-----------+---------+----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                               ; To Clock ;
++---------------+-------------+-----------+---------+----------------------------------+----------+
+; N/A           ; None        ; -1.534 ns ; reset_n ; lcd_controller:inst1|LCD_EN      ; clock    ;
+; N/A           ; None        ; -1.534 ns ; reset_n ; lcd_controller:inst1|LCD_RS      ; clock    ;
+; N/A           ; None        ; -1.534 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[7] ; clock    ;
+; N/A           ; None        ; -1.534 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[6] ; clock    ;
+; N/A           ; None        ; -2.515 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[0] ; clock    ;
+; N/A           ; None        ; -2.782 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[5] ; clock    ;
+; N/A           ; None        ; -2.782 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[4] ; clock    ;
+; N/A           ; None        ; -2.782 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[3] ; clock    ;
+; N/A           ; None        ; -2.782 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[2] ; clock    ;
+; N/A           ; None        ; -2.782 ns ; reset_n ; lcd_controller:inst1|LCD_DATA[1] ; clock    ;
++---------------+-------------+-----------+---------+----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.2 Build 151 09/26/2007 SJ Full Version
+    Info: Processing started: Fri Mar 07 10:58:30 2008
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off lcd -c lcd --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "lcd_controller:inst1|clock" as buffer
+Info: Clock "clock" has Internal fmax of 167.2 MHz between source register "lcd_controller:inst1|count[0]" and destination register "lcd_controller:inst1|state.s20" (period= 5.981 ns)
+    Info: + Longest register to register delay is 5.774 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X17_Y20_N15; Fanout = 13; REG Node = 'lcd_controller:inst1|count[0]'
+        Info: 2: + IC(0.478 ns) + CELL(0.393 ns) = 0.871 ns; Loc. = LCCOMB_X16_Y20_N0; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~791'
+        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 0.942 ns; Loc. = LCCOMB_X16_Y20_N2; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~793'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.013 ns; Loc. = LCCOMB_X16_Y20_N4; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~795'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.084 ns; Loc. = LCCOMB_X16_Y20_N6; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~797'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.155 ns; Loc. = LCCOMB_X16_Y20_N8; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~799'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.226 ns; Loc. = LCCOMB_X16_Y20_N10; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~801'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.297 ns; Loc. = LCCOMB_X16_Y20_N12; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~803'
+        Info: 9: + IC(0.000 ns) + CELL(0.159 ns) = 1.456 ns; Loc. = LCCOMB_X16_Y20_N14; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~805'
+        Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 1.527 ns; Loc. = LCCOMB_X16_Y20_N16; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~807'
+        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.598 ns; Loc. = LCCOMB_X16_Y20_N18; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~809'
+        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 1.669 ns; Loc. = LCCOMB_X16_Y20_N20; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~811'
+        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 1.740 ns; Loc. = LCCOMB_X16_Y20_N22; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~813'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 1.811 ns; Loc. = LCCOMB_X16_Y20_N24; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~815'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 1.882 ns; Loc. = LCCOMB_X16_Y20_N26; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~817'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 1.953 ns; Loc. = LCCOMB_X16_Y20_N28; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~819'
+        Info: 17: + IC(0.000 ns) + CELL(0.146 ns) = 2.099 ns; Loc. = LCCOMB_X16_Y20_N30; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~821'
+        Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 2.170 ns; Loc. = LCCOMB_X16_Y19_N0; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~823'
+        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.241 ns; Loc. = LCCOMB_X16_Y19_N2; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~825'
+        Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.312 ns; Loc. = LCCOMB_X16_Y19_N4; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~827'
+        Info: 21: + IC(0.000 ns) + CELL(0.071 ns) = 2.383 ns; Loc. = LCCOMB_X16_Y19_N6; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~829'
+        Info: 22: + IC(0.000 ns) + CELL(0.071 ns) = 2.454 ns; Loc. = LCCOMB_X16_Y19_N8; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~831'
+        Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 2.525 ns; Loc. = LCCOMB_X16_Y19_N10; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~833'
+        Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 2.596 ns; Loc. = LCCOMB_X16_Y19_N12; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~835'
+        Info: 25: + IC(0.000 ns) + CELL(0.159 ns) = 2.755 ns; Loc. = LCCOMB_X16_Y19_N14; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~837'
+        Info: 26: + IC(0.000 ns) + CELL(0.071 ns) = 2.826 ns; Loc. = LCCOMB_X16_Y19_N16; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~839'
+        Info: 27: + IC(0.000 ns) + CELL(0.071 ns) = 2.897 ns; Loc. = LCCOMB_X16_Y19_N18; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~841'
+        Info: 28: + IC(0.000 ns) + CELL(0.071 ns) = 2.968 ns; Loc. = LCCOMB_X16_Y19_N20; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~843'
+        Info: 29: + IC(0.000 ns) + CELL(0.071 ns) = 3.039 ns; Loc. = LCCOMB_X16_Y19_N22; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~845'
+        Info: 30: + IC(0.000 ns) + CELL(0.410 ns) = 3.449 ns; Loc. = LCCOMB_X16_Y19_N24; Fanout = 2; COMB Node = 'lcd_controller:inst1|Add0~846'
+        Info: 31: + IC(0.801 ns) + CELL(0.275 ns) = 4.525 ns; Loc. = LCCOMB_X15_Y20_N16; Fanout = 2; COMB Node = 'lcd_controller:inst1|LessThan0~489'
+        Info: 32: + IC(0.464 ns) + CELL(0.275 ns) = 5.264 ns; Loc. = LCCOMB_X15_Y19_N2; Fanout = 4; COMB Node = 'lcd_controller:inst1|LessThan1~315'
+        Info: 33: + IC(0.276 ns) + CELL(0.150 ns) = 5.690 ns; Loc. = LCCOMB_X15_Y19_N24; Fanout = 1; COMB Node = 'lcd_controller:inst1|state~69'
+        Info: 34: + IC(0.000 ns) + CELL(0.084 ns) = 5.774 ns; Loc. = LCFF_X15_Y19_N25; Fanout = 9; REG Node = 'lcd_controller:inst1|state.s20'
+        Info: Total cell delay = 3.755 ns ( 65.03 % )
+        Info: Total interconnect delay = 2.019 ns ( 34.97 % )
+    Info: - Smallest clock skew is 0.007 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 6.398 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(2.007 ns) + CELL(0.787 ns) = 3.793 ns; Loc. = LCFF_X27_Y32_N3; Fanout = 1; REG Node = 'lcd_controller:inst1|clock'
+            Info: 3: + IC(1.044 ns) + CELL(0.000 ns) = 4.837 ns; Loc. = CLKCTRL_G9; Fanout = 53; COMB Node = 'lcd_controller:inst1|clock~clkctrl'
+            Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 6.398 ns; Loc. = LCFF_X15_Y19_N25; Fanout = 9; REG Node = 'lcd_controller:inst1|state.s20'
+            Info: Total cell delay = 2.323 ns ( 36.31 % )
+            Info: Total interconnect delay = 4.075 ns ( 63.69 % )
+        Info: - Longest clock path from clock "clock" to source register is 6.391 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(2.007 ns) + CELL(0.787 ns) = 3.793 ns; Loc. = LCFF_X27_Y32_N3; Fanout = 1; REG Node = 'lcd_controller:inst1|clock'
+            Info: 3: + IC(1.044 ns) + CELL(0.000 ns) = 4.837 ns; Loc. = CLKCTRL_G9; Fanout = 53; COMB Node = 'lcd_controller:inst1|clock~clkctrl'
+            Info: 4: + IC(1.017 ns) + CELL(0.537 ns) = 6.391 ns; Loc. = LCFF_X17_Y20_N15; Fanout = 13; REG Node = 'lcd_controller:inst1|count[0]'
+            Info: Total cell delay = 2.323 ns ( 36.35 % )
+            Info: Total interconnect delay = 4.068 ns ( 63.65 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "lcd_controller:inst1|LCD_DATA[5]" (data pin = "reset_n", clock pin = "clock") is 3.012 ns
+    Info: + Longest pin to register delay is 9.441 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_G26; Fanout = 48; PIN Node = 'reset_n'
+        Info: 2: + IC(6.787 ns) + CELL(0.438 ns) = 8.087 ns; Loc. = LCCOMB_X15_Y20_N0; Fanout = 6; COMB Node = 'lcd_controller:inst1|LCD_DATA[5]~81'
+        Info: 3: + IC(0.694 ns) + CELL(0.660 ns) = 9.441 ns; Loc. = LCFF_X14_Y21_N21; Fanout = 1; REG Node = 'lcd_controller:inst1|LCD_DATA[5]'
+        Info: Total cell delay = 1.960 ns ( 20.76 % )
+        Info: Total interconnect delay = 7.481 ns ( 79.24 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 6.393 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(2.007 ns) + CELL(0.787 ns) = 3.793 ns; Loc. = LCFF_X27_Y32_N3; Fanout = 1; REG Node = 'lcd_controller:inst1|clock'
+        Info: 3: + IC(1.044 ns) + CELL(0.000 ns) = 4.837 ns; Loc. = CLKCTRL_G9; Fanout = 53; COMB Node = 'lcd_controller:inst1|clock~clkctrl'
+        Info: 4: + IC(1.019 ns) + CELL(0.537 ns) = 6.393 ns; Loc. = LCFF_X14_Y21_N21; Fanout = 1; REG Node = 'lcd_controller:inst1|LCD_DATA[5]'
+        Info: Total cell delay = 2.323 ns ( 36.34 % )
+        Info: Total interconnect delay = 4.070 ns ( 63.66 % )
+Info: tco from clock "clock" to destination pin "LCD_DATA[7]" through register "lcd_controller:inst1|LCD_DATA[7]" is 11.351 ns
+    Info: + Longest clock path from clock "clock" to source register is 6.398 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(2.007 ns) + CELL(0.787 ns) = 3.793 ns; Loc. = LCFF_X27_Y32_N3; Fanout = 1; REG Node = 'lcd_controller:inst1|clock'
+        Info: 3: + IC(1.044 ns) + CELL(0.000 ns) = 4.837 ns; Loc. = CLKCTRL_G9; Fanout = 53; COMB Node = 'lcd_controller:inst1|clock~clkctrl'
+        Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 6.398 ns; Loc. = LCFF_X14_Y19_N1; Fanout = 2; REG Node = 'lcd_controller:inst1|LCD_DATA[7]'
+        Info: Total cell delay = 2.323 ns ( 36.31 % )
+        Info: Total interconnect delay = 4.075 ns ( 63.69 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 4.703 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X14_Y19_N1; Fanout = 2; REG Node = 'lcd_controller:inst1|LCD_DATA[7]'
+        Info: 2: + IC(2.051 ns) + CELL(2.652 ns) = 4.703 ns; Loc. = PIN_H3; Fanout = 0; PIN Node = 'LCD_DATA[7]'
+        Info: Total cell delay = 2.652 ns ( 56.39 % )
+        Info: Total interconnect delay = 2.051 ns ( 43.61 % )
+Info: th for register "lcd_controller:inst1|LCD_EN" (data pin = "reset_n", clock pin = "clock") is -1.534 ns
+    Info: + Longest clock path from clock "clock" to destination register is 6.398 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(2.007 ns) + CELL(0.787 ns) = 3.793 ns; Loc. = LCFF_X27_Y32_N3; Fanout = 1; REG Node = 'lcd_controller:inst1|clock'
+        Info: 3: + IC(1.044 ns) + CELL(0.000 ns) = 4.837 ns; Loc. = CLKCTRL_G9; Fanout = 53; COMB Node = 'lcd_controller:inst1|clock~clkctrl'
+        Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 6.398 ns; Loc. = LCFF_X14_Y19_N3; Fanout = 2; REG Node = 'lcd_controller:inst1|LCD_EN'
+        Info: Total cell delay = 2.323 ns ( 36.31 % )
+        Info: Total interconnect delay = 4.075 ns ( 63.69 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 8.198 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_G26; Fanout = 48; PIN Node = 'reset_n'
+        Info: 2: + IC(6.676 ns) + CELL(0.660 ns) = 8.198 ns; Loc. = LCFF_X14_Y19_N3; Fanout = 2; REG Node = 'lcd_controller:inst1|LCD_EN'
+        Info: Total cell delay = 1.522 ns ( 18.57 % )
+        Info: Total interconnect delay = 6.676 ns ( 81.43 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Allocated 117 megabytes of memory during processing
+    Info: Processing ended: Fri Mar 07 10:58:31 2008
+    Info: Elapsed time: 00:00:01
+
+

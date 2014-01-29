@@ -1,0 +1,31 @@
+DEPTH = 256;	% Memory depth and width are required	%
+WIDTH = 16;		% Enter a decimal number	%
+
+ADDRESS_RADIX = HEX;	% Address and value radixes are optional	%
+DATA_RADIX = HEX;		% Enter BIN, DEC, HEX, or OCT; unless 	%
+						% otherwise specified, radixes = HEX	%
+-- Specify values for addresses, which can be single address or range
+CONTENT
+	BEGIN
+[00..FF]	: 0000; % Range--Every address from 00 to FF = 0000 (Default) %
+00 :0210; % LOAD AC with MEM(10) %
+01 :0011; % ADD MEM(11) to AC %
+02 :0112; % STORE AC in MEM(12) %
+03 :0212; % LOAD AC with MEM(12) check for new value of FFFF %
+---------Test for the SUBI instruction -----------------------
+04 :0211; %Load AC with MEM(11) %
+05 :0513; %TestC-D=2222shouldbe2222
+-- 05isopcode d isonlocation13%
+06 :0114; % STORE AC in MEM(14) Every instruction added will store in memory below %
+--Every instruction "subt, xor" will have 3 instructions like ----above
+--------------------------------------------------------------
+07	:0307;	% JUMP to same line (loop forever) %
+--03 is jump, 07 is this same line. 07 will change if more lines are added above
+--------------------------------------------------------------
+10	:AAAA;	% Data Value of B %
+11	:5555;	% Data Value of C%
+12	:0000;	% Data Value of A - should be FFFF after running program %
+13	:3333;	% Data Value of D %
+14  :0000;  % Data value E should be 2222 after running program %
+END ;	
+

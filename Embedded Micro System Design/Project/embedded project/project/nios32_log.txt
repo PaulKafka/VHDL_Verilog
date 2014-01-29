@@ -1,0 +1,96 @@
+Altera SOPC Builder Version 9.12 Build 350
+Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
+
+
+No .sopc_builder configuration file(!)
+# 2013.11.19 20:55:32 (*) mk_custom_sdk starting
+# 2013.11.19 20:55:32 (*) Reading project F:/My Documents/Desktop/hw8a/nios32.ptf.
+
+# 2013.11.19 20:55:32 (*) Finding all CPUs
+# 2013.11.19 20:55:32 (*) Finding all available components
+
+# 2013.11.19 20:55:32 (*) Reading F:/My Documents/Desktop/hw8a/.sopc_builder/install.ptf
+
+# 2013.11.19 20:55:32 (*) Found 67 components
+
+# 2013.11.19 20:55:33 (*) Finding all peripherals
+
+# 2013.11.19 20:55:33 (*) Finding software components
+
+# 2013.11.19 20:55:33 (*) (Legacy SDK Generation Skipped)
+# 2013.11.19 20:55:33 (*) (All TCL Script Generation Skipped)
+# 2013.11.19 20:55:33 (*) (No Libraries Built)
+# 2013.11.19 20:55:33 (*) (Contents Generation Skipped)
+# 2013.11.19 20:55:33 (*) mk_custom_sdk finishing
+
+# 2013.11.19 20:55:33 (*) Starting generation for system: nios32.
+
+.
+.
+.
+.
+...
+.
+.
+..
+
+# 2013.11.19 20:55:35 (*) Running Generator Program for cpu
+
+# 2013.11.19 20:55:37 (*) Starting Nios II generation
+# 2013.11.19 20:55:38 (*)   Checking for plaintext license.
+# 2013.11.19 20:55:39 (*)   Plaintext license not found.
+# 2013.11.19 20:55:39 (*)   Checking for encrypted license (non-evaluation).
+# 2013.11.19 20:55:40 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2013.11.19 20:55:40 (*)   Getting CPU configuration settings
+# 2013.11.19 20:55:40 (*)   Elaborating CPU configuration settings
+# 2013.11.19 20:55:40 (*)   Creating all objects for CPU
+
+# 2013.11.19 20:55:41 (*)     Pipeline frontend
+# 2013.11.19 20:55:43 (*)   Generating HDL from CPU objects
+# 2013.11.19 20:55:49 (*)   Creating encrypted HDL
+# 2013.11.19 20:55:52 (*) Done Nios II generation
+
+# 2013.11.19 20:55:52 (*) Running Generator Program for jtag_uart
+
+# 2013.11.19 20:55:54 (*) Running Generator Program for uart
+
+# 2013.11.19 20:55:56 (*) Running Generator Program for timer
+
+# 2013.11.19 20:55:57 (*) Running Generator Program for buttons
+
+# 2013.11.19 20:55:58 (*) Running Generator Program for switches
+
+# 2013.11.19 20:55:59 (*) Running Generator Program for LEDS
+
+# 2013.11.19 20:56:00 (*) Running Generator Program for sdram
+
+# 2013.11.19 20:56:02 (*) Running Generator Program for lcd
+
+# 2013.11.19 20:56:03 (*) Running Generator Program for flash
+
+# 2013.11.19 20:56:04 (*) Running Generator Program for cpu_bitswap
+
+.
+
+# 2013.11.19 20:56:05 (*) Running Test Generator Program for sdram
+
+# 2013.11.19 20:56:06 (*) Making arbitration and system (top) modules.
+
+# 2013.11.19 20:56:14 (*) Generating Quartus symbol for top level: nios32
+
+# 2013.11.19 20:56:14 (*) Symbol F:/My Documents/Desktop/hw8a/nios32.bsf already exists, no need to regenerate
+# 2013.11.19 20:56:14 (*) Creating command-line system-generation script: F:/My Documents/Desktop/hw8a/nios32_generation_script
+
+# 2013.11.19 20:56:15 (*) Running setup for HDL simulator: modelsim
+
+
+# 2013.11.19 20:56:15 (*) Completed generation for system: nios32.
+# 2013.11.19 20:56:15 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : F:/My Documents/Desktop/hw8a/nios32.ptf 
+  System HDL Model : F:/My Documents/Desktop/hw8a/nios32.vhd 
+  System Generation Script : F:/My Documents/Desktop/hw8a/nios32_generation_script 
+
+# 2013.11.19 20:56:15 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

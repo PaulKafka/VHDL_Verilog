@@ -1,0 +1,881 @@
+Simulator report for hw3
+Fri Feb 01 09:37:27 2008
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 360 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 360          ;
+; Total output ports checked                          ; 360          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 360          ;
+; Total output ports with no 1-value coverage         ; 360          ;
+; Total output ports with no 0-value coverage         ; 360          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------+
+; Missing 1-Value Coverage                            ;
++---------------+------------------+------------------+
+; Node Name     ; Output Port Name ; Output Port Type ;
++---------------+------------------+------------------+
+; |hw3|p0[0]    ; |hw3|p0[0]       ; out0             ;
+; |hw3|p0[1]    ; |hw3|p0[1]       ; out0             ;
+; |hw3|p0[2]    ; |hw3|p0[2]       ; out0             ;
+; |hw3|p0[3]    ; |hw3|p0[3]       ; out0             ;
+; |hw3|p0[4]    ; |hw3|p0[4]       ; out0             ;
+; |hw3|p0[5]    ; |hw3|p0[5]       ; out0             ;
+; |hw3|p0[6]    ; |hw3|p0[6]       ; out0             ;
+; |hw3|p0[7]    ; |hw3|p0[7]       ; out0             ;
+; |hw3|p1[1]    ; |hw3|p1[1]       ; out0             ;
+; |hw3|p1[2]    ; |hw3|p1[2]       ; out0             ;
+; |hw3|p1[3]    ; |hw3|p1[3]       ; out0             ;
+; |hw3|p1[4]    ; |hw3|p1[4]       ; out0             ;
+; |hw3|p1[5]    ; |hw3|p1[5]       ; out0             ;
+; |hw3|p1[6]    ; |hw3|p1[6]       ; out0             ;
+; |hw3|p1[7]    ; |hw3|p1[7]       ; out0             ;
+; |hw3|p1[8]    ; |hw3|p1[8]       ; out0             ;
+; |hw3|p2[2]    ; |hw3|p2[2]       ; out0             ;
+; |hw3|p2[3]    ; |hw3|p2[3]       ; out0             ;
+; |hw3|p2[4]    ; |hw3|p2[4]       ; out0             ;
+; |hw3|p2[5]    ; |hw3|p2[5]       ; out0             ;
+; |hw3|p2[6]    ; |hw3|p2[6]       ; out0             ;
+; |hw3|p2[7]    ; |hw3|p2[7]       ; out0             ;
+; |hw3|p2[8]    ; |hw3|p2[8]       ; out0             ;
+; |hw3|p2[9]    ; |hw3|p2[9]       ; out0             ;
+; |hw3|p3[3]    ; |hw3|p3[3]       ; out0             ;
+; |hw3|p3[4]    ; |hw3|p3[4]       ; out0             ;
+; |hw3|p3[5]    ; |hw3|p3[5]       ; out0             ;
+; |hw3|p3[6]    ; |hw3|p3[6]       ; out0             ;
+; |hw3|p3[7]    ; |hw3|p3[7]       ; out0             ;
+; |hw3|p3[8]    ; |hw3|p3[8]       ; out0             ;
+; |hw3|p3[9]    ; |hw3|p3[9]       ; out0             ;
+; |hw3|p3[10]   ; |hw3|p3[10]      ; out0             ;
+; |hw3|p4[4]    ; |hw3|p4[4]       ; out0             ;
+; |hw3|p4[5]    ; |hw3|p4[5]       ; out0             ;
+; |hw3|p4[6]    ; |hw3|p4[6]       ; out0             ;
+; |hw3|p4[7]    ; |hw3|p4[7]       ; out0             ;
+; |hw3|p4[8]    ; |hw3|p4[8]       ; out0             ;
+; |hw3|p4[9]    ; |hw3|p4[9]       ; out0             ;
+; |hw3|p4[10]   ; |hw3|p4[10]      ; out0             ;
+; |hw3|p4[11]   ; |hw3|p4[11]      ; out0             ;
+; |hw3|p5[5]    ; |hw3|p5[5]       ; out0             ;
+; |hw3|p5[6]    ; |hw3|p5[6]       ; out0             ;
+; |hw3|p5[7]    ; |hw3|p5[7]       ; out0             ;
+; |hw3|p5[8]    ; |hw3|p5[8]       ; out0             ;
+; |hw3|p5[9]    ; |hw3|p5[9]       ; out0             ;
+; |hw3|p5[10]   ; |hw3|p5[10]      ; out0             ;
+; |hw3|p5[11]   ; |hw3|p5[11]      ; out0             ;
+; |hw3|p5[12]   ; |hw3|p5[12]      ; out0             ;
+; |hw3|p6[6]    ; |hw3|p6[6]       ; out0             ;
+; |hw3|p6[7]    ; |hw3|p6[7]       ; out0             ;
+; |hw3|p6[8]    ; |hw3|p6[8]       ; out0             ;
+; |hw3|p6[9]    ; |hw3|p6[9]       ; out0             ;
+; |hw3|p6[10]   ; |hw3|p6[10]      ; out0             ;
+; |hw3|p6[11]   ; |hw3|p6[11]      ; out0             ;
+; |hw3|p6[12]   ; |hw3|p6[12]      ; out0             ;
+; |hw3|p6[13]   ; |hw3|p6[13]      ; out0             ;
+; |hw3|p7[7]    ; |hw3|p7[7]       ; out0             ;
+; |hw3|p7[8]    ; |hw3|p7[8]       ; out0             ;
+; |hw3|p7[9]    ; |hw3|p7[9]       ; out0             ;
+; |hw3|p7[10]   ; |hw3|p7[10]      ; out0             ;
+; |hw3|p7[11]   ; |hw3|p7[11]      ; out0             ;
+; |hw3|p7[12]   ; |hw3|p7[12]      ; out0             ;
+; |hw3|p7[13]   ; |hw3|p7[13]      ; out0             ;
+; |hw3|p7[14]   ; |hw3|p7[14]      ; out0             ;
+; |hw3|a[0]     ; |hw3|a[0]        ; out              ;
+; |hw3|a[1]     ; |hw3|a[1]        ; out              ;
+; |hw3|a[2]     ; |hw3|a[2]        ; out              ;
+; |hw3|a[3]     ; |hw3|a[3]        ; out              ;
+; |hw3|a[4]     ; |hw3|a[4]        ; out              ;
+; |hw3|a[5]     ; |hw3|a[5]        ; out              ;
+; |hw3|a[6]     ; |hw3|a[6]        ; out              ;
+; |hw3|a[7]     ; |hw3|a[7]        ; out              ;
+; |hw3|b[0]     ; |hw3|b[0]        ; out              ;
+; |hw3|b[1]     ; |hw3|b[1]        ; out              ;
+; |hw3|b[2]     ; |hw3|b[2]        ; out              ;
+; |hw3|b[3]     ; |hw3|b[3]        ; out              ;
+; |hw3|b[4]     ; |hw3|b[4]        ; out              ;
+; |hw3|b[5]     ; |hw3|b[5]        ; out              ;
+; |hw3|b[6]     ; |hw3|b[6]        ; out              ;
+; |hw3|b[7]     ; |hw3|b[7]        ; out              ;
+; |hw3|y[0]     ; |hw3|y[0]        ; pin_out          ;
+; |hw3|y[1]     ; |hw3|y[1]        ; pin_out          ;
+; |hw3|y[2]     ; |hw3|y[2]        ; pin_out          ;
+; |hw3|y[3]     ; |hw3|y[3]        ; pin_out          ;
+; |hw3|y[4]     ; |hw3|y[4]        ; pin_out          ;
+; |hw3|y[5]     ; |hw3|y[5]        ; pin_out          ;
+; |hw3|y[6]     ; |hw3|y[6]        ; pin_out          ;
+; |hw3|y[7]     ; |hw3|y[7]        ; pin_out          ;
+; |hw3|y[8]     ; |hw3|y[8]        ; pin_out          ;
+; |hw3|y[9]     ; |hw3|y[9]        ; pin_out          ;
+; |hw3|y[10]    ; |hw3|y[10]       ; pin_out          ;
+; |hw3|y[11]    ; |hw3|y[11]       ; pin_out          ;
+; |hw3|y[12]    ; |hw3|y[12]       ; pin_out          ;
+; |hw3|y[13]    ; |hw3|y[13]       ; pin_out          ;
+; |hw3|y[14]    ; |hw3|y[14]       ; pin_out          ;
+; |hw3|y[15]    ; |hw3|y[15]       ; pin_out          ;
+; |hw3|Add0~80  ; |hw3|Add0~80     ; out0             ;
+; |hw3|Add0~81  ; |hw3|Add0~81     ; out0             ;
+; |hw3|Add0~82  ; |hw3|Add0~82     ; out0             ;
+; |hw3|Add0~83  ; |hw3|Add0~83     ; out0             ;
+; |hw3|Add0~84  ; |hw3|Add0~84     ; out0             ;
+; |hw3|Add0~85  ; |hw3|Add0~85     ; out0             ;
+; |hw3|Add0~86  ; |hw3|Add0~86     ; out0             ;
+; |hw3|Add0~87  ; |hw3|Add0~87     ; out0             ;
+; |hw3|Add0~88  ; |hw3|Add0~88     ; out0             ;
+; |hw3|Add0~89  ; |hw3|Add0~89     ; out0             ;
+; |hw3|Add0~90  ; |hw3|Add0~90     ; out0             ;
+; |hw3|Add0~91  ; |hw3|Add0~91     ; out0             ;
+; |hw3|Add0~92  ; |hw3|Add0~92     ; out0             ;
+; |hw3|Add0~93  ; |hw3|Add0~93     ; out0             ;
+; |hw3|Add0~94  ; |hw3|Add0~94     ; out0             ;
+; |hw3|Add0~95  ; |hw3|Add0~95     ; out0             ;
+; |hw3|Add0~96  ; |hw3|Add0~96     ; out0             ;
+; |hw3|Add0~97  ; |hw3|Add0~97     ; out0             ;
+; |hw3|Add0~98  ; |hw3|Add0~98     ; out0             ;
+; |hw3|Add0~99  ; |hw3|Add0~99     ; out0             ;
+; |hw3|Add0~100 ; |hw3|Add0~100    ; out0             ;
+; |hw3|Add0~101 ; |hw3|Add0~101    ; out0             ;
+; |hw3|Add0~102 ; |hw3|Add0~102    ; out0             ;
+; |hw3|Add0~103 ; |hw3|Add0~103    ; out0             ;
+; |hw3|Add0~104 ; |hw3|Add0~104    ; out0             ;
+; |hw3|Add0~105 ; |hw3|Add0~105    ; out0             ;
+; |hw3|Add0~106 ; |hw3|Add0~106    ; out0             ;
+; |hw3|Add0~107 ; |hw3|Add0~107    ; out0             ;
+; |hw3|Add0~108 ; |hw3|Add0~108    ; out0             ;
+; |hw3|Add0~109 ; |hw3|Add0~109    ; out0             ;
+; |hw3|Add0~110 ; |hw3|Add0~110    ; out0             ;
+; |hw3|Add0~111 ; |hw3|Add0~111    ; out0             ;
+; |hw3|Add0~112 ; |hw3|Add0~112    ; out0             ;
+; |hw3|Add0~113 ; |hw3|Add0~113    ; out0             ;
+; |hw3|Add1~80  ; |hw3|Add1~80     ; out0             ;
+; |hw3|Add1~81  ; |hw3|Add1~81     ; out0             ;
+; |hw3|Add1~82  ; |hw3|Add1~82     ; out0             ;
+; |hw3|Add1~83  ; |hw3|Add1~83     ; out0             ;
+; |hw3|Add1~84  ; |hw3|Add1~84     ; out0             ;
+; |hw3|Add1~85  ; |hw3|Add1~85     ; out0             ;
+; |hw3|Add1~86  ; |hw3|Add1~86     ; out0             ;
+; |hw3|Add1~87  ; |hw3|Add1~87     ; out0             ;
+; |hw3|Add1~88  ; |hw3|Add1~88     ; out0             ;
+; |hw3|Add1~89  ; |hw3|Add1~89     ; out0             ;
+; |hw3|Add1~90  ; |hw3|Add1~90     ; out0             ;
+; |hw3|Add1~91  ; |hw3|Add1~91     ; out0             ;
+; |hw3|Add1~92  ; |hw3|Add1~92     ; out0             ;
+; |hw3|Add1~93  ; |hw3|Add1~93     ; out0             ;
+; |hw3|Add1~94  ; |hw3|Add1~94     ; out0             ;
+; |hw3|Add1~95  ; |hw3|Add1~95     ; out0             ;
+; |hw3|Add1~96  ; |hw3|Add1~96     ; out0             ;
+; |hw3|Add1~97  ; |hw3|Add1~97     ; out0             ;
+; |hw3|Add1~98  ; |hw3|Add1~98     ; out0             ;
+; |hw3|Add1~99  ; |hw3|Add1~99     ; out0             ;
+; |hw3|Add1~100 ; |hw3|Add1~100    ; out0             ;
+; |hw3|Add1~101 ; |hw3|Add1~101    ; out0             ;
+; |hw3|Add1~102 ; |hw3|Add1~102    ; out0             ;
+; |hw3|Add1~103 ; |hw3|Add1~103    ; out0             ;
+; |hw3|Add1~104 ; |hw3|Add1~104    ; out0             ;
+; |hw3|Add1~105 ; |hw3|Add1~105    ; out0             ;
+; |hw3|Add1~106 ; |hw3|Add1~106    ; out0             ;
+; |hw3|Add1~107 ; |hw3|Add1~107    ; out0             ;
+; |hw3|Add1~108 ; |hw3|Add1~108    ; out0             ;
+; |hw3|Add1~109 ; |hw3|Add1~109    ; out0             ;
+; |hw3|Add1~110 ; |hw3|Add1~110    ; out0             ;
+; |hw3|Add1~111 ; |hw3|Add1~111    ; out0             ;
+; |hw3|Add1~112 ; |hw3|Add1~112    ; out0             ;
+; |hw3|Add1~113 ; |hw3|Add1~113    ; out0             ;
+; |hw3|Add2~80  ; |hw3|Add2~80     ; out0             ;
+; |hw3|Add2~81  ; |hw3|Add2~81     ; out0             ;
+; |hw3|Add2~82  ; |hw3|Add2~82     ; out0             ;
+; |hw3|Add2~83  ; |hw3|Add2~83     ; out0             ;
+; |hw3|Add2~84  ; |hw3|Add2~84     ; out0             ;
+; |hw3|Add2~85  ; |hw3|Add2~85     ; out0             ;
+; |hw3|Add2~86  ; |hw3|Add2~86     ; out0             ;
+; |hw3|Add2~87  ; |hw3|Add2~87     ; out0             ;
+; |hw3|Add2~88  ; |hw3|Add2~88     ; out0             ;
+; |hw3|Add2~89  ; |hw3|Add2~89     ; out0             ;
+; |hw3|Add2~90  ; |hw3|Add2~90     ; out0             ;
+; |hw3|Add2~91  ; |hw3|Add2~91     ; out0             ;
+; |hw3|Add2~92  ; |hw3|Add2~92     ; out0             ;
+; |hw3|Add2~93  ; |hw3|Add2~93     ; out0             ;
+; |hw3|Add2~94  ; |hw3|Add2~94     ; out0             ;
+; |hw3|Add2~95  ; |hw3|Add2~95     ; out0             ;
+; |hw3|Add2~96  ; |hw3|Add2~96     ; out0             ;
+; |hw3|Add2~97  ; |hw3|Add2~97     ; out0             ;
+; |hw3|Add2~98  ; |hw3|Add2~98     ; out0             ;
+; |hw3|Add2~99  ; |hw3|Add2~99     ; out0             ;
+; |hw3|Add2~100 ; |hw3|Add2~100    ; out0             ;
+; |hw3|Add2~101 ; |hw3|Add2~101    ; out0             ;
+; |hw3|Add2~102 ; |hw3|Add2~102    ; out0             ;
+; |hw3|Add2~103 ; |hw3|Add2~103    ; out0             ;
+; |hw3|Add2~104 ; |hw3|Add2~104    ; out0             ;
+; |hw3|Add2~105 ; |hw3|Add2~105    ; out0             ;
+; |hw3|Add2~106 ; |hw3|Add2~106    ; out0             ;
+; |hw3|Add2~107 ; |hw3|Add2~107    ; out0             ;
+; |hw3|Add2~108 ; |hw3|Add2~108    ; out0             ;
+; |hw3|Add2~109 ; |hw3|Add2~109    ; out0             ;
+; |hw3|Add2~110 ; |hw3|Add2~110    ; out0             ;
+; |hw3|Add2~111 ; |hw3|Add2~111    ; out0             ;
+; |hw3|Add2~112 ; |hw3|Add2~112    ; out0             ;
+; |hw3|Add2~113 ; |hw3|Add2~113    ; out0             ;
+; |hw3|Add2~114 ; |hw3|Add2~114    ; out0             ;
+; |hw3|Add2~115 ; |hw3|Add2~115    ; out0             ;
+; |hw3|Add2~116 ; |hw3|Add2~116    ; out0             ;
+; |hw3|Add2~117 ; |hw3|Add2~117    ; out0             ;
+; |hw3|Add2~118 ; |hw3|Add2~118    ; out0             ;
+; |hw3|Add2~119 ; |hw3|Add2~119    ; out0             ;
+; |hw3|Add2~120 ; |hw3|Add2~120    ; out0             ;
+; |hw3|Add3~80  ; |hw3|Add3~80     ; out0             ;
+; |hw3|Add3~81  ; |hw3|Add3~81     ; out0             ;
+; |hw3|Add3~82  ; |hw3|Add3~82     ; out0             ;
+; |hw3|Add3~83  ; |hw3|Add3~83     ; out0             ;
+; |hw3|Add3~84  ; |hw3|Add3~84     ; out0             ;
+; |hw3|Add3~85  ; |hw3|Add3~85     ; out0             ;
+; |hw3|Add3~86  ; |hw3|Add3~86     ; out0             ;
+; |hw3|Add3~87  ; |hw3|Add3~87     ; out0             ;
+; |hw3|Add3~88  ; |hw3|Add3~88     ; out0             ;
+; |hw3|Add3~89  ; |hw3|Add3~89     ; out0             ;
+; |hw3|Add3~90  ; |hw3|Add3~90     ; out0             ;
+; |hw3|Add3~91  ; |hw3|Add3~91     ; out0             ;
+; |hw3|Add3~92  ; |hw3|Add3~92     ; out0             ;
+; |hw3|Add3~93  ; |hw3|Add3~93     ; out0             ;
+; |hw3|Add3~94  ; |hw3|Add3~94     ; out0             ;
+; |hw3|Add3~95  ; |hw3|Add3~95     ; out0             ;
+; |hw3|Add3~96  ; |hw3|Add3~96     ; out0             ;
+; |hw3|Add3~97  ; |hw3|Add3~97     ; out0             ;
+; |hw3|Add3~98  ; |hw3|Add3~98     ; out0             ;
+; |hw3|Add3~99  ; |hw3|Add3~99     ; out0             ;
+; |hw3|Add3~100 ; |hw3|Add3~100    ; out0             ;
+; |hw3|Add3~101 ; |hw3|Add3~101    ; out0             ;
+; |hw3|Add3~102 ; |hw3|Add3~102    ; out0             ;
+; |hw3|Add3~103 ; |hw3|Add3~103    ; out0             ;
+; |hw3|Add3~104 ; |hw3|Add3~104    ; out0             ;
+; |hw3|Add3~105 ; |hw3|Add3~105    ; out0             ;
+; |hw3|Add3~106 ; |hw3|Add3~106    ; out0             ;
+; |hw3|Add3~107 ; |hw3|Add3~107    ; out0             ;
+; |hw3|Add3~108 ; |hw3|Add3~108    ; out0             ;
+; |hw3|Add3~109 ; |hw3|Add3~109    ; out0             ;
+; |hw3|Add3~110 ; |hw3|Add3~110    ; out0             ;
+; |hw3|Add3~111 ; |hw3|Add3~111    ; out0             ;
+; |hw3|Add3~112 ; |hw3|Add3~112    ; out0             ;
+; |hw3|Add3~113 ; |hw3|Add3~113    ; out0             ;
+; |hw3|Add4~80  ; |hw3|Add4~80     ; out0             ;
+; |hw3|Add4~81  ; |hw3|Add4~81     ; out0             ;
+; |hw3|Add4~82  ; |hw3|Add4~82     ; out0             ;
+; |hw3|Add4~83  ; |hw3|Add4~83     ; out0             ;
+; |hw3|Add4~84  ; |hw3|Add4~84     ; out0             ;
+; |hw3|Add4~85  ; |hw3|Add4~85     ; out0             ;
+; |hw3|Add4~86  ; |hw3|Add4~86     ; out0             ;
+; |hw3|Add4~87  ; |hw3|Add4~87     ; out0             ;
+; |hw3|Add4~88  ; |hw3|Add4~88     ; out0             ;
+; |hw3|Add4~89  ; |hw3|Add4~89     ; out0             ;
+; |hw3|Add4~90  ; |hw3|Add4~90     ; out0             ;
+; |hw3|Add4~91  ; |hw3|Add4~91     ; out0             ;
+; |hw3|Add4~92  ; |hw3|Add4~92     ; out0             ;
+; |hw3|Add4~93  ; |hw3|Add4~93     ; out0             ;
+; |hw3|Add4~94  ; |hw3|Add4~94     ; out0             ;
+; |hw3|Add4~95  ; |hw3|Add4~95     ; out0             ;
+; |hw3|Add4~96  ; |hw3|Add4~96     ; out0             ;
+; |hw3|Add4~97  ; |hw3|Add4~97     ; out0             ;
+; |hw3|Add4~98  ; |hw3|Add4~98     ; out0             ;
+; |hw3|Add4~99  ; |hw3|Add4~99     ; out0             ;
+; |hw3|Add4~100 ; |hw3|Add4~100    ; out0             ;
+; |hw3|Add4~101 ; |hw3|Add4~101    ; out0             ;
+; |hw3|Add4~102 ; |hw3|Add4~102    ; out0             ;
+; |hw3|Add4~103 ; |hw3|Add4~103    ; out0             ;
+; |hw3|Add4~104 ; |hw3|Add4~104    ; out0             ;
+; |hw3|Add4~105 ; |hw3|Add4~105    ; out0             ;
+; |hw3|Add4~106 ; |hw3|Add4~106    ; out0             ;
+; |hw3|Add4~107 ; |hw3|Add4~107    ; out0             ;
+; |hw3|Add4~108 ; |hw3|Add4~108    ; out0             ;
+; |hw3|Add4~109 ; |hw3|Add4~109    ; out0             ;
+; |hw3|Add4~110 ; |hw3|Add4~110    ; out0             ;
+; |hw3|Add4~111 ; |hw3|Add4~111    ; out0             ;
+; |hw3|Add4~112 ; |hw3|Add4~112    ; out0             ;
+; |hw3|Add4~113 ; |hw3|Add4~113    ; out0             ;
+; |hw3|Add5~80  ; |hw3|Add5~80     ; out0             ;
+; |hw3|Add5~81  ; |hw3|Add5~81     ; out0             ;
+; |hw3|Add5~82  ; |hw3|Add5~82     ; out0             ;
+; |hw3|Add5~83  ; |hw3|Add5~83     ; out0             ;
+; |hw3|Add5~84  ; |hw3|Add5~84     ; out0             ;
+; |hw3|Add5~85  ; |hw3|Add5~85     ; out0             ;
+; |hw3|Add5~86  ; |hw3|Add5~86     ; out0             ;
+; |hw3|Add5~87  ; |hw3|Add5~87     ; out0             ;
+; |hw3|Add5~88  ; |hw3|Add5~88     ; out0             ;
+; |hw3|Add5~89  ; |hw3|Add5~89     ; out0             ;
+; |hw3|Add5~90  ; |hw3|Add5~90     ; out0             ;
+; |hw3|Add5~91  ; |hw3|Add5~91     ; out0             ;
+; |hw3|Add5~92  ; |hw3|Add5~92     ; out0             ;
+; |hw3|Add5~93  ; |hw3|Add5~93     ; out0             ;
+; |hw3|Add5~94  ; |hw3|Add5~94     ; out0             ;
+; |hw3|Add5~95  ; |hw3|Add5~95     ; out0             ;
+; |hw3|Add5~96  ; |hw3|Add5~96     ; out0             ;
+; |hw3|Add5~97  ; |hw3|Add5~97     ; out0             ;
+; |hw3|Add5~98  ; |hw3|Add5~98     ; out0             ;
+; |hw3|Add5~99  ; |hw3|Add5~99     ; out0             ;
+; |hw3|Add5~100 ; |hw3|Add5~100    ; out0             ;
+; |hw3|Add5~101 ; |hw3|Add5~101    ; out0             ;
+; |hw3|Add5~102 ; |hw3|Add5~102    ; out0             ;
+; |hw3|Add5~103 ; |hw3|Add5~103    ; out0             ;
+; |hw3|Add5~104 ; |hw3|Add5~104    ; out0             ;
+; |hw3|Add5~105 ; |hw3|Add5~105    ; out0             ;
+; |hw3|Add5~106 ; |hw3|Add5~106    ; out0             ;
+; |hw3|Add5~107 ; |hw3|Add5~107    ; out0             ;
+; |hw3|Add5~108 ; |hw3|Add5~108    ; out0             ;
+; |hw3|Add5~109 ; |hw3|Add5~109    ; out0             ;
+; |hw3|Add5~110 ; |hw3|Add5~110    ; out0             ;
+; |hw3|Add5~111 ; |hw3|Add5~111    ; out0             ;
+; |hw3|Add5~112 ; |hw3|Add5~112    ; out0             ;
+; |hw3|Add5~113 ; |hw3|Add5~113    ; out0             ;
+; |hw3|Add5~114 ; |hw3|Add5~114    ; out0             ;
+; |hw3|Add5~115 ; |hw3|Add5~115    ; out0             ;
+; |hw3|Add5~116 ; |hw3|Add5~116    ; out0             ;
+; |hw3|Add5~117 ; |hw3|Add5~117    ; out0             ;
+; |hw3|Add5~118 ; |hw3|Add5~118    ; out0             ;
+; |hw3|Add5~119 ; |hw3|Add5~119    ; out0             ;
+; |hw3|Add6~80  ; |hw3|Add6~80     ; out0             ;
+; |hw3|Add6~81  ; |hw3|Add6~81     ; out0             ;
+; |hw3|Add6~82  ; |hw3|Add6~82     ; out0             ;
+; |hw3|Add6~83  ; |hw3|Add6~83     ; out0             ;
+; |hw3|Add6~84  ; |hw3|Add6~84     ; out0             ;
+; |hw3|Add6~85  ; |hw3|Add6~85     ; out0             ;
+; |hw3|Add6~86  ; |hw3|Add6~86     ; out0             ;
+; |hw3|Add6~87  ; |hw3|Add6~87     ; out0             ;
+; |hw3|Add6~88  ; |hw3|Add6~88     ; out0             ;
+; |hw3|Add6~89  ; |hw3|Add6~89     ; out0             ;
+; |hw3|Add6~90  ; |hw3|Add6~90     ; out0             ;
+; |hw3|Add6~91  ; |hw3|Add6~91     ; out0             ;
+; |hw3|Add6~92  ; |hw3|Add6~92     ; out0             ;
+; |hw3|Add6~93  ; |hw3|Add6~93     ; out0             ;
+; |hw3|Add6~94  ; |hw3|Add6~94     ; out0             ;
+; |hw3|Add6~95  ; |hw3|Add6~95     ; out0             ;
+; |hw3|Add6~96  ; |hw3|Add6~96     ; out0             ;
+; |hw3|Add6~97  ; |hw3|Add6~97     ; out0             ;
+; |hw3|Add6~98  ; |hw3|Add6~98     ; out0             ;
+; |hw3|Add6~99  ; |hw3|Add6~99     ; out0             ;
+; |hw3|Add6~100 ; |hw3|Add6~100    ; out0             ;
+; |hw3|Add6~101 ; |hw3|Add6~101    ; out0             ;
+; |hw3|Add6~102 ; |hw3|Add6~102    ; out0             ;
+; |hw3|Add6~103 ; |hw3|Add6~103    ; out0             ;
+; |hw3|Add6~104 ; |hw3|Add6~104    ; out0             ;
+; |hw3|Add6~105 ; |hw3|Add6~105    ; out0             ;
+; |hw3|Add6~106 ; |hw3|Add6~106    ; out0             ;
+; |hw3|Add6~107 ; |hw3|Add6~107    ; out0             ;
+; |hw3|Add6~108 ; |hw3|Add6~108    ; out0             ;
+; |hw3|Add6~109 ; |hw3|Add6~109    ; out0             ;
+; |hw3|Add6~110 ; |hw3|Add6~110    ; out0             ;
+; |hw3|Add6~111 ; |hw3|Add6~111    ; out0             ;
+; |hw3|Add6~112 ; |hw3|Add6~112    ; out0             ;
+; |hw3|Add6~113 ; |hw3|Add6~113    ; out0             ;
+; |hw3|Add6~114 ; |hw3|Add6~114    ; out0             ;
+; |hw3|Add6~115 ; |hw3|Add6~115    ; out0             ;
+; |hw3|Add6~116 ; |hw3|Add6~116    ; out0             ;
+; |hw3|Add6~117 ; |hw3|Add6~117    ; out0             ;
+; |hw3|Add6~118 ; |hw3|Add6~118    ; out0             ;
+; |hw3|Add6~119 ; |hw3|Add6~119    ; out0             ;
+; |hw3|Add6~120 ; |hw3|Add6~120    ; out0             ;
+; |hw3|Add6~121 ; |hw3|Add6~121    ; out0             ;
+; |hw3|Add6~122 ; |hw3|Add6~122    ; out0             ;
+; |hw3|Add6~123 ; |hw3|Add6~123    ; out0             ;
+; |hw3|Add6~124 ; |hw3|Add6~124    ; out0             ;
+; |hw3|Add6~125 ; |hw3|Add6~125    ; out0             ;
+; |hw3|Add6~126 ; |hw3|Add6~126    ; out0             ;
++---------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------+
+; Missing 0-Value Coverage                            ;
++---------------+------------------+------------------+
+; Node Name     ; Output Port Name ; Output Port Type ;
++---------------+------------------+------------------+
+; |hw3|p0[0]    ; |hw3|p0[0]       ; out0             ;
+; |hw3|p0[1]    ; |hw3|p0[1]       ; out0             ;
+; |hw3|p0[2]    ; |hw3|p0[2]       ; out0             ;
+; |hw3|p0[3]    ; |hw3|p0[3]       ; out0             ;
+; |hw3|p0[4]    ; |hw3|p0[4]       ; out0             ;
+; |hw3|p0[5]    ; |hw3|p0[5]       ; out0             ;
+; |hw3|p0[6]    ; |hw3|p0[6]       ; out0             ;
+; |hw3|p0[7]    ; |hw3|p0[7]       ; out0             ;
+; |hw3|p1[1]    ; |hw3|p1[1]       ; out0             ;
+; |hw3|p1[2]    ; |hw3|p1[2]       ; out0             ;
+; |hw3|p1[3]    ; |hw3|p1[3]       ; out0             ;
+; |hw3|p1[4]    ; |hw3|p1[4]       ; out0             ;
+; |hw3|p1[5]    ; |hw3|p1[5]       ; out0             ;
+; |hw3|p1[6]    ; |hw3|p1[6]       ; out0             ;
+; |hw3|p1[7]    ; |hw3|p1[7]       ; out0             ;
+; |hw3|p1[8]    ; |hw3|p1[8]       ; out0             ;
+; |hw3|p2[2]    ; |hw3|p2[2]       ; out0             ;
+; |hw3|p2[3]    ; |hw3|p2[3]       ; out0             ;
+; |hw3|p2[4]    ; |hw3|p2[4]       ; out0             ;
+; |hw3|p2[5]    ; |hw3|p2[5]       ; out0             ;
+; |hw3|p2[6]    ; |hw3|p2[6]       ; out0             ;
+; |hw3|p2[7]    ; |hw3|p2[7]       ; out0             ;
+; |hw3|p2[8]    ; |hw3|p2[8]       ; out0             ;
+; |hw3|p2[9]    ; |hw3|p2[9]       ; out0             ;
+; |hw3|p3[3]    ; |hw3|p3[3]       ; out0             ;
+; |hw3|p3[4]    ; |hw3|p3[4]       ; out0             ;
+; |hw3|p3[5]    ; |hw3|p3[5]       ; out0             ;
+; |hw3|p3[6]    ; |hw3|p3[6]       ; out0             ;
+; |hw3|p3[7]    ; |hw3|p3[7]       ; out0             ;
+; |hw3|p3[8]    ; |hw3|p3[8]       ; out0             ;
+; |hw3|p3[9]    ; |hw3|p3[9]       ; out0             ;
+; |hw3|p3[10]   ; |hw3|p3[10]      ; out0             ;
+; |hw3|p4[4]    ; |hw3|p4[4]       ; out0             ;
+; |hw3|p4[5]    ; |hw3|p4[5]       ; out0             ;
+; |hw3|p4[6]    ; |hw3|p4[6]       ; out0             ;
+; |hw3|p4[7]    ; |hw3|p4[7]       ; out0             ;
+; |hw3|p4[8]    ; |hw3|p4[8]       ; out0             ;
+; |hw3|p4[9]    ; |hw3|p4[9]       ; out0             ;
+; |hw3|p4[10]   ; |hw3|p4[10]      ; out0             ;
+; |hw3|p4[11]   ; |hw3|p4[11]      ; out0             ;
+; |hw3|p5[5]    ; |hw3|p5[5]       ; out0             ;
+; |hw3|p5[6]    ; |hw3|p5[6]       ; out0             ;
+; |hw3|p5[7]    ; |hw3|p5[7]       ; out0             ;
+; |hw3|p5[8]    ; |hw3|p5[8]       ; out0             ;
+; |hw3|p5[9]    ; |hw3|p5[9]       ; out0             ;
+; |hw3|p5[10]   ; |hw3|p5[10]      ; out0             ;
+; |hw3|p5[11]   ; |hw3|p5[11]      ; out0             ;
+; |hw3|p5[12]   ; |hw3|p5[12]      ; out0             ;
+; |hw3|p6[6]    ; |hw3|p6[6]       ; out0             ;
+; |hw3|p6[7]    ; |hw3|p6[7]       ; out0             ;
+; |hw3|p6[8]    ; |hw3|p6[8]       ; out0             ;
+; |hw3|p6[9]    ; |hw3|p6[9]       ; out0             ;
+; |hw3|p6[10]   ; |hw3|p6[10]      ; out0             ;
+; |hw3|p6[11]   ; |hw3|p6[11]      ; out0             ;
+; |hw3|p6[12]   ; |hw3|p6[12]      ; out0             ;
+; |hw3|p6[13]   ; |hw3|p6[13]      ; out0             ;
+; |hw3|p7[7]    ; |hw3|p7[7]       ; out0             ;
+; |hw3|p7[8]    ; |hw3|p7[8]       ; out0             ;
+; |hw3|p7[9]    ; |hw3|p7[9]       ; out0             ;
+; |hw3|p7[10]   ; |hw3|p7[10]      ; out0             ;
+; |hw3|p7[11]   ; |hw3|p7[11]      ; out0             ;
+; |hw3|p7[12]   ; |hw3|p7[12]      ; out0             ;
+; |hw3|p7[13]   ; |hw3|p7[13]      ; out0             ;
+; |hw3|p7[14]   ; |hw3|p7[14]      ; out0             ;
+; |hw3|a[0]     ; |hw3|a[0]        ; out              ;
+; |hw3|a[1]     ; |hw3|a[1]        ; out              ;
+; |hw3|a[2]     ; |hw3|a[2]        ; out              ;
+; |hw3|a[3]     ; |hw3|a[3]        ; out              ;
+; |hw3|a[4]     ; |hw3|a[4]        ; out              ;
+; |hw3|a[5]     ; |hw3|a[5]        ; out              ;
+; |hw3|a[6]     ; |hw3|a[6]        ; out              ;
+; |hw3|a[7]     ; |hw3|a[7]        ; out              ;
+; |hw3|b[0]     ; |hw3|b[0]        ; out              ;
+; |hw3|b[1]     ; |hw3|b[1]        ; out              ;
+; |hw3|b[2]     ; |hw3|b[2]        ; out              ;
+; |hw3|b[3]     ; |hw3|b[3]        ; out              ;
+; |hw3|b[4]     ; |hw3|b[4]        ; out              ;
+; |hw3|b[5]     ; |hw3|b[5]        ; out              ;
+; |hw3|b[6]     ; |hw3|b[6]        ; out              ;
+; |hw3|b[7]     ; |hw3|b[7]        ; out              ;
+; |hw3|y[0]     ; |hw3|y[0]        ; pin_out          ;
+; |hw3|y[1]     ; |hw3|y[1]        ; pin_out          ;
+; |hw3|y[2]     ; |hw3|y[2]        ; pin_out          ;
+; |hw3|y[3]     ; |hw3|y[3]        ; pin_out          ;
+; |hw3|y[4]     ; |hw3|y[4]        ; pin_out          ;
+; |hw3|y[5]     ; |hw3|y[5]        ; pin_out          ;
+; |hw3|y[6]     ; |hw3|y[6]        ; pin_out          ;
+; |hw3|y[7]     ; |hw3|y[7]        ; pin_out          ;
+; |hw3|y[8]     ; |hw3|y[8]        ; pin_out          ;
+; |hw3|y[9]     ; |hw3|y[9]        ; pin_out          ;
+; |hw3|y[10]    ; |hw3|y[10]       ; pin_out          ;
+; |hw3|y[11]    ; |hw3|y[11]       ; pin_out          ;
+; |hw3|y[12]    ; |hw3|y[12]       ; pin_out          ;
+; |hw3|y[13]    ; |hw3|y[13]       ; pin_out          ;
+; |hw3|y[14]    ; |hw3|y[14]       ; pin_out          ;
+; |hw3|y[15]    ; |hw3|y[15]       ; pin_out          ;
+; |hw3|Add0~80  ; |hw3|Add0~80     ; out0             ;
+; |hw3|Add0~81  ; |hw3|Add0~81     ; out0             ;
+; |hw3|Add0~82  ; |hw3|Add0~82     ; out0             ;
+; |hw3|Add0~83  ; |hw3|Add0~83     ; out0             ;
+; |hw3|Add0~84  ; |hw3|Add0~84     ; out0             ;
+; |hw3|Add0~85  ; |hw3|Add0~85     ; out0             ;
+; |hw3|Add0~86  ; |hw3|Add0~86     ; out0             ;
+; |hw3|Add0~87  ; |hw3|Add0~87     ; out0             ;
+; |hw3|Add0~88  ; |hw3|Add0~88     ; out0             ;
+; |hw3|Add0~89  ; |hw3|Add0~89     ; out0             ;
+; |hw3|Add0~90  ; |hw3|Add0~90     ; out0             ;
+; |hw3|Add0~91  ; |hw3|Add0~91     ; out0             ;
+; |hw3|Add0~92  ; |hw3|Add0~92     ; out0             ;
+; |hw3|Add0~93  ; |hw3|Add0~93     ; out0             ;
+; |hw3|Add0~94  ; |hw3|Add0~94     ; out0             ;
+; |hw3|Add0~95  ; |hw3|Add0~95     ; out0             ;
+; |hw3|Add0~96  ; |hw3|Add0~96     ; out0             ;
+; |hw3|Add0~97  ; |hw3|Add0~97     ; out0             ;
+; |hw3|Add0~98  ; |hw3|Add0~98     ; out0             ;
+; |hw3|Add0~99  ; |hw3|Add0~99     ; out0             ;
+; |hw3|Add0~100 ; |hw3|Add0~100    ; out0             ;
+; |hw3|Add0~101 ; |hw3|Add0~101    ; out0             ;
+; |hw3|Add0~102 ; |hw3|Add0~102    ; out0             ;
+; |hw3|Add0~103 ; |hw3|Add0~103    ; out0             ;
+; |hw3|Add0~104 ; |hw3|Add0~104    ; out0             ;
+; |hw3|Add0~105 ; |hw3|Add0~105    ; out0             ;
+; |hw3|Add0~106 ; |hw3|Add0~106    ; out0             ;
+; |hw3|Add0~107 ; |hw3|Add0~107    ; out0             ;
+; |hw3|Add0~108 ; |hw3|Add0~108    ; out0             ;
+; |hw3|Add0~109 ; |hw3|Add0~109    ; out0             ;
+; |hw3|Add0~110 ; |hw3|Add0~110    ; out0             ;
+; |hw3|Add0~111 ; |hw3|Add0~111    ; out0             ;
+; |hw3|Add0~112 ; |hw3|Add0~112    ; out0             ;
+; |hw3|Add0~113 ; |hw3|Add0~113    ; out0             ;
+; |hw3|Add1~80  ; |hw3|Add1~80     ; out0             ;
+; |hw3|Add1~81  ; |hw3|Add1~81     ; out0             ;
+; |hw3|Add1~82  ; |hw3|Add1~82     ; out0             ;
+; |hw3|Add1~83  ; |hw3|Add1~83     ; out0             ;
+; |hw3|Add1~84  ; |hw3|Add1~84     ; out0             ;
+; |hw3|Add1~85  ; |hw3|Add1~85     ; out0             ;
+; |hw3|Add1~86  ; |hw3|Add1~86     ; out0             ;
+; |hw3|Add1~87  ; |hw3|Add1~87     ; out0             ;
+; |hw3|Add1~88  ; |hw3|Add1~88     ; out0             ;
+; |hw3|Add1~89  ; |hw3|Add1~89     ; out0             ;
+; |hw3|Add1~90  ; |hw3|Add1~90     ; out0             ;
+; |hw3|Add1~91  ; |hw3|Add1~91     ; out0             ;
+; |hw3|Add1~92  ; |hw3|Add1~92     ; out0             ;
+; |hw3|Add1~93  ; |hw3|Add1~93     ; out0             ;
+; |hw3|Add1~94  ; |hw3|Add1~94     ; out0             ;
+; |hw3|Add1~95  ; |hw3|Add1~95     ; out0             ;
+; |hw3|Add1~96  ; |hw3|Add1~96     ; out0             ;
+; |hw3|Add1~97  ; |hw3|Add1~97     ; out0             ;
+; |hw3|Add1~98  ; |hw3|Add1~98     ; out0             ;
+; |hw3|Add1~99  ; |hw3|Add1~99     ; out0             ;
+; |hw3|Add1~100 ; |hw3|Add1~100    ; out0             ;
+; |hw3|Add1~101 ; |hw3|Add1~101    ; out0             ;
+; |hw3|Add1~102 ; |hw3|Add1~102    ; out0             ;
+; |hw3|Add1~103 ; |hw3|Add1~103    ; out0             ;
+; |hw3|Add1~104 ; |hw3|Add1~104    ; out0             ;
+; |hw3|Add1~105 ; |hw3|Add1~105    ; out0             ;
+; |hw3|Add1~106 ; |hw3|Add1~106    ; out0             ;
+; |hw3|Add1~107 ; |hw3|Add1~107    ; out0             ;
+; |hw3|Add1~108 ; |hw3|Add1~108    ; out0             ;
+; |hw3|Add1~109 ; |hw3|Add1~109    ; out0             ;
+; |hw3|Add1~110 ; |hw3|Add1~110    ; out0             ;
+; |hw3|Add1~111 ; |hw3|Add1~111    ; out0             ;
+; |hw3|Add1~112 ; |hw3|Add1~112    ; out0             ;
+; |hw3|Add1~113 ; |hw3|Add1~113    ; out0             ;
+; |hw3|Add2~80  ; |hw3|Add2~80     ; out0             ;
+; |hw3|Add2~81  ; |hw3|Add2~81     ; out0             ;
+; |hw3|Add2~82  ; |hw3|Add2~82     ; out0             ;
+; |hw3|Add2~83  ; |hw3|Add2~83     ; out0             ;
+; |hw3|Add2~84  ; |hw3|Add2~84     ; out0             ;
+; |hw3|Add2~85  ; |hw3|Add2~85     ; out0             ;
+; |hw3|Add2~86  ; |hw3|Add2~86     ; out0             ;
+; |hw3|Add2~87  ; |hw3|Add2~87     ; out0             ;
+; |hw3|Add2~88  ; |hw3|Add2~88     ; out0             ;
+; |hw3|Add2~89  ; |hw3|Add2~89     ; out0             ;
+; |hw3|Add2~90  ; |hw3|Add2~90     ; out0             ;
+; |hw3|Add2~91  ; |hw3|Add2~91     ; out0             ;
+; |hw3|Add2~92  ; |hw3|Add2~92     ; out0             ;
+; |hw3|Add2~93  ; |hw3|Add2~93     ; out0             ;
+; |hw3|Add2~94  ; |hw3|Add2~94     ; out0             ;
+; |hw3|Add2~95  ; |hw3|Add2~95     ; out0             ;
+; |hw3|Add2~96  ; |hw3|Add2~96     ; out0             ;
+; |hw3|Add2~97  ; |hw3|Add2~97     ; out0             ;
+; |hw3|Add2~98  ; |hw3|Add2~98     ; out0             ;
+; |hw3|Add2~99  ; |hw3|Add2~99     ; out0             ;
+; |hw3|Add2~100 ; |hw3|Add2~100    ; out0             ;
+; |hw3|Add2~101 ; |hw3|Add2~101    ; out0             ;
+; |hw3|Add2~102 ; |hw3|Add2~102    ; out0             ;
+; |hw3|Add2~103 ; |hw3|Add2~103    ; out0             ;
+; |hw3|Add2~104 ; |hw3|Add2~104    ; out0             ;
+; |hw3|Add2~105 ; |hw3|Add2~105    ; out0             ;
+; |hw3|Add2~106 ; |hw3|Add2~106    ; out0             ;
+; |hw3|Add2~107 ; |hw3|Add2~107    ; out0             ;
+; |hw3|Add2~108 ; |hw3|Add2~108    ; out0             ;
+; |hw3|Add2~109 ; |hw3|Add2~109    ; out0             ;
+; |hw3|Add2~110 ; |hw3|Add2~110    ; out0             ;
+; |hw3|Add2~111 ; |hw3|Add2~111    ; out0             ;
+; |hw3|Add2~112 ; |hw3|Add2~112    ; out0             ;
+; |hw3|Add2~113 ; |hw3|Add2~113    ; out0             ;
+; |hw3|Add2~114 ; |hw3|Add2~114    ; out0             ;
+; |hw3|Add2~115 ; |hw3|Add2~115    ; out0             ;
+; |hw3|Add2~116 ; |hw3|Add2~116    ; out0             ;
+; |hw3|Add2~117 ; |hw3|Add2~117    ; out0             ;
+; |hw3|Add2~118 ; |hw3|Add2~118    ; out0             ;
+; |hw3|Add2~119 ; |hw3|Add2~119    ; out0             ;
+; |hw3|Add2~120 ; |hw3|Add2~120    ; out0             ;
+; |hw3|Add3~80  ; |hw3|Add3~80     ; out0             ;
+; |hw3|Add3~81  ; |hw3|Add3~81     ; out0             ;
+; |hw3|Add3~82  ; |hw3|Add3~82     ; out0             ;
+; |hw3|Add3~83  ; |hw3|Add3~83     ; out0             ;
+; |hw3|Add3~84  ; |hw3|Add3~84     ; out0             ;
+; |hw3|Add3~85  ; |hw3|Add3~85     ; out0             ;
+; |hw3|Add3~86  ; |hw3|Add3~86     ; out0             ;
+; |hw3|Add3~87  ; |hw3|Add3~87     ; out0             ;
+; |hw3|Add3~88  ; |hw3|Add3~88     ; out0             ;
+; |hw3|Add3~89  ; |hw3|Add3~89     ; out0             ;
+; |hw3|Add3~90  ; |hw3|Add3~90     ; out0             ;
+; |hw3|Add3~91  ; |hw3|Add3~91     ; out0             ;
+; |hw3|Add3~92  ; |hw3|Add3~92     ; out0             ;
+; |hw3|Add3~93  ; |hw3|Add3~93     ; out0             ;
+; |hw3|Add3~94  ; |hw3|Add3~94     ; out0             ;
+; |hw3|Add3~95  ; |hw3|Add3~95     ; out0             ;
+; |hw3|Add3~96  ; |hw3|Add3~96     ; out0             ;
+; |hw3|Add3~97  ; |hw3|Add3~97     ; out0             ;
+; |hw3|Add3~98  ; |hw3|Add3~98     ; out0             ;
+; |hw3|Add3~99  ; |hw3|Add3~99     ; out0             ;
+; |hw3|Add3~100 ; |hw3|Add3~100    ; out0             ;
+; |hw3|Add3~101 ; |hw3|Add3~101    ; out0             ;
+; |hw3|Add3~102 ; |hw3|Add3~102    ; out0             ;
+; |hw3|Add3~103 ; |hw3|Add3~103    ; out0             ;
+; |hw3|Add3~104 ; |hw3|Add3~104    ; out0             ;
+; |hw3|Add3~105 ; |hw3|Add3~105    ; out0             ;
+; |hw3|Add3~106 ; |hw3|Add3~106    ; out0             ;
+; |hw3|Add3~107 ; |hw3|Add3~107    ; out0             ;
+; |hw3|Add3~108 ; |hw3|Add3~108    ; out0             ;
+; |hw3|Add3~109 ; |hw3|Add3~109    ; out0             ;
+; |hw3|Add3~110 ; |hw3|Add3~110    ; out0             ;
+; |hw3|Add3~111 ; |hw3|Add3~111    ; out0             ;
+; |hw3|Add3~112 ; |hw3|Add3~112    ; out0             ;
+; |hw3|Add3~113 ; |hw3|Add3~113    ; out0             ;
+; |hw3|Add4~80  ; |hw3|Add4~80     ; out0             ;
+; |hw3|Add4~81  ; |hw3|Add4~81     ; out0             ;
+; |hw3|Add4~82  ; |hw3|Add4~82     ; out0             ;
+; |hw3|Add4~83  ; |hw3|Add4~83     ; out0             ;
+; |hw3|Add4~84  ; |hw3|Add4~84     ; out0             ;
+; |hw3|Add4~85  ; |hw3|Add4~85     ; out0             ;
+; |hw3|Add4~86  ; |hw3|Add4~86     ; out0             ;
+; |hw3|Add4~87  ; |hw3|Add4~87     ; out0             ;
+; |hw3|Add4~88  ; |hw3|Add4~88     ; out0             ;
+; |hw3|Add4~89  ; |hw3|Add4~89     ; out0             ;
+; |hw3|Add4~90  ; |hw3|Add4~90     ; out0             ;
+; |hw3|Add4~91  ; |hw3|Add4~91     ; out0             ;
+; |hw3|Add4~92  ; |hw3|Add4~92     ; out0             ;
+; |hw3|Add4~93  ; |hw3|Add4~93     ; out0             ;
+; |hw3|Add4~94  ; |hw3|Add4~94     ; out0             ;
+; |hw3|Add4~95  ; |hw3|Add4~95     ; out0             ;
+; |hw3|Add4~96  ; |hw3|Add4~96     ; out0             ;
+; |hw3|Add4~97  ; |hw3|Add4~97     ; out0             ;
+; |hw3|Add4~98  ; |hw3|Add4~98     ; out0             ;
+; |hw3|Add4~99  ; |hw3|Add4~99     ; out0             ;
+; |hw3|Add4~100 ; |hw3|Add4~100    ; out0             ;
+; |hw3|Add4~101 ; |hw3|Add4~101    ; out0             ;
+; |hw3|Add4~102 ; |hw3|Add4~102    ; out0             ;
+; |hw3|Add4~103 ; |hw3|Add4~103    ; out0             ;
+; |hw3|Add4~104 ; |hw3|Add4~104    ; out0             ;
+; |hw3|Add4~105 ; |hw3|Add4~105    ; out0             ;
+; |hw3|Add4~106 ; |hw3|Add4~106    ; out0             ;
+; |hw3|Add4~107 ; |hw3|Add4~107    ; out0             ;
+; |hw3|Add4~108 ; |hw3|Add4~108    ; out0             ;
+; |hw3|Add4~109 ; |hw3|Add4~109    ; out0             ;
+; |hw3|Add4~110 ; |hw3|Add4~110    ; out0             ;
+; |hw3|Add4~111 ; |hw3|Add4~111    ; out0             ;
+; |hw3|Add4~112 ; |hw3|Add4~112    ; out0             ;
+; |hw3|Add4~113 ; |hw3|Add4~113    ; out0             ;
+; |hw3|Add5~80  ; |hw3|Add5~80     ; out0             ;
+; |hw3|Add5~81  ; |hw3|Add5~81     ; out0             ;
+; |hw3|Add5~82  ; |hw3|Add5~82     ; out0             ;
+; |hw3|Add5~83  ; |hw3|Add5~83     ; out0             ;
+; |hw3|Add5~84  ; |hw3|Add5~84     ; out0             ;
+; |hw3|Add5~85  ; |hw3|Add5~85     ; out0             ;
+; |hw3|Add5~86  ; |hw3|Add5~86     ; out0             ;
+; |hw3|Add5~87  ; |hw3|Add5~87     ; out0             ;
+; |hw3|Add5~88  ; |hw3|Add5~88     ; out0             ;
+; |hw3|Add5~89  ; |hw3|Add5~89     ; out0             ;
+; |hw3|Add5~90  ; |hw3|Add5~90     ; out0             ;
+; |hw3|Add5~91  ; |hw3|Add5~91     ; out0             ;
+; |hw3|Add5~92  ; |hw3|Add5~92     ; out0             ;
+; |hw3|Add5~93  ; |hw3|Add5~93     ; out0             ;
+; |hw3|Add5~94  ; |hw3|Add5~94     ; out0             ;
+; |hw3|Add5~95  ; |hw3|Add5~95     ; out0             ;
+; |hw3|Add5~96  ; |hw3|Add5~96     ; out0             ;
+; |hw3|Add5~97  ; |hw3|Add5~97     ; out0             ;
+; |hw3|Add5~98  ; |hw3|Add5~98     ; out0             ;
+; |hw3|Add5~99  ; |hw3|Add5~99     ; out0             ;
+; |hw3|Add5~100 ; |hw3|Add5~100    ; out0             ;
+; |hw3|Add5~101 ; |hw3|Add5~101    ; out0             ;
+; |hw3|Add5~102 ; |hw3|Add5~102    ; out0             ;
+; |hw3|Add5~103 ; |hw3|Add5~103    ; out0             ;
+; |hw3|Add5~104 ; |hw3|Add5~104    ; out0             ;
+; |hw3|Add5~105 ; |hw3|Add5~105    ; out0             ;
+; |hw3|Add5~106 ; |hw3|Add5~106    ; out0             ;
+; |hw3|Add5~107 ; |hw3|Add5~107    ; out0             ;
+; |hw3|Add5~108 ; |hw3|Add5~108    ; out0             ;
+; |hw3|Add5~109 ; |hw3|Add5~109    ; out0             ;
+; |hw3|Add5~110 ; |hw3|Add5~110    ; out0             ;
+; |hw3|Add5~111 ; |hw3|Add5~111    ; out0             ;
+; |hw3|Add5~112 ; |hw3|Add5~112    ; out0             ;
+; |hw3|Add5~113 ; |hw3|Add5~113    ; out0             ;
+; |hw3|Add5~114 ; |hw3|Add5~114    ; out0             ;
+; |hw3|Add5~115 ; |hw3|Add5~115    ; out0             ;
+; |hw3|Add5~116 ; |hw3|Add5~116    ; out0             ;
+; |hw3|Add5~117 ; |hw3|Add5~117    ; out0             ;
+; |hw3|Add5~118 ; |hw3|Add5~118    ; out0             ;
+; |hw3|Add5~119 ; |hw3|Add5~119    ; out0             ;
+; |hw3|Add6~80  ; |hw3|Add6~80     ; out0             ;
+; |hw3|Add6~81  ; |hw3|Add6~81     ; out0             ;
+; |hw3|Add6~82  ; |hw3|Add6~82     ; out0             ;
+; |hw3|Add6~83  ; |hw3|Add6~83     ; out0             ;
+; |hw3|Add6~84  ; |hw3|Add6~84     ; out0             ;
+; |hw3|Add6~85  ; |hw3|Add6~85     ; out0             ;
+; |hw3|Add6~86  ; |hw3|Add6~86     ; out0             ;
+; |hw3|Add6~87  ; |hw3|Add6~87     ; out0             ;
+; |hw3|Add6~88  ; |hw3|Add6~88     ; out0             ;
+; |hw3|Add6~89  ; |hw3|Add6~89     ; out0             ;
+; |hw3|Add6~90  ; |hw3|Add6~90     ; out0             ;
+; |hw3|Add6~91  ; |hw3|Add6~91     ; out0             ;
+; |hw3|Add6~92  ; |hw3|Add6~92     ; out0             ;
+; |hw3|Add6~93  ; |hw3|Add6~93     ; out0             ;
+; |hw3|Add6~94  ; |hw3|Add6~94     ; out0             ;
+; |hw3|Add6~95  ; |hw3|Add6~95     ; out0             ;
+; |hw3|Add6~96  ; |hw3|Add6~96     ; out0             ;
+; |hw3|Add6~97  ; |hw3|Add6~97     ; out0             ;
+; |hw3|Add6~98  ; |hw3|Add6~98     ; out0             ;
+; |hw3|Add6~99  ; |hw3|Add6~99     ; out0             ;
+; |hw3|Add6~100 ; |hw3|Add6~100    ; out0             ;
+; |hw3|Add6~101 ; |hw3|Add6~101    ; out0             ;
+; |hw3|Add6~102 ; |hw3|Add6~102    ; out0             ;
+; |hw3|Add6~103 ; |hw3|Add6~103    ; out0             ;
+; |hw3|Add6~104 ; |hw3|Add6~104    ; out0             ;
+; |hw3|Add6~105 ; |hw3|Add6~105    ; out0             ;
+; |hw3|Add6~106 ; |hw3|Add6~106    ; out0             ;
+; |hw3|Add6~107 ; |hw3|Add6~107    ; out0             ;
+; |hw3|Add6~108 ; |hw3|Add6~108    ; out0             ;
+; |hw3|Add6~109 ; |hw3|Add6~109    ; out0             ;
+; |hw3|Add6~110 ; |hw3|Add6~110    ; out0             ;
+; |hw3|Add6~111 ; |hw3|Add6~111    ; out0             ;
+; |hw3|Add6~112 ; |hw3|Add6~112    ; out0             ;
+; |hw3|Add6~113 ; |hw3|Add6~113    ; out0             ;
+; |hw3|Add6~114 ; |hw3|Add6~114    ; out0             ;
+; |hw3|Add6~115 ; |hw3|Add6~115    ; out0             ;
+; |hw3|Add6~116 ; |hw3|Add6~116    ; out0             ;
+; |hw3|Add6~117 ; |hw3|Add6~117    ; out0             ;
+; |hw3|Add6~118 ; |hw3|Add6~118    ; out0             ;
+; |hw3|Add6~119 ; |hw3|Add6~119    ; out0             ;
+; |hw3|Add6~120 ; |hw3|Add6~120    ; out0             ;
+; |hw3|Add6~121 ; |hw3|Add6~121    ; out0             ;
+; |hw3|Add6~122 ; |hw3|Add6~122    ; out0             ;
+; |hw3|Add6~123 ; |hw3|Add6~123    ; out0             ;
+; |hw3|Add6~124 ; |hw3|Add6~124    ; out0             ;
+; |hw3|Add6~125 ; |hw3|Add6~125    ; out0             ;
+; |hw3|Add6~126 ; |hw3|Add6~126    ; out0             ;
++---------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 7.1 Build 156 04/30/2007 SJ Web Edition
+    Info: Processing started: Fri Feb 01 09:37:26 2008
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off hw3 -c hw3
+Info: Using vector source file "C:/altera/71/quartus/hw3/hw3.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of hw3.vwf called hw3.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Vector file hw3.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Allocated 124 megabytes of memory during processing
+    Info: Processing ended: Fri Feb 01 09:37:27 2008
+    Info: Elapsed time: 00:00:01
+
+

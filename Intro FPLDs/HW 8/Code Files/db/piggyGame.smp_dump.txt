@@ -1,0 +1,7 @@
+
+State Machine - |piggyGame|pr_state
+Name pr_state.player2_hold pr_state.player2_diceroll pr_state.player1_hold pr_state.player1_diceroll 
+pr_state.player1_diceroll 0 0 0 0 
+pr_state.player1_hold 0 0 1 1 
+pr_state.player2_diceroll 0 1 0 1 
+pr_state.player2_hold 1 0 0 1 

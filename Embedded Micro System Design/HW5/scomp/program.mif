@@ -1,0 +1,55 @@
+DEPTH = 256;	% Memory depth and width are required	%
+WIDTH = 16;		% Enter a decimal number	%
+
+ADDRESS_RADIX = HEX;	% Address and value radixes are optional	%
+DATA_RADIX = HEX;		% Enter BIN, DEC, HEX, or OCT; unless 	%
+						% otherwise specified, radixes = HEX	%
+-- Specify values for addresses, which can be single address or range
+CONTENT
+	BEGIN
+[00..FF]	: 0000; % Range--Every address from 00 to FF = 0000 (Default) %
+
+---------Test for the ADD instruction -------------------------------------
+00 :0260; % LOAD AC with MEM(60)=B=AAAA  %
+01 :0061; % ADD MEM(61)=C=5555 to AC %
+02 :0162; % STORE AC in MEM(62)=A %
+03 :0262; % LOAD AC with MEM(62) check for new value of FFFF %
+---------Test for the SUBI instruction ------------------------------------
+04 :0261; % Load AC with MEM(61)=C %
+05 :0563; % Test C-D = 2222. 05 is minus opcode. 63 is D's Address  %
+06 :0164; % STORE AC in MEM(64)=E %
+07 :0264; % LOAD AC with MEM(64) check for new value of 2222 %
+---------Test for the XOR instruction -------------------------------------
+08 :0261; % Load AC with MEM(61)=C %
+09 :0663; % Test C XOR D = 6666. 06 is XOR opcode. 63 is D's Address %
+0A :0165; % STORE AC in MEM(65)=F %
+0B :0265; % LOAD AC with MEM(65) check for new value of 6666 %
+---------Test for the OR instruction --------------------------------------
+0C :0261; % Load AC with MEM(61)=C %
+0D :0763; % Test C OR D= 7777.  07 is OR opcode. 63 is D's Address %
+0E :0166; % STORE AC in MEM(66)=G %
+0F :0266; % LOAD AC with MEM(66) check for new value of 7777 %
+---------Test for the AND instruction -------------------------------------
+10 :0261; % Load AC with MEM(61)=C %
+11 :0863; % Test C AND D = 1111.  08 is AND opcode. 63 is D's Address %
+12 :0167; % STORE AC in MEM(67)=H %
+13 :0267; % LOAD AC with MEM(67) check for new value of 1111 %
+---------Test for the ANDI instruction ------------------------------------
+14 :0261; % Load AC with MEM(61)=C %
+15 :0BFF; % Test C ANDi FF = 5554.  0B is ANDI opcode. FF is the integer %
+16 :0168; % STORE AC in MEM(68)=I %
+17 :0268; % LOAD AC with MEM(68) check for new value of 5554 %
+---------------------------------------------------------------------------
+18	:0318;	% JUMP to same line (loop forever) 03 is jump opcode. 18 is same line %
+---------------------------------------------------------------------------
+60	:AAAA;	% Data Value of B %
+61	:5555;	% Data Value of C %
+62	:0000;	% Data Value of A - should be FFFF after running program %
+63	:3333;	% Data Value of D %
+64  :0000;  % Data value of E - should be 2222 after running program %
+65  :0000;  % Data value of F - should be 6666 after running program %
+66  :0000;  % Data value of G - should be 7777 after running program %
+67  :0000;  % Data value of H - should be 1111 after running program %
+68  :0000;  % Data value of I - should be 5554 after running program %
+END ;	
+

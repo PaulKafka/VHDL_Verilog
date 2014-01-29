@@ -1,0 +1,29 @@
+|hw4a
+LOAD => a~0.IN0
+DATA_A => a~3.IN0
+DATA_B => b~3.IN0
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+clk => d[3].CLK
+clk => c[3].CLK
+clk => b[3].CLK
+clk => a[3].CLK
+DATA_C => c~4.IN0
+DATA_D => d~5.IN0
+CLR => a~3.IN1
+CLR => b~3.IN1
+CLR => c~4.IN1
+CLR => d~5.IN1
+CLR => a~0.IN1
+ENP => first~0.IN0
+ENT => comb~3.IN1
+ENT => first~0.IN1
+Q_A <> Q_A~0
+Q_B <> Q_B~0
+Q_C <> Q_C~0
+Q_D <> Q_D~0
+RC0 <= comb~3.DB_MAX_OUTPUT_PORT_TYPE
+
+

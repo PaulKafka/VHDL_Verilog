@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.031 ns
+From           : SW[8]
+To             : my8bitregister:inst3|myDflipflop:inst7|myDlatch:inst|inst~1
+From Clock     : --
+To Clock       : KEY[0]
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.269 ns
+From           : my8bitregister:inst3|myDflipflop:inst|myDlatch:inst1|inst~1
+To             : HEX4[1]
+From Clock     : KEY[0]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.993 ns
+From           : SW[5]
+To             : HEX7[5]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.392 ns
+From           : SW[8]
+To             : my8bitregister:inst3|myDflipflop:inst4|myDlatch:inst|inst~1
+From Clock     : --
+To Clock       : KEY[0]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'KEY[0]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 161.71 MHz ( period = 6.184 ns )
+From           : my8bitregister:inst3|myDflipflop:inst|myDlatch:inst1|inst~1
+To             : my8bitregister:inst3|myDflipflop:inst7|myDlatch:inst|inst~1
+From Clock     : KEY[0]
+To Clock       : KEY[0]
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

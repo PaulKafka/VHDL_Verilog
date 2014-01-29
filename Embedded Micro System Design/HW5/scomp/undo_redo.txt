@@ -1,0 +1,13 @@
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
+RPW
+
+	Undo Commands
+	     1.	||Simulation Report||Simulator||Logical Memories|||SCOMP|altsyncram:memory|altsyncram_6mk3:auto_generated|ALTSYNCRAM
+	     2.	||Simulation Report||Simulator||Simulation Waveforms
+
+

@@ -1,0 +1,459 @@
+Simulator report for piggyGame
+Thu Apr 12 09:29:06 2012
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 205 nodes    ;
+; Simulation Coverage         ;      35.61 % ;
+; Total Number of Transitions ; 194059       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      35.61 % ;
+; Total nodes checked                                 ; 205          ;
+; Total output ports checked                          ; 205          ;
+; Total output ports with complete 1/0-value coverage ; 73           ;
+; Total output ports with no 1/0-value coverage       ; 81           ;
+; Total output ports with no 1-value coverage         ; 132          ;
+; Total output ports with no 0-value coverage         ; 81           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                    ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |piggyGame|pr_state.player1_diceroll ; |piggyGame|pr_state.player1_diceroll ; regout           ;
+; |piggyGame|pr_state.player1_hold     ; |piggyGame|pr_state.player1_hold     ; regout           ;
+; |piggyGame|process_1~0               ; |piggyGame|process_1~0               ; out0             ;
+; |piggyGame|nx_state~0                ; |piggyGame|nx_state~0                ; out              ;
+; |piggyGame|nx_state~1                ; |piggyGame|nx_state~1                ; out              ;
+; |piggyGame|p1_turn~7                 ; |piggyGame|p1_turn~7                 ; out0             ;
+; |piggyGame|nx_state.player1_hold     ; |piggyGame|nx_state.player1_hold     ; out              ;
+; |piggyGame|p2_turn[0]~1              ; |piggyGame|p2_turn[0]~1              ; out0             ;
+; |piggyGame|p1_turn[0]                ; |piggyGame|p1_turn[0]                ; out              ;
+; |piggyGame|p1_turn[0]~0              ; |piggyGame|p1_turn[0]~0              ; out              ;
+; |piggyGame|p1_turn[1]                ; |piggyGame|p1_turn[1]                ; out              ;
+; |piggyGame|p1_turn[1]~1              ; |piggyGame|p1_turn[1]~1              ; out              ;
+; |piggyGame|p1_turn[2]                ; |piggyGame|p1_turn[2]                ; out              ;
+; |piggyGame|p1_turn[2]~2              ; |piggyGame|p1_turn[2]~2              ; out              ;
+; |piggyGame|p1_turn[3]                ; |piggyGame|p1_turn[3]                ; out              ;
+; |piggyGame|p1_turn[3]~3              ; |piggyGame|p1_turn[3]~3              ; out              ;
+; |piggyGame|p1_turn[4]                ; |piggyGame|p1_turn[4]                ; out              ;
+; |piggyGame|p1_turn[4]~4              ; |piggyGame|p1_turn[4]~4              ; out              ;
+; |piggyGame|p1_turn[5]                ; |piggyGame|p1_turn[5]                ; out              ;
+; |piggyGame|p1_turn[5]~5              ; |piggyGame|p1_turn[5]~5              ; out              ;
+; |piggyGame|p1_turn[6]                ; |piggyGame|p1_turn[6]                ; out              ;
+; |piggyGame|p1_turn[6]~6              ; |piggyGame|p1_turn[6]~6              ; out              ;
+; |piggyGame|clk                       ; |piggyGame|clk                       ; out              ;
+; |piggyGame|rst                       ; |piggyGame|rst                       ; out              ;
+; |piggyGame|diceNum[0]                ; |piggyGame|diceNum[0]                ; out              ;
+; |piggyGame|diceNum[1]                ; |piggyGame|diceNum[1]                ; out              ;
+; |piggyGame|diceNum[2]                ; |piggyGame|diceNum[2]                ; out              ;
+; |piggyGame|player1                   ; |piggyGame|player1                   ; out              ;
+; |piggyGame|player2                   ; |piggyGame|player2                   ; out              ;
+; |piggyGame|pr_state~0                ; |piggyGame|pr_state~0                ; out0             ;
+; |piggyGame|pr_state~1                ; |piggyGame|pr_state~1                ; out0             ;
+; |piggyGame|Selector0~0               ; |piggyGame|Selector0~0               ; out0             ;
+; |piggyGame|pr_state.player1_hold~0   ; |piggyGame|pr_state.player1_hold~0   ; out0             ;
+; |piggyGame|p1_turn~9                 ; |piggyGame|p1_turn~9                 ; out0             ;
+; |piggyGame|pr_state~5                ; |piggyGame|pr_state~5                ; out0             ;
+; |piggyGame|pr_state~9                ; |piggyGame|pr_state~9                ; out0             ;
+; |piggyGame|Selector0~2               ; |piggyGame|Selector0~2               ; out0             ;
+; |piggyGame|Selector0~4               ; |piggyGame|Selector0~4               ; out0             ;
+; |piggyGame|Selector2~0               ; |piggyGame|Selector2~0               ; out              ;
+; |piggyGame|Selector4~0               ; |piggyGame|Selector4~0               ; out0             ;
+; |piggyGame|Selector5~0               ; |piggyGame|Selector5~0               ; out0             ;
+; |piggyGame|Selector5~1               ; |piggyGame|Selector5~1               ; out0             ;
+; |piggyGame|Selector6~0               ; |piggyGame|Selector6~0               ; out0             ;
+; |piggyGame|Selector7~0               ; |piggyGame|Selector7~0               ; out0             ;
+; |piggyGame|Selector8~0               ; |piggyGame|Selector8~0               ; out0             ;
+; |piggyGame|Selector9~0               ; |piggyGame|Selector9~0               ; out0             ;
+; |piggyGame|Selector10~0              ; |piggyGame|Selector10~0              ; out0             ;
+; |piggyGame|Selector11~0              ; |piggyGame|Selector11~0              ; out0             ;
+; |piggyGame|LessThan0~0               ; |piggyGame|LessThan0~0               ; out0             ;
+; |piggyGame|LessThan0~1               ; |piggyGame|LessThan0~1               ; out0             ;
+; |piggyGame|LessThan1~0               ; |piggyGame|LessThan1~0               ; out0             ;
+; |piggyGame|LessThan1~1               ; |piggyGame|LessThan1~1               ; out0             ;
+; |piggyGame|LessThan1~2               ; |piggyGame|LessThan1~2               ; out0             ;
+; |piggyGame|LessThan1~3               ; |piggyGame|LessThan1~3               ; out0             ;
+; |piggyGame|Add0~0                    ; |piggyGame|Add0~0                    ; out0             ;
+; |piggyGame|Add0~1                    ; |piggyGame|Add0~1                    ; out0             ;
+; |piggyGame|Add0~2                    ; |piggyGame|Add0~2                    ; out0             ;
+; |piggyGame|Add0~3                    ; |piggyGame|Add0~3                    ; out0             ;
+; |piggyGame|Add0~5                    ; |piggyGame|Add0~5                    ; out0             ;
+; |piggyGame|Add0~6                    ; |piggyGame|Add0~6                    ; out0             ;
+; |piggyGame|Add0~7                    ; |piggyGame|Add0~7                    ; out0             ;
+; |piggyGame|Add0~8                    ; |piggyGame|Add0~8                    ; out0             ;
+; |piggyGame|Add0~9                    ; |piggyGame|Add0~9                    ; out0             ;
+; |piggyGame|Add0~10                   ; |piggyGame|Add0~10                   ; out0             ;
+; |piggyGame|Add0~11                   ; |piggyGame|Add0~11                   ; out0             ;
+; |piggyGame|Add0~12                   ; |piggyGame|Add0~12                   ; out0             ;
+; |piggyGame|Add0~13                   ; |piggyGame|Add0~13                   ; out0             ;
+; |piggyGame|Add0~14                   ; |piggyGame|Add0~14                   ; out0             ;
+; |piggyGame|Add0~15                   ; |piggyGame|Add0~15                   ; out0             ;
+; |piggyGame|Add0~16                   ; |piggyGame|Add0~16                   ; out0             ;
+; |piggyGame|Add0~17                   ; |piggyGame|Add0~17                   ; out0             ;
+; |piggyGame|Add0~18                   ; |piggyGame|Add0~18                   ; out0             ;
+; |piggyGame|Equal0~0                  ; |piggyGame|Equal0~0                  ; out0             ;
++--------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                       ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |piggyGame|p2_total[5]               ; |piggyGame|p2_total[5]               ; out              ;
+; |piggyGame|pr_state.player2_diceroll ; |piggyGame|pr_state.player2_diceroll ; regout           ;
+; |piggyGame|p2_total[4]               ; |piggyGame|p2_total[4]               ; out              ;
+; |piggyGame|pr_state.player2_hold     ; |piggyGame|pr_state.player2_hold     ; regout           ;
+; |piggyGame|p2_total[3]               ; |piggyGame|p2_total[3]               ; out              ;
+; |piggyGame|nx_state.player2_hold     ; |piggyGame|nx_state.player2_hold     ; out              ;
+; |piggyGame|p2_total[2]               ; |piggyGame|p2_total[2]               ; out              ;
+; |piggyGame|p2_total[1]               ; |piggyGame|p2_total[1]               ; out              ;
+; |piggyGame|p2_total[0]               ; |piggyGame|p2_total[0]               ; out              ;
+; |piggyGame|p2_turn[0]                ; |piggyGame|p2_turn[0]                ; out              ;
+; |piggyGame|p2_turn[0]~0              ; |piggyGame|p2_turn[0]~0              ; out              ;
+; |piggyGame|p2_turn[0]~2              ; |piggyGame|p2_turn[0]~2              ; out0             ;
+; |piggyGame|p2_turn[1]                ; |piggyGame|p2_turn[1]                ; out              ;
+; |piggyGame|p2_turn[1]~3              ; |piggyGame|p2_turn[1]~3              ; out              ;
+; |piggyGame|p2_turn[2]                ; |piggyGame|p2_turn[2]                ; out              ;
+; |piggyGame|p2_turn[2]~4              ; |piggyGame|p2_turn[2]~4              ; out              ;
+; |piggyGame|p2_turn[3]                ; |piggyGame|p2_turn[3]                ; out              ;
+; |piggyGame|p2_turn[3]~5              ; |piggyGame|p2_turn[3]~5              ; out              ;
+; |piggyGame|p2_turn[4]                ; |piggyGame|p2_turn[4]                ; out              ;
+; |piggyGame|p2_turn[4]~6              ; |piggyGame|p2_turn[4]~6              ; out              ;
+; |piggyGame|p2_turn[5]                ; |piggyGame|p2_turn[5]                ; out              ;
+; |piggyGame|p2_turn[5]~7              ; |piggyGame|p2_turn[5]~7              ; out              ;
+; |piggyGame|p2_turn[6]                ; |piggyGame|p2_turn[6]                ; out              ;
+; |piggyGame|p2_turn[6]~8              ; |piggyGame|p2_turn[6]~8              ; out              ;
+; |piggyGame|winner$latch              ; |piggyGame|winner$latch              ; out              ;
+; |piggyGame|p1_total[0]               ; |piggyGame|p1_total[0]               ; out              ;
+; |piggyGame|p1_total[1]               ; |piggyGame|p1_total[1]               ; out              ;
+; |piggyGame|p1_total[2]               ; |piggyGame|p1_total[2]               ; out              ;
+; |piggyGame|p1_total[3]               ; |piggyGame|p1_total[3]               ; out              ;
+; |piggyGame|p1_total[4]               ; |piggyGame|p1_total[4]               ; out              ;
+; |piggyGame|p1_total[5]               ; |piggyGame|p1_total[5]               ; out              ;
+; |piggyGame|p1_total[6]               ; |piggyGame|p1_total[6]               ; out              ;
+; |piggyGame|p2_total[6]               ; |piggyGame|p2_total[6]               ; out              ;
+; |piggyGame|winner                    ; |piggyGame|winner                    ; pin_out          ;
+; |piggyGame|Selector0~1               ; |piggyGame|Selector0~1               ; out0             ;
+; |piggyGame|pr_state.player2_hold~0   ; |piggyGame|pr_state.player2_hold~0   ; out0             ;
+; |piggyGame|p1_turn~11                ; |piggyGame|p1_turn~11                ; out0             ;
+; |piggyGame|Selector0~3               ; |piggyGame|Selector0~3               ; out0             ;
+; |piggyGame|Selector1~0               ; |piggyGame|Selector1~0               ; out0             ;
+; |piggyGame|Selector1~1               ; |piggyGame|Selector1~1               ; out0             ;
+; |piggyGame|Selector1~2               ; |piggyGame|Selector1~2               ; out0             ;
+; |piggyGame|Selector3~0               ; |piggyGame|Selector3~0               ; out0             ;
+; |piggyGame|Selector3~1               ; |piggyGame|Selector3~1               ; out0             ;
+; |piggyGame|Selector3~2               ; |piggyGame|Selector3~2               ; out0             ;
+; |piggyGame|LessThan2~0               ; |piggyGame|LessThan2~0               ; out0             ;
+; |piggyGame|LessThan2~1               ; |piggyGame|LessThan2~1               ; out0             ;
+; |piggyGame|LessThan2~2               ; |piggyGame|LessThan2~2               ; out0             ;
+; |piggyGame|LessThan2~3               ; |piggyGame|LessThan2~3               ; out0             ;
+; |piggyGame|LessThan2~4               ; |piggyGame|LessThan2~4               ; out0             ;
+; |piggyGame|LessThan2~5               ; |piggyGame|LessThan2~5               ; out0             ;
+; |piggyGame|LessThan3~0               ; |piggyGame|LessThan3~0               ; out0             ;
+; |piggyGame|LessThan3~1               ; |piggyGame|LessThan3~1               ; out0             ;
+; |piggyGame|LessThan3~2               ; |piggyGame|LessThan3~2               ; out0             ;
+; |piggyGame|LessThan3~3               ; |piggyGame|LessThan3~3               ; out0             ;
+; |piggyGame|LessThan3~4               ; |piggyGame|LessThan3~4               ; out0             ;
+; |piggyGame|LessThan3~5               ; |piggyGame|LessThan3~5               ; out0             ;
+; |piggyGame|Add0~4                    ; |piggyGame|Add0~4                    ; out0             ;
+; |piggyGame|Add1~0                    ; |piggyGame|Add1~0                    ; out0             ;
+; |piggyGame|Add1~1                    ; |piggyGame|Add1~1                    ; out0             ;
+; |piggyGame|Add1~2                    ; |piggyGame|Add1~2                    ; out0             ;
+; |piggyGame|Add1~3                    ; |piggyGame|Add1~3                    ; out0             ;
+; |piggyGame|Add1~4                    ; |piggyGame|Add1~4                    ; out0             ;
+; |piggyGame|Add1~5                    ; |piggyGame|Add1~5                    ; out0             ;
+; |piggyGame|Add1~6                    ; |piggyGame|Add1~6                    ; out0             ;
+; |piggyGame|Add1~7                    ; |piggyGame|Add1~7                    ; out0             ;
+; |piggyGame|Add1~8                    ; |piggyGame|Add1~8                    ; out0             ;
+; |piggyGame|Add1~9                    ; |piggyGame|Add1~9                    ; out0             ;
+; |piggyGame|Add1~10                   ; |piggyGame|Add1~10                   ; out0             ;
+; |piggyGame|Add1~11                   ; |piggyGame|Add1~11                   ; out0             ;
+; |piggyGame|Add1~12                   ; |piggyGame|Add1~12                   ; out0             ;
+; |piggyGame|Add1~13                   ; |piggyGame|Add1~13                   ; out0             ;
+; |piggyGame|Add1~14                   ; |piggyGame|Add1~14                   ; out0             ;
+; |piggyGame|Add1~15                   ; |piggyGame|Add1~15                   ; out0             ;
+; |piggyGame|Add1~16                   ; |piggyGame|Add1~16                   ; out0             ;
+; |piggyGame|Add1~17                   ; |piggyGame|Add1~17                   ; out0             ;
+; |piggyGame|Add1~18                   ; |piggyGame|Add1~18                   ; out0             ;
+; |piggyGame|Add1~19                   ; |piggyGame|Add1~19                   ; out0             ;
+; |piggyGame|Add1~20                   ; |piggyGame|Add1~20                   ; out0             ;
+; |piggyGame|Add1~21                   ; |piggyGame|Add1~21                   ; out0             ;
+; |piggyGame|Add1~22                   ; |piggyGame|Add1~22                   ; out0             ;
+; |piggyGame|Add1~23                   ; |piggyGame|Add1~23                   ; out0             ;
+; |piggyGame|Add1~24                   ; |piggyGame|Add1~24                   ; out0             ;
+; |piggyGame|Add1~25                   ; |piggyGame|Add1~25                   ; out0             ;
+; |piggyGame|Add1~26                   ; |piggyGame|Add1~26                   ; out0             ;
+; |piggyGame|Add1~27                   ; |piggyGame|Add1~27                   ; out0             ;
+; |piggyGame|Add2~0                    ; |piggyGame|Add2~0                    ; out0             ;
+; |piggyGame|Add2~1                    ; |piggyGame|Add2~1                    ; out0             ;
+; |piggyGame|Add2~2                    ; |piggyGame|Add2~2                    ; out0             ;
+; |piggyGame|Add2~3                    ; |piggyGame|Add2~3                    ; out0             ;
+; |piggyGame|Add2~4                    ; |piggyGame|Add2~4                    ; out0             ;
+; |piggyGame|Add2~5                    ; |piggyGame|Add2~5                    ; out0             ;
+; |piggyGame|Add2~6                    ; |piggyGame|Add2~6                    ; out0             ;
+; |piggyGame|Add2~7                    ; |piggyGame|Add2~7                    ; out0             ;
+; |piggyGame|Add2~8                    ; |piggyGame|Add2~8                    ; out0             ;
+; |piggyGame|Add2~9                    ; |piggyGame|Add2~9                    ; out0             ;
+; |piggyGame|Add2~10                   ; |piggyGame|Add2~10                   ; out0             ;
+; |piggyGame|Add2~11                   ; |piggyGame|Add2~11                   ; out0             ;
+; |piggyGame|Add2~12                   ; |piggyGame|Add2~12                   ; out0             ;
+; |piggyGame|Add2~13                   ; |piggyGame|Add2~13                   ; out0             ;
+; |piggyGame|Add2~14                   ; |piggyGame|Add2~14                   ; out0             ;
+; |piggyGame|Add2~15                   ; |piggyGame|Add2~15                   ; out0             ;
+; |piggyGame|Add2~16                   ; |piggyGame|Add2~16                   ; out0             ;
+; |piggyGame|Add2~17                   ; |piggyGame|Add2~17                   ; out0             ;
+; |piggyGame|Add2~18                   ; |piggyGame|Add2~18                   ; out0             ;
+; |piggyGame|Add3~0                    ; |piggyGame|Add3~0                    ; out0             ;
+; |piggyGame|Add3~1                    ; |piggyGame|Add3~1                    ; out0             ;
+; |piggyGame|Add3~2                    ; |piggyGame|Add3~2                    ; out0             ;
+; |piggyGame|Add3~3                    ; |piggyGame|Add3~3                    ; out0             ;
+; |piggyGame|Add3~4                    ; |piggyGame|Add3~4                    ; out0             ;
+; |piggyGame|Add3~5                    ; |piggyGame|Add3~5                    ; out0             ;
+; |piggyGame|Add3~6                    ; |piggyGame|Add3~6                    ; out0             ;
+; |piggyGame|Add3~7                    ; |piggyGame|Add3~7                    ; out0             ;
+; |piggyGame|Add3~8                    ; |piggyGame|Add3~8                    ; out0             ;
+; |piggyGame|Add3~9                    ; |piggyGame|Add3~9                    ; out0             ;
+; |piggyGame|Add3~10                   ; |piggyGame|Add3~10                   ; out0             ;
+; |piggyGame|Add3~11                   ; |piggyGame|Add3~11                   ; out0             ;
+; |piggyGame|Add3~12                   ; |piggyGame|Add3~12                   ; out0             ;
+; |piggyGame|Add3~13                   ; |piggyGame|Add3~13                   ; out0             ;
+; |piggyGame|Add3~14                   ; |piggyGame|Add3~14                   ; out0             ;
+; |piggyGame|Add3~15                   ; |piggyGame|Add3~15                   ; out0             ;
+; |piggyGame|Add3~16                   ; |piggyGame|Add3~16                   ; out0             ;
+; |piggyGame|Add3~17                   ; |piggyGame|Add3~17                   ; out0             ;
+; |piggyGame|Add3~18                   ; |piggyGame|Add3~18                   ; out0             ;
+; |piggyGame|Add3~19                   ; |piggyGame|Add3~19                   ; out0             ;
+; |piggyGame|Add3~20                   ; |piggyGame|Add3~20                   ; out0             ;
+; |piggyGame|Add3~21                   ; |piggyGame|Add3~21                   ; out0             ;
+; |piggyGame|Add3~22                   ; |piggyGame|Add3~22                   ; out0             ;
+; |piggyGame|Add3~23                   ; |piggyGame|Add3~23                   ; out0             ;
+; |piggyGame|Add3~24                   ; |piggyGame|Add3~24                   ; out0             ;
+; |piggyGame|Add3~25                   ; |piggyGame|Add3~25                   ; out0             ;
+; |piggyGame|Add3~26                   ; |piggyGame|Add3~26                   ; out0             ;
+; |piggyGame|Add3~27                   ; |piggyGame|Add3~27                   ; out0             ;
++--------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |piggyGame|p2_total[5]           ; |piggyGame|p2_total[5]           ; out              ;
+; |piggyGame|p2_total[4]           ; |piggyGame|p2_total[4]           ; out              ;
+; |piggyGame|pr_state.player2_hold ; |piggyGame|pr_state.player2_hold ; regout           ;
+; |piggyGame|p2_total[3]           ; |piggyGame|p2_total[3]           ; out              ;
+; |piggyGame|p2_total[2]           ; |piggyGame|p2_total[2]           ; out              ;
+; |piggyGame|p2_total[1]           ; |piggyGame|p2_total[1]           ; out              ;
+; |piggyGame|p2_total[0]           ; |piggyGame|p2_total[0]           ; out              ;
+; |piggyGame|p2_turn[0]            ; |piggyGame|p2_turn[0]            ; out              ;
+; |piggyGame|p2_turn[1]            ; |piggyGame|p2_turn[1]            ; out              ;
+; |piggyGame|p2_turn[2]            ; |piggyGame|p2_turn[2]            ; out              ;
+; |piggyGame|p2_turn[3]            ; |piggyGame|p2_turn[3]            ; out              ;
+; |piggyGame|p2_turn[4]            ; |piggyGame|p2_turn[4]            ; out              ;
+; |piggyGame|p2_turn[5]            ; |piggyGame|p2_turn[5]            ; out              ;
+; |piggyGame|p2_turn[6]            ; |piggyGame|p2_turn[6]            ; out              ;
+; |piggyGame|winner$latch          ; |piggyGame|winner$latch          ; out              ;
+; |piggyGame|p1_total[0]           ; |piggyGame|p1_total[0]           ; out              ;
+; |piggyGame|p1_total[1]           ; |piggyGame|p1_total[1]           ; out              ;
+; |piggyGame|p1_total[2]           ; |piggyGame|p1_total[2]           ; out              ;
+; |piggyGame|p1_total[3]           ; |piggyGame|p1_total[3]           ; out              ;
+; |piggyGame|p1_total[4]           ; |piggyGame|p1_total[4]           ; out              ;
+; |piggyGame|p1_total[5]           ; |piggyGame|p1_total[5]           ; out              ;
+; |piggyGame|p1_total[6]           ; |piggyGame|p1_total[6]           ; out              ;
+; |piggyGame|p2_total[6]           ; |piggyGame|p2_total[6]           ; out              ;
+; |piggyGame|winner                ; |piggyGame|winner                ; pin_out          ;
+; |piggyGame|p1_turn~11            ; |piggyGame|p1_turn~11            ; out0             ;
+; |piggyGame|Selector3~1           ; |piggyGame|Selector3~1           ; out0             ;
+; |piggyGame|LessThan2~0           ; |piggyGame|LessThan2~0           ; out0             ;
+; |piggyGame|LessThan2~1           ; |piggyGame|LessThan2~1           ; out0             ;
+; |piggyGame|LessThan2~2           ; |piggyGame|LessThan2~2           ; out0             ;
+; |piggyGame|LessThan2~3           ; |piggyGame|LessThan2~3           ; out0             ;
+; |piggyGame|LessThan2~4           ; |piggyGame|LessThan2~4           ; out0             ;
+; |piggyGame|LessThan2~5           ; |piggyGame|LessThan2~5           ; out0             ;
+; |piggyGame|LessThan3~0           ; |piggyGame|LessThan3~0           ; out0             ;
+; |piggyGame|LessThan3~1           ; |piggyGame|LessThan3~1           ; out0             ;
+; |piggyGame|LessThan3~2           ; |piggyGame|LessThan3~2           ; out0             ;
+; |piggyGame|LessThan3~3           ; |piggyGame|LessThan3~3           ; out0             ;
+; |piggyGame|LessThan3~4           ; |piggyGame|LessThan3~4           ; out0             ;
+; |piggyGame|LessThan3~5           ; |piggyGame|LessThan3~5           ; out0             ;
+; |piggyGame|Add0~4                ; |piggyGame|Add0~4                ; out0             ;
+; |piggyGame|Add1~0                ; |piggyGame|Add1~0                ; out0             ;
+; |piggyGame|Add1~2                ; |piggyGame|Add1~2                ; out0             ;
+; |piggyGame|Add1~7                ; |piggyGame|Add1~7                ; out0             ;
+; |piggyGame|Add1~12               ; |piggyGame|Add1~12               ; out0             ;
+; |piggyGame|Add1~17               ; |piggyGame|Add1~17               ; out0             ;
+; |piggyGame|Add1~22               ; |piggyGame|Add1~22               ; out0             ;
+; |piggyGame|Add1~27               ; |piggyGame|Add1~27               ; out0             ;
+; |piggyGame|Add2~0                ; |piggyGame|Add2~0                ; out0             ;
+; |piggyGame|Add2~2                ; |piggyGame|Add2~2                ; out0             ;
+; |piggyGame|Add2~7                ; |piggyGame|Add2~7                ; out0             ;
+; |piggyGame|Add2~12               ; |piggyGame|Add2~12               ; out0             ;
+; |piggyGame|Add2~14               ; |piggyGame|Add2~14               ; out0             ;
+; |piggyGame|Add2~16               ; |piggyGame|Add2~16               ; out0             ;
+; |piggyGame|Add2~18               ; |piggyGame|Add2~18               ; out0             ;
+; |piggyGame|Add3~0                ; |piggyGame|Add3~0                ; out0             ;
+; |piggyGame|Add3~1                ; |piggyGame|Add3~1                ; out0             ;
+; |piggyGame|Add3~2                ; |piggyGame|Add3~2                ; out0             ;
+; |piggyGame|Add3~3                ; |piggyGame|Add3~3                ; out0             ;
+; |piggyGame|Add3~4                ; |piggyGame|Add3~4                ; out0             ;
+; |piggyGame|Add3~5                ; |piggyGame|Add3~5                ; out0             ;
+; |piggyGame|Add3~6                ; |piggyGame|Add3~6                ; out0             ;
+; |piggyGame|Add3~7                ; |piggyGame|Add3~7                ; out0             ;
+; |piggyGame|Add3~8                ; |piggyGame|Add3~8                ; out0             ;
+; |piggyGame|Add3~9                ; |piggyGame|Add3~9                ; out0             ;
+; |piggyGame|Add3~10               ; |piggyGame|Add3~10               ; out0             ;
+; |piggyGame|Add3~11               ; |piggyGame|Add3~11               ; out0             ;
+; |piggyGame|Add3~12               ; |piggyGame|Add3~12               ; out0             ;
+; |piggyGame|Add3~13               ; |piggyGame|Add3~13               ; out0             ;
+; |piggyGame|Add3~14               ; |piggyGame|Add3~14               ; out0             ;
+; |piggyGame|Add3~15               ; |piggyGame|Add3~15               ; out0             ;
+; |piggyGame|Add3~16               ; |piggyGame|Add3~16               ; out0             ;
+; |piggyGame|Add3~17               ; |piggyGame|Add3~17               ; out0             ;
+; |piggyGame|Add3~18               ; |piggyGame|Add3~18               ; out0             ;
+; |piggyGame|Add3~19               ; |piggyGame|Add3~19               ; out0             ;
+; |piggyGame|Add3~20               ; |piggyGame|Add3~20               ; out0             ;
+; |piggyGame|Add3~21               ; |piggyGame|Add3~21               ; out0             ;
+; |piggyGame|Add3~22               ; |piggyGame|Add3~22               ; out0             ;
+; |piggyGame|Add3~23               ; |piggyGame|Add3~23               ; out0             ;
+; |piggyGame|Add3~24               ; |piggyGame|Add3~24               ; out0             ;
+; |piggyGame|Add3~25               ; |piggyGame|Add3~25               ; out0             ;
+; |piggyGame|Add3~26               ; |piggyGame|Add3~26               ; out0             ;
+; |piggyGame|Add3~27               ; |piggyGame|Add3~27               ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 12 09:29:05 2012
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off piggyGame -c piggyGame
+Info: Using vector source file "C:/altera/91sp1/quartus/projects/hw8/piggyGame.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of piggyGame.vwf called piggyGame.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Error: Zero-time oscillation in node "|piggyGame|Add0~7" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Add0~12" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|p1_turn[0]~0" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Selector4~0" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|p1_turn[0]" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Add0~0" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Add0~1" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Add1~1" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Add0~2" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Error: Zero-time oscillation in node "|piggyGame|Add1~6" at time 2.5 ns. Check the design or vector source file for combinational loop.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      35.61 %
+Info: Number of transitions in simulation is 194059
+Info: Vector file piggyGame.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Error: Quartus II Simulator was unsuccessful. 10 errors, 0 warnings
+    Error: Peak virtual memory: 131 megabytes
+    Error: Processing ended: Thu Apr 12 09:29:06 2012
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+
+

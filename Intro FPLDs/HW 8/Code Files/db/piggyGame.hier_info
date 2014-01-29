@@ -1,0 +1,23 @@
+|piggyGame
+clk => pr_state~5.DATAIN
+rst => pr_state~9.DATAIN
+diceNum[0] => LessThan0.IN6
+diceNum[0] => LessThan1.IN6
+diceNum[0] => Add0.IN7
+diceNum[0] => Add2.IN7
+diceNum[0] => Equal0.IN2
+diceNum[1] => LessThan0.IN5
+diceNum[1] => LessThan1.IN5
+diceNum[1] => Add0.IN6
+diceNum[1] => Add2.IN6
+diceNum[1] => Equal0.IN1
+diceNum[2] => LessThan0.IN4
+diceNum[2] => LessThan1.IN4
+diceNum[2] => Add0.IN5
+diceNum[2] => Add2.IN5
+diceNum[2] => Equal0.IN0
+player1 => Selector2.IN0
+player2 => Selector2.IN1
+winner <= winner$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Mar 07 10:58:06 2008
+Quartus II Version : 7.2 Build 151 09/26/2007 SJ Full Version
+Revision Name : lcd
+Top-level Entity Name : top
+Family : Cyclone II
+Total logic elements : 143
+    Total combinational functions : 143
+    Dedicated logic registers : 70
+Total registers : 70
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

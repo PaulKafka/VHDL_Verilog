@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 23 11:22:16 2013
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+Revision Name : rpds17
+Top-level Entity Name : rpds17
+Family : Cyclone II
+Total logic elements : 3,787
+    Total combinational functions : 3,278
+    Dedicated logic registers : 2,119
+Total registers : 2119
+Total pins : 148
+Total virtual pins : 0
+Total memory bits : 46,720
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 1

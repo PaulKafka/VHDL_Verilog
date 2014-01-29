@@ -1,0 +1,101 @@
+Altera SOPC Builder Version 9.12 Build 350
+Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
+
+
+No .sopc_builder configuration file(!)
+# 2013.10.21 11:52:38 (*) mk_custom_sdk starting
+# 2013.10.21 11:52:38 (*) Reading project //codex2/kafkapa/My Documents/Desktop/rpds17/nios32.ptf.
+
+# 2013.10.21 11:52:38 (*) Finding all CPUs
+# 2013.10.21 11:52:38 (*) Finding all available components
+
+# 2013.10.21 11:52:38 (*) Reading //codex2/kafkapa/My Documents/Desktop/rpds17/.sopc_builder/install.ptf
+
+# 2013.10.21 11:52:38 (*) Found 67 components
+
+# 2013.10.21 11:52:39 (*) Finding all peripherals
+
+# 2013.10.21 11:52:39 (*) Finding software components
+
+# 2013.10.21 11:52:39 (*) (Legacy SDK Generation Skipped)
+# 2013.10.21 11:52:39 (*) (All TCL Script Generation Skipped)
+# 2013.10.21 11:52:39 (*) (No Libraries Built)
+# 2013.10.21 11:52:39 (*) (Contents Generation Skipped)
+# 2013.10.21 11:52:39 (*) mk_custom_sdk finishing
+
+# 2013.10.21 11:52:39 (*) Starting generation for system: nios32.
+
+.
+.
+.
+.
+...
+.
+.
+.
+
+# 2013.10.21 11:52:41 (*) Running Generator Program for cpu
+
+# 2013.10.21 11:52:43 (*) Starting Nios II generation
+# 2013.10.21 11:52:43 (*)   Checking for plaintext license.
+'\\codex2\kafkapa\My Documents\Desktop\rpds17'
+CMD.EXE was started with the above path as the current directory.
+UNC paths are not supported.  Defaulting to Windows directory.
+# 2013.10.21 11:52:43 (*)   Plaintext license not found.
+# 2013.10.21 11:52:43 (*)   Checking for encrypted license (non-evaluation).
+'\\codex2\kafkapa\My Documents\Desktop\rpds17'
+CMD.EXE was started with the above path as the current directory.
+
+UNC paths are not supported.  Defaulting to Windows directory.
+# 2013.10.21 11:52:44 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2013.10.21 11:52:44 (*)   Getting CPU configuration settings
+# 2013.10.21 11:52:44 (*)   Elaborating CPU configuration settings
+# 2013.10.21 11:52:44 (*)   Creating all objects for CPU
+# 2013.10.21 11:52:45 (*)     Pipeline frontend
+# 2013.10.21 11:52:46 (*)   Generating HDL from CPU objects
+# 2013.10.21 11:52:50 (*)   Creating encrypted HDL
+# 2013.10.21 11:52:52 (*) Done Nios II generation
+
+# 2013.10.21 11:52:52 (*) Running Generator Program for jtag_uart
+
+# 2013.10.21 11:52:53 (*) Running Generator Program for uart
+
+# 2013.10.21 11:52:55 (*) Running Generator Program for timer
+
+# 2013.10.21 11:52:56 (*) Running Generator Program for buttons
+
+# 2013.10.21 11:52:57 (*) Running Generator Program for switches
+
+# 2013.10.21 11:52:58 (*) Running Generator Program for LEDS
+
+# 2013.10.21 11:52:59 (*) Running Generator Program for sdram
+
+# 2013.10.21 11:53:00 (*) Running Generator Program for lcd
+
+# 2013.10.21 11:53:01 (*) Running Generator Program for flash
+
+.
+
+# 2013.10.21 11:53:02 (*) Running Test Generator Program for sdram
+
+# 2013.10.21 11:53:02 (*) Making arbitration and system (top) modules.
+
+# 2013.10.21 11:53:08 (*) Generating Quartus symbol for top level: nios32
+
+# 2013.10.21 11:53:08 (*) Generating Symbol //codex2/kafkapa/My Documents/Desktop/rpds17/nios32.bsf
+
+# 2013.10.21 11:53:08 (*) Creating command-line system-generation script: //codex2/kafkapa/My Documents/Desktop/rpds17/nios32_generation_script
+
+# 2013.10.21 11:53:08 (*) Running setup for HDL simulator: modelsim
+
+
+# 2013.10.21 11:53:09 (*) Completed generation for system: nios32.
+# 2013.10.21 11:53:09 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : //codex2/kafkapa/My Documents/Desktop/rpds17/nios32.ptf 
+  System HDL Model : //codex2/kafkapa/My Documents/Desktop/rpds17/nios32.vhd 
+  System Generation Script : //codex2/kafkapa/My Documents/Desktop/rpds17/nios32_generation_script 
+
+# 2013.10.21 11:53:09 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

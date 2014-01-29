@@ -1,0 +1,13 @@
+
+State Machine - |SCOMP|state
+Name state.execute_jump state.execute_store2 state.execute_store3 state.execute_store state.execute_load state.execute_add state.decode state.fetch state.execute_subt state.reset_pc 
+state.reset_pc 0 0 0 0 0 0 0 0 0 0 
+state.execute_subt 0 0 0 0 0 0 0 0 1 1 
+state.fetch 0 0 0 0 0 0 0 1 0 1 
+state.decode 0 0 0 0 0 0 1 0 0 1 
+state.execute_add 0 0 0 0 0 1 0 0 0 1 
+state.execute_load 0 0 0 0 1 0 0 0 0 1 
+state.execute_store 0 0 0 1 0 0 0 0 0 1 
+state.execute_store3 0 0 1 0 0 0 0 0 0 1 
+state.execute_store2 0 1 0 0 0 0 0 0 0 1 
+state.execute_jump 1 0 0 0 0 0 0 0 0 1 

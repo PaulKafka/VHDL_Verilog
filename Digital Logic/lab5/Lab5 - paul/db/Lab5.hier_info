@@ -1,0 +1,638 @@
+|Lab5
+HEX0[0] <= <GND>
+HEX0[1] <= <GND>
+HEX0[2] <= <GND>
+HEX0[3] <= <GND>
+HEX0[4] <= <GND>
+HEX0[5] <= <GND>
+HEX0[6] <= <GND>
+HEX1[0] <= <GND>
+HEX1[1] <= <GND>
+HEX1[2] <= <GND>
+HEX1[3] <= <GND>
+HEX1[4] <= <GND>
+HEX1[5] <= <GND>
+HEX1[6] <= <GND>
+HEX2[0] <= <GND>
+HEX2[1] <= <GND>
+HEX2[2] <= <GND>
+HEX2[3] <= <GND>
+HEX2[4] <= <GND>
+HEX2[5] <= <GND>
+HEX2[6] <= <GND>
+HEX3[0] <= <VCC>
+HEX3[1] <= <VCC>
+HEX3[2] <= <VCC>
+HEX3[3] <= <VCC>
+HEX3[4] <= <VCC>
+HEX3[5] <= <VCC>
+HEX3[6] <= <VCC>
+HEX4[0] <= output:inst3.seg2[0]
+HEX4[1] <= output:inst3.seg2[1]
+HEX4[2] <= output:inst3.seg2[2]
+HEX4[3] <= output:inst3.seg2[3]
+HEX4[4] <= output:inst3.seg2[4]
+HEX4[5] <= output:inst3.seg2[5]
+HEX4[6] <= output:inst3.seg2[6]
+SW[0] => output:inst3.lsb[0]
+SW[0] => lpm_add_sub1:inst5.datab[0]
+SW[1] => output:inst3.lsb[1]
+SW[1] => lpm_add_sub1:inst5.datab[1]
+SW[2] => output:inst3.lsb[2]
+SW[2] => lpm_add_sub1:inst5.datab[2]
+SW[3] => output:inst3.lsb[3]
+SW[3] => lpm_add_sub1:inst5.datab[3]
+SW[4] => output:inst3.msb[0]
+SW[4] => lpm_add_sub1:inst5.datab[4]
+SW[5] => output:inst3.msb[1]
+SW[5] => lpm_add_sub1:inst5.datab[5]
+SW[6] => output:inst3.msb[2]
+SW[6] => lpm_add_sub1:inst5.datab[6]
+SW[7] => output:inst3.msb[3]
+SW[7] => lpm_add_sub1:inst5.datab[7]
+SW[8] => lpm_add_sub1:inst5.add_sub
+HEX5[0] <= output:inst3.seg1[0]
+HEX5[1] <= output:inst3.seg1[1]
+HEX5[2] <= output:inst3.seg1[2]
+HEX5[3] <= output:inst3.seg1[3]
+HEX5[4] <= output:inst3.seg1[4]
+HEX5[5] <= output:inst3.seg1[5]
+HEX5[6] <= output:inst3.seg1[6]
+HEX6[0] <= output:inst2.seg2[0]
+HEX6[1] <= output:inst2.seg2[1]
+HEX6[2] <= output:inst2.seg2[2]
+HEX6[3] <= output:inst2.seg2[3]
+HEX6[4] <= output:inst2.seg2[4]
+HEX6[5] <= output:inst2.seg2[5]
+HEX6[6] <= output:inst2.seg2[6]
+KEY[0] => Registereightbit:inst.CLK
+HEX7[0] <= output:inst2.seg1[0]
+HEX7[1] <= output:inst2.seg1[1]
+HEX7[2] <= output:inst2.seg1[2]
+HEX7[3] <= output:inst2.seg1[3]
+HEX7[4] <= output:inst2.seg1[4]
+HEX7[5] <= output:inst2.seg1[5]
+HEX7[6] <= output:inst2.seg1[6]
+
+
+|Lab5|output:inst3
+msb[0] => Mux0.IN19
+msb[0] => Mux1.IN19
+msb[0] => Mux2.IN19
+msb[0] => Mux3.IN19
+msb[0] => Mux4.IN19
+msb[0] => Mux5.IN19
+msb[0] => Mux6.IN19
+msb[1] => Mux0.IN18
+msb[1] => Mux1.IN18
+msb[1] => Mux2.IN18
+msb[1] => Mux3.IN18
+msb[1] => Mux4.IN18
+msb[1] => Mux5.IN18
+msb[1] => Mux6.IN18
+msb[2] => Mux0.IN17
+msb[2] => Mux1.IN17
+msb[2] => Mux2.IN17
+msb[2] => Mux3.IN17
+msb[2] => Mux4.IN17
+msb[2] => Mux5.IN17
+msb[2] => Mux6.IN17
+msb[3] => Mux0.IN16
+msb[3] => Mux1.IN16
+msb[3] => Mux2.IN16
+msb[3] => Mux3.IN16
+msb[3] => Mux4.IN16
+msb[3] => Mux5.IN16
+msb[3] => Mux6.IN16
+lsb[0] => Mux7.IN19
+lsb[0] => Mux8.IN19
+lsb[0] => Mux9.IN19
+lsb[0] => Mux10.IN19
+lsb[0] => Mux11.IN19
+lsb[0] => Mux12.IN19
+lsb[0] => Mux13.IN19
+lsb[1] => Mux7.IN18
+lsb[1] => Mux8.IN18
+lsb[1] => Mux9.IN18
+lsb[1] => Mux10.IN18
+lsb[1] => Mux11.IN18
+lsb[1] => Mux12.IN18
+lsb[1] => Mux13.IN18
+lsb[2] => Mux7.IN17
+lsb[2] => Mux8.IN17
+lsb[2] => Mux9.IN17
+lsb[2] => Mux10.IN17
+lsb[2] => Mux11.IN17
+lsb[2] => Mux12.IN17
+lsb[2] => Mux13.IN17
+lsb[3] => Mux7.IN16
+lsb[3] => Mux8.IN16
+lsb[3] => Mux9.IN16
+lsb[3] => Mux10.IN16
+lsb[3] => Mux11.IN16
+lsb[3] => Mux12.IN16
+lsb[3] => Mux13.IN16
+seg1[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg1[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg1[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+seg2[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+seg2[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+seg2[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+seg2[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+seg2[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+seg2[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+seg2[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|output:inst2
+msb[0] => Mux0.IN19
+msb[0] => Mux1.IN19
+msb[0] => Mux2.IN19
+msb[0] => Mux3.IN19
+msb[0] => Mux4.IN19
+msb[0] => Mux5.IN19
+msb[0] => Mux6.IN19
+msb[1] => Mux0.IN18
+msb[1] => Mux1.IN18
+msb[1] => Mux2.IN18
+msb[1] => Mux3.IN18
+msb[1] => Mux4.IN18
+msb[1] => Mux5.IN18
+msb[1] => Mux6.IN18
+msb[2] => Mux0.IN17
+msb[2] => Mux1.IN17
+msb[2] => Mux2.IN17
+msb[2] => Mux3.IN17
+msb[2] => Mux4.IN17
+msb[2] => Mux5.IN17
+msb[2] => Mux6.IN17
+msb[3] => Mux0.IN16
+msb[3] => Mux1.IN16
+msb[3] => Mux2.IN16
+msb[3] => Mux3.IN16
+msb[3] => Mux4.IN16
+msb[3] => Mux5.IN16
+msb[3] => Mux6.IN16
+lsb[0] => Mux7.IN19
+lsb[0] => Mux8.IN19
+lsb[0] => Mux9.IN19
+lsb[0] => Mux10.IN19
+lsb[0] => Mux11.IN19
+lsb[0] => Mux12.IN19
+lsb[0] => Mux13.IN19
+lsb[1] => Mux7.IN18
+lsb[1] => Mux8.IN18
+lsb[1] => Mux9.IN18
+lsb[1] => Mux10.IN18
+lsb[1] => Mux11.IN18
+lsb[1] => Mux12.IN18
+lsb[1] => Mux13.IN18
+lsb[2] => Mux7.IN17
+lsb[2] => Mux8.IN17
+lsb[2] => Mux9.IN17
+lsb[2] => Mux10.IN17
+lsb[2] => Mux11.IN17
+lsb[2] => Mux12.IN17
+lsb[2] => Mux13.IN17
+lsb[3] => Mux7.IN16
+lsb[3] => Mux8.IN16
+lsb[3] => Mux9.IN16
+lsb[3] => Mux10.IN16
+lsb[3] => Mux11.IN16
+lsb[3] => Mux12.IN16
+lsb[3] => Mux13.IN16
+seg1[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg1[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg1[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+seg2[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+seg2[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+seg2[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+seg2[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+seg2[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+seg2[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+seg2[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst
+q[0] <= D_FlipFlop:inst.D_out
+q[1] <= D_FlipFlop:inst2.D_out
+q[2] <= D_FlipFlop:inst1.D_out
+q[3] <= D_FlipFlop:inst3.D_out
+q[4] <= D_FlipFlop:inst6.D_out
+q[5] <= D_FlipFlop:inst5.D_out
+q[6] <= D_FlipFlop:inst4.D_out
+q[7] <= D_FlipFlop:inst7.D_out
+CLK => D_FlipFlop:inst.CLK
+CLK => D_FlipFlop:inst2.CLK
+CLK => D_FlipFlop:inst1.CLK
+CLK => D_FlipFlop:inst3.CLK
+CLK => D_FlipFlop:inst6.CLK
+CLK => D_FlipFlop:inst5.CLK
+CLK => D_FlipFlop:inst4.CLK
+CLK => D_FlipFlop:inst7.CLK
+d[0] => D_FlipFlop:inst.D_in
+d[1] => D_FlipFlop:inst2.D_in
+d[2] => D_FlipFlop:inst1.D_in
+d[3] => D_FlipFlop:inst3.D_in
+d[4] => D_FlipFlop:inst6.D_in
+d[5] => D_FlipFlop:inst5.D_in
+d[6] => D_FlipFlop:inst4.D_in
+d[7] => D_FlipFlop:inst7.D_in
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst2
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst2|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst1
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst1|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst3
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst3|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst6
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst6|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst5
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst5|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst4
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst4|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst7
+D_out <= D-LatchedSR:inst1.data_out
+D_in => D-LatchedSR:inst.D
+CLK => inst2.IN0
+CLK => D-LatchedSR:inst1.W
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst1
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst1|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst
+data_out <= SRLATCHY:inst1.L
+W => inst.IN0
+W => inst4.IN1
+D => inst.IN1
+D => inst5.IN0
+
+
+|Lab5|Registereightbit:inst|D_FlipFlop:inst7|D-LatchedSR:inst|SRLATCHY:inst1
+~L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst2.IN0
+R => inst.IN1
+L <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|lpm_add_sub1:inst5
+add_sub => lpm_add_sub:LPM_ADD_SUB_component.add_sub
+dataa[0] => lpm_add_sub:LPM_ADD_SUB_component.dataa[0]
+dataa[1] => lpm_add_sub:LPM_ADD_SUB_component.dataa[1]
+dataa[2] => lpm_add_sub:LPM_ADD_SUB_component.dataa[2]
+dataa[3] => lpm_add_sub:LPM_ADD_SUB_component.dataa[3]
+dataa[4] => lpm_add_sub:LPM_ADD_SUB_component.dataa[4]
+dataa[5] => lpm_add_sub:LPM_ADD_SUB_component.dataa[5]
+dataa[6] => lpm_add_sub:LPM_ADD_SUB_component.dataa[6]
+dataa[7] => lpm_add_sub:LPM_ADD_SUB_component.dataa[7]
+datab[0] => lpm_add_sub:LPM_ADD_SUB_component.datab[0]
+datab[1] => lpm_add_sub:LPM_ADD_SUB_component.datab[1]
+datab[2] => lpm_add_sub:LPM_ADD_SUB_component.datab[2]
+datab[3] => lpm_add_sub:LPM_ADD_SUB_component.datab[3]
+datab[4] => lpm_add_sub:LPM_ADD_SUB_component.datab[4]
+datab[5] => lpm_add_sub:LPM_ADD_SUB_component.datab[5]
+datab[6] => lpm_add_sub:LPM_ADD_SUB_component.datab[6]
+datab[7] => lpm_add_sub:LPM_ADD_SUB_component.datab[7]
+result[0] <= lpm_add_sub:LPM_ADD_SUB_component.result[0]
+result[1] <= lpm_add_sub:LPM_ADD_SUB_component.result[1]
+result[2] <= lpm_add_sub:LPM_ADD_SUB_component.result[2]
+result[3] <= lpm_add_sub:LPM_ADD_SUB_component.result[3]
+result[4] <= lpm_add_sub:LPM_ADD_SUB_component.result[4]
+result[5] <= lpm_add_sub:LPM_ADD_SUB_component.result[5]
+result[6] <= lpm_add_sub:LPM_ADD_SUB_component.result[6]
+result[7] <= lpm_add_sub:LPM_ADD_SUB_component.result[7]
+
+
+|Lab5|lpm_add_sub1:inst5|lpm_add_sub:LPM_ADD_SUB_component
+dataa[0] => add_sub_big:auto_generated.dataa[0]
+dataa[1] => add_sub_big:auto_generated.dataa[1]
+dataa[2] => add_sub_big:auto_generated.dataa[2]
+dataa[3] => add_sub_big:auto_generated.dataa[3]
+dataa[4] => add_sub_big:auto_generated.dataa[4]
+dataa[5] => add_sub_big:auto_generated.dataa[5]
+dataa[6] => add_sub_big:auto_generated.dataa[6]
+dataa[7] => add_sub_big:auto_generated.dataa[7]
+datab[0] => add_sub_big:auto_generated.datab[0]
+datab[1] => add_sub_big:auto_generated.datab[1]
+datab[2] => add_sub_big:auto_generated.datab[2]
+datab[3] => add_sub_big:auto_generated.datab[3]
+datab[4] => add_sub_big:auto_generated.datab[4]
+datab[5] => add_sub_big:auto_generated.datab[5]
+datab[6] => add_sub_big:auto_generated.datab[6]
+datab[7] => add_sub_big:auto_generated.datab[7]
+cin => ~NO_FANOUT~
+add_sub => add_sub_big:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_big:auto_generated.result[0]
+result[1] <= add_sub_big:auto_generated.result[1]
+result[2] <= add_sub_big:auto_generated.result[2]
+result[3] <= add_sub_big:auto_generated.result[3]
+result[4] <= add_sub_big:auto_generated.result[4]
+result[5] <= add_sub_big:auto_generated.result[5]
+result[6] <= add_sub_big:auto_generated.result[6]
+result[7] <= add_sub_big:auto_generated.result[7]
+cout <= <GND>
+overflow <= <GND>
+
+
+|Lab5|lpm_add_sub1:inst5|lpm_add_sub:LPM_ADD_SUB_component|add_sub_big:auto_generated
+add_sub => _.IN0
+add_sub => _.IN0
+add_sub => _.IN0
+dataa[0] => op_1.IN14
+dataa[1] => op_1.IN12
+dataa[2] => op_1.IN10
+dataa[3] => op_1.IN8
+dataa[4] => op_1.IN6
+dataa[5] => op_1.IN4
+dataa[6] => op_1.IN2
+dataa[7] => op_1.IN0
+datab[0] => _.IN1
+datab[1] => _.IN1
+datab[2] => _.IN1
+datab[3] => _.IN1
+datab[4] => _.IN1
+datab[5] => _.IN1
+datab[6] => _.IN1
+datab[7] => _.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+

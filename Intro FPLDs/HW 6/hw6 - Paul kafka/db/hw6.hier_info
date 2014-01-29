@@ -1,0 +1,15 @@
+|hw6
+clk => pr_state[0].CLK
+clk => pr_state[1].CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+rst => pr_state[0].ACLR
+rst => pr_state[1].ACLR
+rst => count[2].ENA
+rst => count[1].ENA
+rst => count[0].ENA
+x => process_0~0.IN1
+y <= pr_state[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

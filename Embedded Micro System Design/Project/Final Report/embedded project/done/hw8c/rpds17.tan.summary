@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.385 ns
+From           : LCD_DATA[1]
+To             : nios32:inst|cpu:the_cpu|d_readdata_d1[1]
+From Clock     : --
+To Clock       : DE_CLOCK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.090 ns
+From           : nios32:inst|cpu:the_cpu|M_alu_result[20]
+To             : LCD_EN
+From Clock     : DE_CLOCK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.211 ns
+From           : DE_RESET
+To             : FLASH_RST_N
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.796 ns
+From           : altera_internal_jtag~TMSUTAP
+To             : sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm|state[2]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll0:inst1|altpll:altpll_component|_clk1'
+Slack          : 6.554 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 145.10 MHz ( period = 6.892 ns )
+From           : nios32:inst|cpu:the_cpu|M_rot_step1[23]
+To             : nios32:inst|cpu:the_cpu|Mn_rot_step2[31]
+From Clock     : altpll0:inst1|altpll:altpll_component|_clk1
+To Clock       : altpll0:inst1|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 124.47 MHz ( period = 8.034 ns )
+From           : sld_hub:auto_hub|irsr_reg[2]
+To             : sld_hub:auto_hub|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll0:inst1|altpll:altpll_component|_clk1'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : nios32:inst|sdram:the_sdram|m_count[0]
+To             : nios32:inst|sdram:the_sdram|m_count[0]
+From Clock     : altpll0:inst1|altpll:altpll_component|_clk1
+To Clock       : altpll0:inst1|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

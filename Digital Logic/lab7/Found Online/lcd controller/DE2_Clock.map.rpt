@@ -1,0 +1,394 @@
+Analysis & Synthesis report for DE2_Clock
+Sat Dec 31 21:36:13 2005
+Version 5.0 Build 168 06/22/2005 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |DE2_CLOCK|state
+  8. State Machine - |DE2_CLOCK|next_command
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Analysis & Synthesis Equations
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 31 21:36:13 2005        ;
+; Quartus II Version                 ; 5.0 Build 168 06/22/2005 SP 1 SJ Web Edition ;
+; Revision Name                      ; DE2_Clock                                    ;
+; Top-level Entity Name              ; DE2_CLOCK                                    ;
+; Family                             ; Cyclone II                                   ;
+; Total combinational functions      ; 155                                          ;
+; Total registers                    ; 104                                          ;
+; Total pins                         ; 16                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Device                                                             ; EP2C35F672C6 ;               ;
+; Top-level entity name                                              ; DE2_Clock    ; DE2_Clock     ;
+; Family name                                                        ; Cyclone II   ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Cyclone II                               ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ;
++----------------------------------+-----------------+-----------------+------------------------------+
+; DE2_CLOCK.vhd                    ; yes             ; User VHDL File  ; C:/de2clock/DE2_CLOCK.vhd    ;
++----------------------------------+-----------------+-----------------+------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total combinational functions               ; 155   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 77    ;
+;     -- 3 input functions                    ; 15    ;
+;     -- <=2 input functions                  ; 63    ;
+;         -- Combinational cells for routing  ; 0     ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 129   ;
+;     -- arithmetic mode                      ; 26    ;
+; Total registers                             ; 104   ;
+; I/O pins                                    ; 16    ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 86    ;
+; Total fan-out                               ; 825   ;
+; Average fan-out                             ; 3.00  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+
+; |DE2_CLOCK                 ; 155 (155)         ; 104 (104)    ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |DE2_CLOCK          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE2_CLOCK|state                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------------+---------------------+-------------------+--------------+--------------+------------+----------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+----------------+------------------+----------------+--------------+
+; Name                ; state.display_clear ; state.display_off ; state.reset3 ; state.reset2 ; state.hold ; state.toggle_e ; state.return_home ; state.write_char10 ; state.write_char9 ; state.write_char8 ; state.write_char7 ; state.write_char6 ; state.write_char5 ; state.write_char4 ; state.write_char3 ; state.write_char2 ; state.write_char1 ; state.mode_set ; state.display_on ; state.func_set ; state.reset1 ;
++---------------------+---------------------+-------------------+--------------+--------------+------------+----------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+----------------+------------------+----------------+--------------+
+; state.reset1        ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 0            ;
+; state.func_set      ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 1              ; 1            ;
+; state.display_on    ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 1                ; 0              ; 1            ;
+; state.mode_set      ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1              ; 0                ; 0              ; 1            ;
+; state.write_char1   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char2   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char3   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char4   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char5   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char6   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char7   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char8   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char9   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.write_char10  ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 1                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.return_home   ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 1                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.toggle_e      ; 0                   ; 0                 ; 0            ; 0            ; 0          ; 1              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.hold          ; 0                   ; 0                 ; 0            ; 0            ; 1          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.reset2        ; 0                   ; 0                 ; 0            ; 1            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.reset3        ; 0                   ; 0                 ; 1            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.display_off   ; 0                   ; 1                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
+; state.display_clear ; 1                   ; 0                 ; 0            ; 0            ; 0          ; 0              ; 0                 ; 0                  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0              ; 0                ; 0              ; 1            ;
++---------------------+---------------------+-------------------+--------------+--------------+------------+----------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+----------------+------------------+----------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE2_CLOCK|next_command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++----------------------------+----------------------------+--------------------------+---------------------+-------------------+---------------------+-----------------------+--------------------------+---------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+-----------------------+-------------------------+-----------------------+---------------------+
+; Name                       ; next_command.display_clear ; next_command.display_off ; next_command.reset3 ; next_command.hold ; next_command.reset1 ; next_command.toggle_e ; next_command.return_home ; next_command.write_char10 ; next_command.write_char9 ; next_command.write_char8 ; next_command.write_char7 ; next_command.write_char6 ; next_command.write_char5 ; next_command.write_char4 ; next_command.write_char3 ; next_command.write_char2 ; next_command.write_char1 ; next_command.mode_set ; next_command.display_on ; next_command.func_set ; next_command.reset2 ;
++----------------------------+----------------------------+--------------------------+---------------------+-------------------+---------------------+-----------------------+--------------------------+---------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+-----------------------+-------------------------+-----------------------+---------------------+
+; next_command.reset2        ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 0                   ;
+; next_command.func_set      ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 1                     ; 1                   ;
+; next_command.display_on    ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 1                       ; 0                     ; 1                   ;
+; next_command.mode_set      ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 1                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char1   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 1                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char2   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 1                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char3   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 1                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char4   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 1                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char5   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 1                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char6   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 1                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char7   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 1                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char8   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 1                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char9   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 1                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.write_char10  ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 1                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.return_home   ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 1                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.toggle_e      ; 0                          ; 0                        ; 0                   ; 0                 ; 0                   ; 1                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.reset1        ; 0                          ; 0                        ; 0                   ; 0                 ; 1                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.hold          ; 0                          ; 0                        ; 0                   ; 1                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.reset3        ; 0                          ; 0                        ; 1                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.display_off   ; 0                          ; 1                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
+; next_command.display_clear ; 1                          ; 0                        ; 0                   ; 0                 ; 0                   ; 0                     ; 0                        ; 0                         ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ; 0                     ; 0                       ; 0                     ; 1                   ;
++----------------------------+----------------------------+--------------------------+---------------------+-------------------+---------------------+-----------------------+--------------------------+---------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+-----------------------+-------------------------+-----------------------+---------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 74    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 28    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; LCD_E~reg0                             ; 1       ;
+; DATA_BUS_VALUE[3]                      ; 2       ;
+; DATA_BUS_VALUE[4]                      ; 2       ;
+; DATA_BUS_VALUE[5]                      ; 2       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE2_CLOCK|BCD_HRD1[1]        ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_CLOCK|CLK_COUNT_400HZ[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/de2clock/DE2_Clock.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 168 06/22/2005 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Dec 31 21:36:10 2005
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_Clock -c DE2_Clock
+Info: Found 2 design units, including 1 entities, in source file DE2_CLOCK.vhd
+    Info: Found design unit 1: DE2_CLOCK-a
+    Info: Found entity 1: DE2_CLOCK
+Info: Elaborating entity "DE2_Clock" for the top level hierarchy
+Warning: Reduced register "DATA_BUS_VALUE[6]" with stuck data_in port to stuck value GND
+Warning: Reduced register "LCD_RW~reg0" with stuck data_in port to stuck value GND
+Info: State machine "|DE2_CLOCK|state" contains 21 states and 0 state bits
+Info: State machine "|DE2_CLOCK|next_command" contains 21 states and 0 state bits
+Info: Selected Auto state machine encoding method for state machine "|DE2_CLOCK|state"
+Info: Encoding result for state machine "|DE2_CLOCK|state"
+    Info: Completed encoding using 21 state bits
+        Info: Encoded state bit "state.display_clear"
+        Info: Encoded state bit "state.display_off"
+        Info: Encoded state bit "state.reset3"
+        Info: Encoded state bit "state.reset2"
+        Info: Encoded state bit "state.hold"
+        Info: Encoded state bit "state.toggle_e"
+        Info: Encoded state bit "state.return_home"
+        Info: Encoded state bit "state.write_char10"
+        Info: Encoded state bit "state.write_char9"
+        Info: Encoded state bit "state.write_char8"
+        Info: Encoded state bit "state.write_char7"
+        Info: Encoded state bit "state.write_char6"
+        Info: Encoded state bit "state.write_char5"
+        Info: Encoded state bit "state.write_char4"
+        Info: Encoded state bit "state.write_char3"
+        Info: Encoded state bit "state.write_char2"
+        Info: Encoded state bit "state.write_char1"
+        Info: Encoded state bit "state.mode_set"
+        Info: Encoded state bit "state.display_on"
+        Info: Encoded state bit "state.func_set"
+        Info: Encoded state bit "state.reset1"
+    Info: State "|DE2_CLOCK|state.reset1" uses code string "000000000000000000000"
+    Info: State "|DE2_CLOCK|state.func_set" uses code string "000000000000000000011"
+    Info: State "|DE2_CLOCK|state.display_on" uses code string "000000000000000000101"
+    Info: State "|DE2_CLOCK|state.mode_set" uses code string "000000000000000001001"
+    Info: State "|DE2_CLOCK|state.write_char1" uses code string "000000000000000010001"
+    Info: State "|DE2_CLOCK|state.write_char2" uses code string "000000000000000100001"
+    Info: State "|DE2_CLOCK|state.write_char3" uses code string "000000000000001000001"
+    Info: State "|DE2_CLOCK|state.write_char4" uses code string "000000000000010000001"
+    Info: State "|DE2_CLOCK|state.write_char5" uses code string "000000000000100000001"
+    Info: State "|DE2_CLOCK|state.write_char6" uses code string "000000000001000000001"
+    Info: State "|DE2_CLOCK|state.write_char7" uses code string "000000000010000000001"
+    Info: State "|DE2_CLOCK|state.write_char8" uses code string "000000000100000000001"
+    Info: State "|DE2_CLOCK|state.write_char9" uses code string "000000001000000000001"
+    Info: State "|DE2_CLOCK|state.write_char10" uses code string "000000010000000000001"
+    Info: State "|DE2_CLOCK|state.return_home" uses code string "000000100000000000001"
+    Info: State "|DE2_CLOCK|state.toggle_e" uses code string "000001000000000000001"
+    Info: State "|DE2_CLOCK|state.hold" uses code string "000010000000000000001"
+    Info: State "|DE2_CLOCK|state.reset2" uses code string "000100000000000000001"
+    Info: State "|DE2_CLOCK|state.reset3" uses code string "001000000000000000001"
+    Info: State "|DE2_CLOCK|state.display_off" uses code string "010000000000000000001"
+    Info: State "|DE2_CLOCK|state.display_clear" uses code string "100000000000000000001"
+Info: Selected Auto state machine encoding method for state machine "|DE2_CLOCK|next_command"
+Info: Encoding result for state machine "|DE2_CLOCK|next_command"
+    Info: Completed encoding using 21 state bits
+        Info: Encoded state bit "next_command.display_clear"
+        Info: Encoded state bit "next_command.display_off"
+        Info: Encoded state bit "next_command.reset3"
+        Info: Encoded state bit "next_command.hold"
+        Info: Encoded state bit "next_command.reset1"
+        Info: Encoded state bit "next_command.toggle_e"
+        Info: Encoded state bit "next_command.return_home"
+        Info: Encoded state bit "next_command.write_char10"
+        Info: Encoded state bit "next_command.write_char9"
+        Info: Encoded state bit "next_command.write_char8"
+        Info: Encoded state bit "next_command.write_char7"
+        Info: Encoded state bit "next_command.write_char6"
+        Info: Encoded state bit "next_command.write_char5"
+        Info: Encoded state bit "next_command.write_char4"
+        Info: Encoded state bit "next_command.write_char3"
+        Info: Encoded state bit "next_command.write_char2"
+        Info: Encoded state bit "next_command.write_char1"
+        Info: Encoded state bit "next_command.mode_set"
+        Info: Encoded state bit "next_command.display_on"
+        Info: Encoded state bit "next_command.func_set"
+        Info: Encoded state bit "next_command.reset2"
+    Info: State "|DE2_CLOCK|next_command.reset2" uses code string "000000000000000000000"
+    Info: State "|DE2_CLOCK|next_command.func_set" uses code string "000000000000000000011"
+    Info: State "|DE2_CLOCK|next_command.display_on" uses code string "000000000000000000101"
+    Info: State "|DE2_CLOCK|next_command.mode_set" uses code string "000000000000000001001"
+    Info: State "|DE2_CLOCK|next_command.write_char1" uses code string "000000000000000010001"
+    Info: State "|DE2_CLOCK|next_command.write_char2" uses code string "000000000000000100001"
+    Info: State "|DE2_CLOCK|next_command.write_char3" uses code string "000000000000001000001"
+    Info: State "|DE2_CLOCK|next_command.write_char4" uses code string "000000000000010000001"
+    Info: State "|DE2_CLOCK|next_command.write_char5" uses code string "000000000000100000001"
+    Info: State "|DE2_CLOCK|next_command.write_char6" uses code string "000000000001000000001"
+    Info: State "|DE2_CLOCK|next_command.write_char7" uses code string "000000000010000000001"
+    Info: State "|DE2_CLOCK|next_command.write_char8" uses code string "000000000100000000001"
+    Info: State "|DE2_CLOCK|next_command.write_char9" uses code string "000000001000000000001"
+    Info: State "|DE2_CLOCK|next_command.write_char10" uses code string "000000010000000000001"
+    Info: State "|DE2_CLOCK|next_command.return_home" uses code string "000000100000000000001"
+    Info: State "|DE2_CLOCK|next_command.toggle_e" uses code string "000001000000000000001"
+    Info: State "|DE2_CLOCK|next_command.reset1" uses code string "000010000000000000001"
+    Info: State "|DE2_CLOCK|next_command.hold" uses code string "000100000000000000001"
+    Info: State "|DE2_CLOCK|next_command.reset3" uses code string "001000000000000000001"
+    Info: State "|DE2_CLOCK|next_command.display_off" uses code string "010000000000000000001"
+    Info: State "|DE2_CLOCK|next_command.display_clear" uses code string "100000000000000000001"
+Warning: Reduced register "next_command.toggle_e" with stuck data_in port to stuck value GND
+Warning: Reduced register "next_command.hold" with stuck data_in port to stuck value GND
+Warning: Reduced register "next_command.reset1" with stuck data_in port to stuck value GND
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning: Reduced register "BCD_SECD1[3]" with stuck data_in port to stuck value GND
+Warning: Reduced register "BCD_MIND1[3]" with stuck data_in port to stuck value GND
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "DATA_BUS~15"
+    Warning: Node "DATA_BUS~14"
+    Warning: Node "DATA_BUS~13"
+    Warning: Node "DATA_BUS~12"
+    Warning: Node "DATA_BUS~11"
+    Warning: Node "DATA_BUS~10"
+    Warning: Node "DATA_BUS~8"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "LCD_ON" stuck at VCC
+    Warning: Pin "LCD_RW" stuck at GND
+Info: Implemented 275 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 6 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 259 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Processing ended: Sat Dec 31 21:36:13 2005
+    Info: Elapsed time: 00:00:04
+
+

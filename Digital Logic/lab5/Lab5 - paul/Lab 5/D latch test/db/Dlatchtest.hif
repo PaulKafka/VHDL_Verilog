@@ -1,0 +1,44 @@
+Version 7.1 Build 156 04/30/2007 SJ Web Edition
+11
+912
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Dlatchtest
+# storage
+db|Dlatchtest.(0).cnf
+db|Dlatchtest.(0).cnf
+# case_insensitive
+# source_file
+Dlatchtest.bdf
+17ced019f4e1d7175cdf9ac01e128a
+25
+# hierarchies {
+|
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+
